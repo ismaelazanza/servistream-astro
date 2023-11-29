@@ -1,0 +1,13 @@
+---
+interface Props {
+	content: string;
+	src: string;
+}
+
+const { src, content } = Astro.props;
+---
+
+<div class="hover__carHosting px-6 py-6">
+    <img src={src} width="50" alt="Icono">
+    <p class="text-white" >{content}</p>
+</div>

@@ -1,0 +1,784 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
+import SubmenuHosting from "../components/hosting_linux/SubmenuHosting.astro";
+import PlanesHostingLinux from "../components/hosting_linux/cardPlanesHosting.astro";
+import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
+import TemasEnvato from "../components/index/TemasEnvato.astro";
+import Footer from "../components/Footer.astro";
+import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
+import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+---
+
+<Layout title="Hosting Internet Services | Hosting Linux">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <header class="h-screen">
+        <Top />
+        <div class="hidden lg:block">
+            <Menu />
+        </div>
+        <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <article class="flex items-center justify-center h-[40rem]">
+            <div class="px-5">
+                <section class="contenedor mx-auto flex flex-col items-center" >
+                    <p class="text-white hidden text-center bak__barra sm:block">
+                        A partir de <strong>$2.30</strong> USD/mes
+                    </p>
+                    <h1 class="text-white text-4xl font-bold text-center lg:text-6xl">
+                        Hosting Linux <br /> para Sitios Web
+                    </h1>
+                    <p class="text-white mt-4 text-center text-lg lg:mt-0">
+                        Todo lo que necesitas para lanzar tu sitio web
+                    </p>
+                </section>
+                <section class="mt-10">
+                    <div
+                        class="grid grid-cols-2 contenedor__hosting__header mx-auto lg:grid-cols-4"
+                    >
+                        <CardHostingLinux
+                            src="/img/SolarCodeSquareBroken.svg"
+                            content="Creador de Sitios WordPress"
+                        />
+                        <CardHostingLinux
+                            src="/img/SolarQuitPipBroken.svg"
+                            content="Instalador de WordPress"
+                        />
+                        <CardHostingLinux
+                            src="/img/SolarDollarBroken.svg"
+                            content="Garantía de Reembolso"
+                        />
+                        <CardHostingLinux
+                            src="/img/SolarHeartsBroken.svg"
+                            content="Con la Confianza de Millones"
+                        />
+                    </div>
+                </section>
+                <section>
+                    <p class="text-white text-center font-semibold mt-10">
+                        Todos los planes <span class="underline"
+                            >incluyen migraciones</span
+                        >, SSL gratis, copias de seguridad y <span
+                            class="underline"
+                            >99,99% de tiempo de actividad</span
+                        > garantizado
+                    </p>
+                </section>
+            </div>
+        </article>
+    </header>
+
+    <!-- FIN CODIGO SECCION HEADER-->
+
+    <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
+
+    <section class="hidden lg:block">
+        <SubmenuHosting />
+    </section>
+
+    <!-- FIN CODIGO SECCION SUBMENU HOSTING-->
+
+    <!-- INICIO CODIGO SECCION PLANES HOSTING-->
+
+    <section class="bg-white py-28 px-5">
+        <div class="contenedor mx-auto">
+            <div class="flex justify-center text-center flex-col">
+                <h2>
+                    Los mejores planes para su Website
+                </h2>
+                <h5>
+                    Disfruta de tiempos de carga ultrarrápidos, seguridad sólida
+                    <br />
+                     como una roca y escalabilidad
+                </h5>
+            </div>
+        </div>
+
+        <div
+            class="contenedor__hosting__precios mx-auto grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3"
+        >
+            <PlanesHostingLinux
+                plan="Plan Deluxe"
+                precio="$2.30"
+                mes="USD/mes"
+                opcion="Precio económico para nuevos sitios, incluido WordPress"
+                des1="10 GB "
+                des2="50 GB "
+                des3="1 dominio alojado"
+                des4="Soporte"
+                des5="Backups diarios"
+                des6="5 subdominios"
+                des7="5 dominios aparcados"
+                des8="20 correos electrónicos"
+                des9="5 MySQL Base de datos"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/deluxe-plan"
+            />
+            <PlanesHostingLinux
+                plan="Plan Ultimate"
+                precio="$2.75"
+                mes="USD/mes"
+                opcion="El paquete perfecto para webs personales"
+                des1="25 GB "
+                des2="70 GB "
+                des3="1 dominio alojado"
+                des4="Soporte"
+                des5="Backups diarios"
+                des6="10 subdominios"
+                des7="10 dominios aparcados"
+                des8="30 correos electrónicos"
+                des9="20 MySQL Base de datos"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/ultimate-plan"
+            />
+            <PlanesHostingLinux
+                plan="Plan Maximum"
+                precio="$3.33"
+                mes="USD/mes"
+                opcion="Sube de nivel con más potencia y funciones mejoradas"
+                des1="50 GB "
+                des2="100 GB "
+                des3="1 dominio alojado"
+                des4="Soporte"
+                des5="Backups diarios"
+                des6="30 subdominios"
+                des7="30 dominios aparcados"
+                des8="50 correos electrónicos"
+                des9="50 MySQL Base de datos"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan"
+            />
+        </div>
+    </section>
+
+    <!-- INICIO CODIGO SECCION LOGOS CLIENTES SCROLL HOSTING-->
+
+    <article class="bg-white py-20">
+        <section class="contenedor mx-auto ">
+            <h3 class="text-center font-semibold uppercase tracking-[.1rem] underline pb-5">
+                Clientes Destacados
+            </h3>
+            <LogosScrollHosting />
+        </section>
+    </article>
+
+    <!-- INICIO CODIGO SECCION TARJETAS-->
+
+    <section class="contenedor mx-auto grid grid-cols-1 gap-20 px-5 pt-32 pb-32 md:grid-cols-2 lg:grid-cols-3">
+        <DescripcionHosting
+            src="/img/SolarSidebarCodeOutline.svg"
+            title="cPanel con CloudLinux"
+            content="¡Hasta 4 GB de RAM por cuenta de cPanel con CloudLinux, lo que le permite ejecutar versiones de PHP desde PHP 5.2 hasta 8.0!"
+        />
+        <DescripcionHosting
+            src="/img/SolarFolderCloudLinear.svg"
+            title="Jetbackup incluido"
+            content="Explore, restaure y descargue copias de seguridad utilizando la herramienta Jetbackup directamente en su panel de control de cPanel"
+        />
+        <DescripcionHosting
+            src="/img/SolarLockKeyholeLinear.svg"
+            title="SSL gratuitos ilimitados"
+            content="Certificados SSl para cada dominio y subdominio que agregues a tu panel de control"
+        />
+        <DescripcionHosting
+            src="/img/SolarCursorSquareLinear.svg"
+            title="Autoinstalador de WordPress"
+            content="Instale y administre WordPress y más de 300 aplicaciones directamente en cPanel, usando Softaculous"
+        />
+        <DescripcionHosting
+            src="/img/SolarServerSquareOutline.svg"
+            title="Servidores NvME ultrarrápidos"
+            content="Ejecutamos los mejores y más recientes servidores en la nube, con discos NvME de alto rendimiento. Como trabajamos 100% en la nube, podemos seguir actualizando su sitio al hardware más reciente sin interrupciones"
+        />
+        <DescripcionHosting
+            src="/img/SolarGraphNewLinear.svg"
+            title="Recursos ilimitados"
+            content="Nuestros sistemas son infinitamente escalables: puede seguir actualizándose a medida que necesite más recursos e incluso podemos ayudarlo a medida que crece hacia servidores dedicados"
+        />
+    </section>
+
+    <!-- INICIO CODIGO SECCION DESCRIPCION-->
+
+    <section class="section_descripcion grid grid-cols-1 mb-[10rem] lg:grid-cols-2">
+        <div class="backgroud__migraciones">
+            <img src="/img/back10.avif" alt="Imagen">
+        </div>
+        <div class="px-12 py-12 flex flex-col justify-center">
+            <p
+                class="title__migraciones rounded-md pl-5 font-semibold max-w-[25rem]"
+            >
+                MIGRACIONES AUTOMATIZADAS DE WORDPRESS
+            </p>
+            <h2 class="mt-5">
+                ¿Ya tienes un sitio de WordPress? Mígralo ¡gratis!
+            </h2>
+            <h5>
+                Migra fácilmente cualquier sitio de WordPress a servistream sin
+                tiempo de inactividad utilizando nuestro plugin gratuito de
+                migración automatizada.
+            </h5>
+            <div>
+                <button
+                onclick="window.location.href='https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan'"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block mt-5"
+            >
+                Comprar Plan
+                <i class="fa-solid fa-arrow-right ml-3"></i>
+            </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INICIO CODIGO SECCION INFRAESTRUCTURA-->
+
+    <section class="bg-oscuro pt-20 pb-20">
+        <div class="contenedor mx-auto px-5">
+            <h2 class="text-white">
+                Infraestructura de <span class="underline">LeaseWeb</span>, <br
+                />
+                <span class="underline">Amazon Web Services</span>,
+                <span class="underline">LiteSpeed</span>
+            </h2>
+            <h5 class="text-white pt-5">
+                Tiene un montón de características, donde incluye privacidad,
+                seguridad, usabilidad y velocidad
+            </h5>
+            <ul class="pt-10">
+                <li class="text-white flex items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        ><path
+                            fill="#059669"
+                            d="m10.586 13.414l-2.829-2.828L6.343 12l4.243 4.243l7.07-7.071l-1.413-1.415l-5.657 5.657Z"
+                        ></path></svg
+                    >Ofrece una velocidad de carga de calidad
+                </li>
+                <li class="text-white flex items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        ><path
+                            fill="#059669"
+                            d="m10.586 13.414l-2.829-2.828L6.343 12l4.243 4.243l7.07-7.071l-1.413-1.415l-5.657 5.657Z"
+                        ></path></svg
+                    >Su web estará disponible siempre sin problema alguno
+                </li>
+                <li class="text-white flex items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        ><path
+                            fill="#059669"
+                            d="m10.586 13.414l-2.829-2.828L6.343 12l4.243 4.243l7.07-7.071l-1.413-1.415l-5.657 5.657Z"
+                        ></path></svg
+                    >Servidores estratégicamente ubicados para dar mayor
+                    rendimiento
+                </li>
+            </ul>
+
+            <div class="mt-10 flex flex-wrap">
+                <img
+                    class="mr-10"
+                    src="/img/leaseweb.svg"
+                    width="150"
+                    height="150"
+                    alt="leaseweb"
+                />
+                <img
+                    class="mr-10"
+                    src="/img/litespeed-logo-vertical.svg"
+                    width="150"
+                    height="150"
+                    alt="litespeed"
+                />
+                <img src="/img/logoamazon.svg" width="50" height="50" alt="logoamazon" />
+            </div>
+        </div>
+    </section>
+
+    <!-- INICIO CODIGO SECCION TEMAS DE ENVATO-->
+
+    <section
+        class="contenedor mx-auto mt-[10rem] mb-[10rem] pl-2 pr-2 text-center"
+    >
+        <TemasEnvato />
+        <a class="text-lg font-bold mt-32 block uppercase underline" href="https://elements.envato.com/es/cms-templates" target="_blank"
+            >Ver todos los temas <i class="fa-solid fa-arrow-right ml-3"></i></a
+        >
+    </section>
+
+    <!-- INICIO CODIGO SECCION TARJETAS FUNCIONES CPANEL-->
+
+    <section class="contenedor mx-auto pb-20 px-5">
+        <h2 class="text-center">Funciones cPanel</h2>
+        <h5 class="text-center mb-20">
+            Creamos la mejor plataforma de alojamiento web cPanel posible. Hemos
+            incluido todo <br /> lo que necesita para ejecutar su sitio web y
+            sus correos electrónicos.
+        </h5>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <DescriptionCpanel
+                title="WordPress"
+                content="Seleccione WordPress u otras 300 aplicaciones para instalar con un solo clic. Nos asociamos con Softaculous para ofrecer siempre las últimas versiones"
+            />
+            <DescriptionCpanel
+                title="Cloudlinux"
+                content="El sistema operativo líder para alojamiento web seguro y confiable. Ayuda a proteger su sitio de otros sitios web dañados"
+            />
+            <DescriptionCpanel
+                title="Basado en la nube"
+                content="Nuestra infraestructura subyacente siempre se actualiza, por lo que nunca se quedará atascado en el hardware heredado ni sufrirá debido a un disco defectuoso"
+            />
+            <DescriptionCpanel
+                title="Escalable"
+                content="Actualice o baje de categoría en cualquier momento, moviéndose entre paquetes, proveedores e incluso alrededor del mundo con solo unos pocos clics"
+            />
+            <DescriptionCpanel
+                title="Hardware"
+                content="Debido a que lo hospedamos en la nube, siempre tendrá el hardware más reciente. Sin discos defectuosos ni rendimiento deficiente"
+            />
+            <DescriptionCpanel
+                title="Imunify360"
+                content="La protección contra malware Imunify360 se incluye de serie en todos los sistemas. Esto busca malware y puede repararse automáticamente"
+            />
+
+            <DescriptionCpanel
+                title="Cortafuegos"
+                content="Protéjase contra ataques y usuarios malintencionados con nuestro firewall de seguridad avanzado"
+            />
+
+            <DescriptionCpanel
+                title="Kernel"
+                content="La seguridad del servidor comienza con el kernel. Parchamos automáticamente y no tenemos sistemas antiguos 'heredados'"
+            />
+            <DescriptionCpanel
+                title="Spam"
+                content="Ejecutamos sistemas avanzados de escaneo de spam tanto en el correo entrante como saliente, evitando que entre spam, pero también protegiendo su reputación de correo"
+            />
+            <DescriptionCpanel
+                title="Bases de datos"
+                content="Proporcionamos MariaDB/MySQL como estándar con todos los planes. No hay límite para la cantidad de bases de datos que puede crear"
+            />
+            <DescriptionCpanel
+                title="Gestionado"
+                content="Todo lo que ofrecemos requiere cero experiencia técnica. Nuestro brillante equipo de sistemas gestiona todo"
+            />
+            <DescriptionCpanel
+                title="Correos"
+                content="Acceda a sus correos electrónicos mientras viaja utilizando nuestro cliente de correo web incorporado. Permitir que el personal tenga su propio acceso directo"
+            />
+        </div>
+    </section>
+
+    <!-- INICIO CODIGO SECCION LOGOS SOPORTADOS-->
+
+    <article class="bg__soportamos pt-20 pb-20">
+        <h3 class="text-center text-white mb-10 font-semibold text-lg">Soportamos los siguientes CMD</h3>
+        <section class="contenedor mx-auto grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div class="flex flex-col items-center">
+                <img
+                    src="/img/wordpress2.svg"
+                    width="200"
+                    height="200"
+                    alt="Wordpress"
+                />
+                <p class="text-white mt-3">WordPress</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img
+                    src="img/drupal2.svg"
+                    width="200"
+                    height="200"
+                    alt="Drupal"
+                />
+                <p class="text-white mt-3">Drupal</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img
+                    src="/img/joomla2.svg"
+                    width="200"
+                    height="200"
+                    alt="Joomla"
+                />
+                <p class="text-white mt-3">Joomla</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img
+                    src="/img/magento2.svg"
+                    width="200"
+                    height="200"
+                    alt="Magento"
+                />
+                <p class="text-white mt-3">Magento</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img
+                    src="/img/presta2.svg"
+                    width="200"
+                    height="200"
+                    alt="Presta"
+                />
+                <p class="text-white mt-3">Presta</p>
+            </div>
+        </section>
+    </article>
+
+    <!-- INICIO CODIGO SECCION PREGUNTAS FRECUENTES-->
+
+    <section class="bg-white pt-20 pb-20">
+        <div class="contenedor__hosting__preguntas mx-5">
+            <h2 class="mb-12">Preguntas Frecuentes</h2>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-1"
+                    >
+                        <span>¿Qué es Hosting?</span>
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-1"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        Vamos a desglosarlo. Lo básico: quieres un sitio web.
+                        Tiene grandes ideas para el contenido, un tablero con la
+                        descripción completa de tu visión, el tono con el que se
+                        comunicará, e incluso una lista de las funciones
+                        adicionales que deseas para tu sitio web. Pero, ¿cómo
+                        publicas exactamente tu sitio en línea? Ahí es donde
+                        entra el alojamiento. Tu sitio web necesita un proveedor
+                        de alojamiento para tenerlo en la web y disponible
+                        públicamente para ser visitado. Los alojadores web son
+                        empresas que proporcionan el espacio de servidor
+                        necesario para almacenar tu sitio web. A medida que el
+                        tráfico web intenta acceder a tu sitio, los datos
+                        necesarios se transmiten desde el servidor al
+                        dispositivo de los visitantes. Sin embargo, los
+                        proveedores de alojamiento web difieren en la variedad
+                        de tipos de planes y opciones que ofrecen. Por lo tanto,
+                        tener un proveedor de alojamiento web de calidad es
+                        crucial.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-2"
+                    >
+                        <span>¿Cuántos sitios puedo alojar?</span>
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-2"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        ¿Estás comenzando? Con un Plan Deluxe, puedes alojar un
+                        sitio web ¡Un excelente lugar para comenzar! Si buscas
+                        administrar varios sitios, el plan Unlimited te permite
+                        alojar sitios web ilimitados. Cuál sea la flexibilidad
+                        que necesites, servistream la tiene.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-3"
+                    >
+                        <span>¿El web hosting incluye correo electrónico?</span>
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-3"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        Sea que estés construyendo tu negocio o tu marca (o
+                        ambas), quieres empezar con el pie derecho. Un correo
+                        exclusivo relacionado con tu dominio puede brindarte un
+                        look profesional mientras trabajas para hacer crecer tu
+                        negocio.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-4"
+                    >
+                        <span
+                            >¿Cuál es la diferencia entre el nombre de un
+                            dominio y el web hosting?</span
+                        >
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-4"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        Un nombre de dominio es la dirección única .com (o
+                        cualquier otra extensión) donde se puede encontrar tu
+                        sitio en la web. Pero para que tu sitio web esté en
+                        línea, también necesitarás un proveedor de alojamiento
+                        web para proporcionar el espacio de servidor necesario
+                        de almacenamiento para tu sitio. Para un sitio
+                        completamente funcional, necesitas un nombre de dominio
+                        y un buen proveedor de alojamiento web. Para simplificar
+                        las cosas, puedes mantener tus necesidades internas,
+                        permitiendo que un proveedor suministre tanto el nombre
+                        de dominio y hosting web.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-5"
+                    >
+                        <span
+                            >¿Puedo actualizar a un plan más poderoso después?</span
+                        >
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-5"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        ¡Claro que sí! Sabemos que tu objetivo final es
+                        probablemente hacer crecer tu sitio web con el tiempo.
+                        ¡Queremos eso para ti! Cuando el tráfico de tu sitio
+                        alcanza niveles de hora pico, se desborda de contenido,
+                        o simplemente necesita más tecnología y características
+                        de alta potencia, puedes actualizar a un plan con
+                        campanas, silbatos y potencia de rendimiento
+                        adicionales. Si bien el Plan Deluxe es una opción
+                        inteligente y económica cuando se es un principiante, un
+                        sitio rico en contenido y con mucho tráfico puede exigir
+                        un plan a mayor capacidad, lo que significa espacio de
+                        servidor adicional, recursos especialmente dedicados,
+                        seguridad avanzada y aceleración en velocidades.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-6"
+                    >
+                        <span>¿Incluyen certificados de seguridad SSL?</span>
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-6"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        Nos preocupamos mucho por la seguridad - y también lo
+                        hacen los visitantes de tu sitio web. Con una cuenta de
+                        Plan Deluxe, obtienes un certificado SSL gratis para
+                        agregar a tu sitio. En estos días, tener un SSL para tu
+                        sitio es una buena práctica casi obvia. No solo un SSL
+                        ayuda a tus visitantes a sentirse seguros interactuando
+                        con tu sitio - también es particularmente importante si
+                        administras un sitio de comercio electrónico - y evitará
+                        penalizaciones de los motores de búsqueda, que te pueden
+                        afectar fácilmente si no tienes uno. Ningún sitio web
+                        quiere una etiqueta de "inseguro" o "insegura" que dañe
+                        su reputación. Si bien un certificado SSL no es una
+                        defensa infalible contra los chicos malos de Internet,
+                        es sin duda un gran primer paso en la dirección correcta
+                        para poner a los visitantes de tu sitio seguros.
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-3">
+                <h6 class="mb-0">
+                    <button
+                        class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                        data-collapse-target="collapse-7"
+                    >
+                        <span
+                            >¿Qué pasa si tengo un dominio en otra empresa, lo
+                            puedo transferir?</span
+                        >
+                        <i
+                            class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                        ></i>
+                        <i
+                            class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                        ></i>
+                    </button>
+                </h6>
+                <div
+                    data-collapse="collapse-7"
+                    class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                >
+                    <div
+                        class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                    >
+                        ¡Sí! Olvídate de empacar cajas virtuales o preocuparte
+                        por una dirección de reenvío: nos encargaremos de las
+                        tareas de transferencia y haremos que moverse a
+                        servistream sea F-Á-C-I-L. Al transferir tu registro de
+                        dominio de tu antiguo proveedor a servistream, puedes
+                        administrar fácilmente todos los aspectos de tu dominio
+                        desde una ubicación conveniente.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INICIO CODIGO SECCION FOOTER-->
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    /*
+    CSS SECCION HEADER
+    */
+
+    .contenedor__logos {
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+
+    header {
+        background-image: url(/img/back11.avif);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-oscuro);
+
+        .bak__barra {
+            background-color: #22b5734d;
+            width: 15rem;
+            border-radius: 0.5rem;
+            padding: 0 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contenedor__hosting__header {
+            max-width: 700px;
+        }
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+
+    .contenedor__hosting__precios {
+        max-width: 1100px;
+        background: linear-gradient(97.03deg, #edf4ff -0.58%, #defffe 92.09%);
+        padding: 0.9rem;
+        border-radius: 1rem;
+    }
+
+    /*
+    CSS SECCION DESCRPCION
+    */
+
+    .section_descripcion {
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title__migraciones {
+            background-color: #22b5734d;
+            color: var(--color-primario);
+        }
+    }
+
+    /*
+    CSS SECCION PREGUNTAS FRECUENTES
+    */
+
+    .contenedor__hosting__preguntas {
+        max-width: 1000px;
+    }
+
+    .bg__soportamos{
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+</style>
+
+<script
+    src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"
+></script>

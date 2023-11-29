@@ -1,0 +1,57 @@
+<div
+    class="backgroud__domain grid place-content-center text-center px-12 py-12"
+>
+    <h2 class="text-slate-100 font-semibold mb-8 text-xl md:text-4xl">
+        Encuentra tu nombre de <br /> dominio perfecto
+    </h2>
+
+    <div class="buscador-domain-princ-contenedor">
+        <div class="contenedor-domain">
+            <!-- Search Form -->
+            <form
+                action="https://clientes.servistream.net/domainchecker.php"
+                method="post"
+            >
+                <!-- Search Field -->
+                <div class="domain-parte">
+                    <div class="">
+                        <div class="btn-buscador-search flex items-center">
+                            <input
+                                class="form-control bar w-9/12 h-12 rounded-full px-3"
+                                name="domain"
+                                type="text"
+                                placeholder="Ingresa el nombre web que deseas"
+                                required=""
+                            />
+                            <button
+                                class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full ml-3 h-12"
+                                type="submit"
+                            >
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- End of Search Form -->
+        </div>
+    </div>
+
+    <div class="flex justify-between mt-10 flex-wrap">
+        <img src="img/com2.svg" width="100" alt="Dominio" />
+        <img src="img/org2.svg" width="100" alt="Dominio" />
+        <img src="img/net2.svg" width="100" alt="Dominio" />
+        <img src="img/biz2.svg" width="100" alt="Dominio" />
+        <img src="img/info.svg" width="100" alt="Dominio" />
+    </div>
+</div>
+
+<style>
+    .backgroud__domain {
+        border-radius: 16px;
+        background-color: var(--color-oscuro);
+        background-position: bottom;
+        background-size: cover;
+        border-radius: .5rem;
+    }
+</style>

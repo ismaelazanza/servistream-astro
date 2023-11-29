@@ -1,0 +1,85 @@
+---
+interface Props {
+    plan: string;
+    precio: string;
+    mes: string;
+    opcion: string
+    des1: string;
+    des2: string;
+    des3: string;
+    des4: string;
+    des5: string;
+    des6: string;
+    des7: string;
+    des8: string;
+    des9: string;
+    link: string;
+}
+
+const {
+    plan,
+    precio,
+    mes,
+    opcion,
+    des1,
+    des2,
+    des3,
+    des4,
+    des5,
+    des6,
+    des7,
+    des8,
+    des9,
+    link,
+} = Astro.props;
+---
+
+<section class="hover__planes">
+    <article
+        class="flex h-12 title__planes__descuento items-center  rounded-tl-lg rounded-tr-lg"
+    >
+        <p class="color__titulo font-normal text-sm">DESCUENTO ESPECIAL</p>
+    </article>
+
+    <div class="rounded-bl-lg rounded-br-lg">
+        <h2 class="font-bold text-3xl">{plan}</h2>
+        <p class="text-4xl font-extrabold">{precio}</p>
+        <p class="mb-5">{mes}</p>
+        <p class="mb-5">{opcion}</p>
+        <p class="underline"> <strong>{des1}</strong> de espacio</p>
+        <p> <strong>{des2}</strong> tráfico</p>
+        <p>{des3}</p>
+        <p>{des4}</p>
+        <p class="underline">{des5}</p>
+        <p>{des6}</p>
+        <p>{des7}</p>
+        <p>{des8}</p>
+        <p>{des9}</p>
+        <a class="bg-principal hover:bg-principalDegra text-white font-bold py-2 px-4 rounded-lg inline-block mt-5" href={link}>Comprar Ahora <i class="fa-solid fa-chevron-right text-xs pl-2"></i></a>
+    </div>
+</section>
+
+<style>
+
+    .color__titulo {
+        color: var(--color-primario);
+    }
+
+    .hover__planes{
+        box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+        border-radius: 1rem;
+        transition: all .2s ease-out;
+    }
+
+    section {
+        padding: 2rem 2rem;
+        background-color: white;
+
+    }
+
+    i{
+        font-size: 12px;
+        margin-left: 4px;
+    }
+
+</style>

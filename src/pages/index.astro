@@ -1,0 +1,332 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import Top from "../components/Top.astro";
+import LogoScroll from "../components/index/LogoScroll.astro";
+import TarjetasIndex from "../components/index/CardServiciosIndex.astro";
+import BuscarDominios from "../components/index/Dominios.astro";
+import TemasEnvato from "../components/index/TemasEnvato.astro";
+import HostingServicios from "../components/index/CardHosting.astro";
+import StreamingRadio from "../components/index/CardStreamingRadio.astro";
+import StreamigCard from "../components/index/StreamingCard.astro";
+import Testimonio from "../components/index/Testimonial.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Hosting Internet Services | Radio y Tv Streaming">
+	<main>
+		<!-- INICIA CODIGO DE HEADER MENU INDEX -->
+
+		<header class="h-screen">
+			<Top />
+			<div class="hidden lg:block">
+				<Menu />
+			</div>
+			<div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+			<section
+				class="mt-20 px-5 contenedor mx-auto grid grid-cols-1 grid-rows-1 gap-2 place-content-center  lg:grid-cols-2"
+			>
+				<div>
+					<h2 class="text-white pb-3 text-lg underline ">
+						Expertos en soluciones web desde 2014
+					</h2>
+					<h1 class="text-white text-4xl font-bold  md:text-5xl lg:text-7xl">
+						El mejor Hosting y Radio Streaming del Ecuador
+					</h1>
+					<p class="text-white text-xl pt-2 lg:text-2xl">
+						Nos aseguramos de que tu sitio web sea rápido, seguro y
+						esté siempre activo, para que tus visitantes y motores
+						de búsqueda confíen en ti. Garantizado.
+					</p>
+					<div class="mt-10 flex flex-col lg:flex-row">
+						
+						<a
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mb-4 lg:mb-0 lg:mr-2 "
+							href="/hosting-cloud"
+						>
+							Comenzar Ahora
+						</a>
+						<a
+							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-lg"
+							href="/paginas-web"
+						>
+							Más que un sitio web
+							<i class="fa-solid fa-arrow-right ml-3"></i>
+						</a>
+					</div>
+				</div>
+				<div class="items-center justify-center hidden lg:flex">
+					<img src="/img/server_izquiera-01.svg" width="500" alt="" />
+				</div>
+			</section>
+
+			<div class="contenedor mx-auto px-5 mt-10">
+				<p class="text-white text-4xl font-bold">
+					Alojando a <span class="underline">1.245 sitios</span>,
+					clientes satisfechos +500
+				</p>
+			</div>
+		</header>
+
+		<!-- FIN CODIGO DE HEADER MENU INDEX -->
+
+		<!-- INICIA CODIGO DE LOGOS DE CLIENTES -->
+
+		<section
+			class="contenedor mx-auto pl-2 pr-2 text-center font-semibold mt-9 mb-8"
+		>
+			<p>
+				Con la confianza de <span class="color__principal"
+					>más de 500+</span
+				> empresas en crecimiento
+			</p>
+		</section>
+
+		<section class="contenedor__logos pl-2 pr-2">
+			<LogoScroll />
+		</section>
+
+		<!-- FIN CODIGO DE LOGOS DE CLIENTES -->
+
+		<!-- INICIA CODIGO SECCION MAS VELOCIDAD -->
+
+		<section
+			class="contenedor mx-auto grid mt-[10rem] mb-[10rem] grid-cols-1 gap-4 px-5 lg:grid-cols-2"
+		>
+			<div class="flex flex-col justify-center">
+				<h2 class="mt-15">¿Listo para <br> más Velocidad?</h2>
+				<h5 class="mb-5">
+					Hacemos que sea fácil aprovechar más de 20 años de
+					experiencia — nuestros expertos web se encargarán de todo
+					para que tu sitio sea exitoso.
+				</h5>
+				<div>
+					<a
+					class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
+					href="/radio-streaming"
+				>
+					Conoce más
+					<i class="fa-solid fa-arrow-right ml-3"></i>
+				</a>
+				</div>
+
+			</div>
+
+			<div class="grid gap-4 grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2">
+				<TarjetasIndex
+					title1="Hosting"
+					title2="Linux"
+					img="/img/SolarServerPathBroken.svg"
+					href="/hosting-linux"
+				/>
+				<TarjetasIndex
+					title1="Hosting"
+					title2="Cloud"
+					img="/img/SolarServerSquareCloudBroken.svg"
+					href="/hosting-cloud"
+				/>
+				<TarjetasIndex
+					title1="Radio"
+					title2="Streaming"
+					img="/img/SolarRadioBroken.svg"
+					href="/radio-streaming"
+				/>
+				<TarjetasIndex
+					title1="Streaming"
+					title2="de TV"
+					img="/img/SolarTvBroken.svg"
+					href="/streaming-tv"
+				/>
+			</div>
+		</section>
+
+		<!-- FIN CODIGO SECCION MAS VELOCIDAD -->
+
+		<!-- INICIA CODIGO SECCION BUSCAR DOMINIOS -->
+
+		<section class="contenedor mx-auto">
+			<BuscarDominios />
+		</section>
+
+		<!-- FIN CODIGO SECCION BUSCAR DOMINIOS -->
+
+		<!-- INICIA CODIGO SECCION TEMAS GRATIS ENVATO -->
+
+		<section class="contenedor mx-auto mt-[10rem] mb-[10rem] px-5">
+			<TemasEnvato />
+		</section>
+
+		<!-- FIN CODIGO SECCION TEMAS GRATIS ENVATO -->
+
+		<!-- INICIA CODIGO SECCION PORQUE ELEGIR servistream -->
+
+		<section
+			class="contenedor mx-auto mt-[10rem] mb-[10rem] grid grid-cols-1 gap-4 px-5 lg:grid-cols-2"
+		>
+			<div class="flex flex-col justify-center">
+				<h2 class="text-4xl lg:text-5xl">
+					¿Por qué elegir servistream.net?
+				</h2>
+				<h5 class="mb-5">
+					cPanel es el panel de control estándar de la industria. En
+					servistream.net desarrollamos la plataforma de alojamiento
+					cPanel definitiva: rápida, segura y fácil de usar .
+				</h5>
+
+				<div>
+					<a
+					class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
+					href="/hosting-cloud"
+				>
+					Ver nuestro planes
+					<i class="fa-solid fa-arrow-right ml-3"></i>
+				</a>
+				</div>
+
+			</div>
+			<div>
+				<div class="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-2">
+					<HostingServicios
+						src="/img/SolarCodeScanOutline.svg"
+						title="cPanel con CloudLinux"
+						content="¡Hasta 4 GB de RAM por cuenta de cPanel con CloudLinux, que le permite ejecutar versiones de PHP desde PHP 5.2 hasta 8.0!"
+					/>
+					<HostingServicios
+						src="/img/SolarArchiveUpMinimlisticBroken.svg"
+						title="Jetbackup incluido"
+						content="Explore, restaure y descargue copias de seguridad utilizando la herramienta Jetbackup directamente en su panel de control de cPanel."
+					/>
+					<HostingServicios
+						src="/img/SolarLockPasswordBroken.svg"
+						title="SSL gratuitos ilimitados"
+						content="Certificados SSL para cada dominio y subdominio que agregue a su panel de control."
+					/>
+					<HostingServicios
+						src="/img/SolarServerSquareBroken.svg"
+						title="Servidores NvME"
+						content="Ejecutamos los últimos y mejores servidores en la nube, con discos NvME de alto rendimiento."
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- FIN CODIGO SECCION PORQUE ELEGIR servistream -->
+
+		<!-- INICIA CODIGO SECCION RADIO STREAMING -->
+
+		<section class="contenedor mx-auto mt-20">
+			<StreamigCard />
+		</section>
+
+		<section class="bg__streaming__radio__index mt-[-20rem]">
+			<div class="contenedor mx-auto pt-[25rem]"></div>
+
+			<div
+				class="grid gap-8 grid-cols-1 grid-rows-auto contenedor__logos text-white pb-20 md:grid-cols-2 lg:grid-cols-3"
+			>
+				<StreamingRadio
+					src="/img/SolarCheckSquareBroken.svg"
+					title="Fácil Instalación"
+					content="Hazlo fácil y sin complicaciones con nuestra guía de instalación"
+				/>
+				<StreamingRadio
+					src="/img/SolarHeadphonesRoundSoundLineDuotone.svg"
+					title="ACC+ o MP3"
+					content="Tú decides como quieres que suene la estación de radio con Icecast o Shoutcast"
+				/>
+				<StreamingRadio
+					src="/img/SolarServer2Broken.svg"
+					title="Disco Sólido"
+					content="300% más velocidad leyendo las canciones en función automática AutoDj"
+				/>
+				<StreamingRadio
+					src="/img/SolarCallChatRoundedLineDuotone.svg"
+					title="Soporte"
+					content="Asistencia permanente y monitoreo de cada servidor durante las 24hs"
+				/>
+				<StreamingRadio
+					src="/img/SolarCardTransferLinear.svg"
+					title="Control Total"
+					content="Transmite en vivo o AutoDJ, tú decides como manejar tu estación de radio"
+				/>
+				<StreamingRadio
+					src="/img/SolarCpuOutline.svg"
+					title="Hardware"
+					content="Servidores rápidos con 50 GB de RAM y procesadores Intel Xeon de 10 núcleos"
+				/>
+			</div>
+
+			<div
+				class="contenedor mx-auto pb-20 text-center font-semibold text-xl"
+			>
+				<a class="text-white underline" href="/radio-streaming"
+					>Ver todos los planes <i
+						class="fa-solid pl-2 fa-arrow-right-long"></i></a
+				>
+			</div>
+		</section>
+
+		<!-- FIN CODIGO SECCION RADIO STREAMING -->
+
+		<!-- INICIA CODIGO SECCION TESTIMONIO -->
+
+		<Testimonio />
+
+		<!-- FIN CODIGO SECCION TESTIMONIO -->
+
+		<Footer />
+		
+	</main>
+</Layout>
+
+<style lang="scss">
+	.contenedor__logos {
+		max-width: 55rem;
+		margin: 0 auto;
+	}
+
+	main {
+		.color__principal {
+			color: var(--color-primario);
+		}
+		header {
+			background-image: linear-gradient(
+				to right top,
+				#0e141b,
+				#0a1422,
+				#071429,
+				#06142f,
+				#071335
+			);
+			/*
+			background-image: linear-gradient(
+				to right top,
+				#0e141b,
+				#111820,
+				#141b26,
+				#171f2b,
+				#1a2231,
+				#1a2231,
+				#1a2231,
+				#1a2231,
+				#171f2b,
+				#141b26,
+				#111820,
+				#0e141b
+			);*/
+
+			section {
+				h2 {
+					color: var(--color-primario);
+				}
+			}
+		}
+
+		.bg__streaming__radio__index {
+			background-color: var(--color-oscuro);
+			clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+</style>

@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+    content: string;
+}
+
+const { content, title } = Astro.props;
+---
+
+<section class="flex items-start">
+    <div>
+        <h2 class="mb-3 font-semibold text-xl underline">{title}</h2>
+        <p>{content}</p>
+    </div>
+</section>

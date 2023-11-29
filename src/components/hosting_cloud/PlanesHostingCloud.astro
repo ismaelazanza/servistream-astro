@@ -1,0 +1,59 @@
+---
+interface Props {
+    title: string;
+    descripcion?: string;
+    descuento: string;
+    precio: string;
+    link: string;
+    des1: string;
+    des2?: string;
+    des3: string;
+    des4?: string;
+    des5?: string;
+    des6: string;
+    des7: string;
+    des8: string;
+    des9: string;
+}
+
+const {
+    descripcion,
+    title,
+    descuento,
+    precio,
+    link,
+    des1,
+    des2,
+    des3,
+    des4,
+    des5,
+    des6,
+    des7,
+    des8,
+    des9,
+} = Astro.props;
+---
+
+<section>
+    <div class="p-10">
+        <h3 class="font-bold text-3xl">{title}</h3>
+        <p class="text-xs pb-5"><i class="fa-solid fa-circle text-[6px] pr-1 mb-3"></i>2vCPU, Memory 2GB, IO 10MB/S</p>
+        <p class="font-semibold bg-cyan-200 inline-block">{descuento}</p>
+        <p class="text-4xl font-extrabold mt-5">{precio} <span class="text-sm font-normal">/mes</span></p>
+        <a
+            class="bg-principal hover:bg-principalDegra text-white font-bold py-2 px-4 rounded-lg mt-5 inline-block"
+            href={link}
+            >Realizar Pedido <i class="text-xs pl-2 fa-solid fa-chevron-right"></i></a
+        >
+        <p class="font-semibold py-5">Incluye:</p>
+        <p class="underline"> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des1}</strong> de espacio</p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>Tráfico Ilimitado</strong></p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> {des3} dominio alojado</p>
+        <p class="underline"> <i class="fa-solid fa-check mr-2 text-xs"></i> Soporte</p>
+        <p class="underline"> <i class="fa-solid fa-check mr-2 text-xs"></i> Backup</p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des6}</strong> subdominios</p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des7}</strong> dominios aparcados</p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des8}</strong> correos electrónicos</p>
+        <p> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des9}</strong> MySQL Base de datos</p>
+    </div>
+</section>
