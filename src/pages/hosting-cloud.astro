@@ -8,6 +8,7 @@ import Footer from "../components/Footer.astro";
 import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
 import PlanesHostingCloud from "../components/hosting_cloud/PlanesHostingCloud.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
 ---
 
 <Layout title="Hosting Internet Services | Hosting Cloud">
@@ -183,6 +184,69 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
             </div>
             
         </section>
+
+            <!-- INICIO CODIGO SECCION TARJETAS FUNCIONES CPANEL-->
+
+    <section class="contenedor mx-auto pb-20 px-5 my-20">
+        <h2 class="text-center">Funciones cPanel</h2>
+        <h5 class="text-center mb-20">
+            Creamos la mejor plataforma de alojamiento web cPanel posible. Hemos
+            incluido todo <br /> lo que necesita para ejecutar su sitio web y
+            sus correos electrónicos.
+        </h5>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <DescriptionCpanel
+                title="WordPress"
+                content="Seleccione WordPress u otras 300 aplicaciones para instalar con un solo clic. Nos asociamos con Softaculous para ofrecer siempre las últimas versiones"
+            />
+            <DescriptionCpanel
+                title="Cloudlinux"
+                content="El sistema operativo líder para alojamiento web seguro y confiable. Ayuda a proteger su sitio de otros sitios web dañados"
+            />
+            <DescriptionCpanel
+                title="Basado en la nube"
+                content="Nuestra infraestructura subyacente siempre se actualiza, por lo que nunca se quedará atascado en el hardware heredado ni sufrirá debido a un disco defectuoso"
+            />
+            <DescriptionCpanel
+                title="Escalable"
+                content="Actualice o baje de categoría en cualquier momento, moviéndose entre paquetes, proveedores e incluso alrededor del mundo con solo unos pocos clics"
+            />
+            <DescriptionCpanel
+                title="Hardware"
+                content="Debido a que lo hospedamos en la nube, siempre tendrá el hardware más reciente. Sin discos defectuosos ni rendimiento deficiente"
+            />
+            <DescriptionCpanel
+                title="Imunify360"
+                content="La protección contra malware Imunify360 se incluye de serie en todos los sistemas. Esto busca malware y puede repararse automáticamente"
+            />
+
+            <DescriptionCpanel
+                title="Cortafuegos"
+                content="Protéjase contra ataques y usuarios malintencionados con nuestro firewall de seguridad avanzado"
+            />
+
+            <DescriptionCpanel
+                title="Kernel"
+                content="La seguridad del servidor comienza con el kernel. Parchamos automáticamente y no tenemos sistemas antiguos 'heredados'"
+            />
+            <DescriptionCpanel
+                title="Spam"
+                content="Ejecutamos sistemas avanzados de escaneo de spam tanto en el correo entrante como saliente, evitando que entre spam, pero también protegiendo su reputación de correo"
+            />
+            <DescriptionCpanel
+                title="Bases de datos"
+                content="Proporcionamos MariaDB/MySQL como estándar con todos los planes. No hay límite para la cantidad de bases de datos que puede crear"
+            />
+            <DescriptionCpanel
+                title="Gestionado"
+                content="Todo lo que ofrecemos requiere cero experiencia técnica. Nuestro brillante equipo de sistemas gestiona todo"
+            />
+            <DescriptionCpanel
+                title="Correos"
+                content="Acceda a sus correos electrónicos mientras viaja utilizando nuestro cliente de correo web incorporado. Permitir que el personal tenga su propio acceso directo"
+            />
+        </div>
+    </section>
 
 
 
