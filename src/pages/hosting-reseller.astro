@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import SubmenuHosting from "../components/hosting_cloud/SubmenuHostingCloud.astro";
+import Footer from "../components/Footer.astro";
+import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
+import PlanesHostingCloud from "../components/hosting_cloud/PlanesHostingCloud.astro";
+import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
+---
+
+<Layout title="Hosting Internet Services | Hosting Cloud">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <header class="h-auto">
+        <Top />
+        <div class="hidden lg:block">
+            <Menu />
+        </div>
+        <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div class="contenedor mx-auto grid grid-cols-2 pt-10 pb-20">
+            <div>
+                <section>
+                    <p class="text-white text-center bak__barra">
+                        A partir de <strong>$4.99</strong> USD/mes
+                    </p>
+                    <h1 class="text-white text-6xl font-bold pb-5">
+                        Web Reseller
+                    </h1>
+                    <p class="text-white text-lg">
+                        Nuestro servicio compartido ofrece una plataforma
+                        potente y comprobada eso es perfecto para alojar sus
+                        sitios web
+                    </p>
+                    <section class="contenedor mx-auto mb-5">
+                        <div class="grid grid-cols-4">
+                            <CardHostingLinux
+                                src="/img/SolarSpedometerMaxBroken.svg"
+                                content="Velocidad Extrema"
+                            />
+                            <CardHostingLinux
+                                src="/img/SolarDevicesBroken.svg"
+                                content="Potentes Herramientas"
+                            />
+                            <CardHostingLinux
+                                src="/img/SolarCircleBottomUpBroken.svg"
+                                content="Migración de Sitios"
+                            />
+                            <CardHostingLinux
+                                src="/img/SolarSmileCircleBroken.svg"
+                                content="Soporte Experto"
+                            />
+                        </div>
+                    </section>
+					<div class="mt-10 flex">
+						
+						<a
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-2"
+							href="/hosting-cloud"
+						>
+							Comenzar Ahora
+						</a>
+						<a
+							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-lg "
+							href="/paginas-web"
+						>
+							Más que un sitio web
+							<i class="fa-solid fa-arrow-right ml-3"></i>
+						</a>
+					</div>
+                </section>
+            </div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
+
+    <section>
+        <SubmenuHosting />
+    </section>
+
+ 
+
+
+    <!-- INICIO CODIGO SECCION FOOTER-->
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    header {
+        background-image: url(../img/young-people-urban-city-lifestyle-street-outdoor-2022-12-16-02-32-23-utc.avif);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .bak__barra {
+            background-color: #22b5734d;
+            width: 15rem;
+            border-radius: 0.5rem;
+            padding: 0 0.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+
+    .contenedor__hosting__precios {
+        max-width: 1100px;
+        background: linear-gradient(97.03deg, #edf4ff -0.58%, #deedff 92.09%);
+        border-radius: 1rem;
+    }
+</style>
