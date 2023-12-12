@@ -1,0 +1,23 @@
+---
+interface Props {
+    content: string;
+    title: string;
+}
+
+const { content, title } = Astro.props;
+---
+
+
+<section class="bg-morado p-6 rounded-md estilo__borde">
+    <p class="text-white text-2xl font-semibold mb-2">{title}</p>
+    <p class="text-white text-sm">{content}</p>
+</section>
+
+
+<style>
+
+    .estilo__borde{
+        border: 1px solid var(--dropdown-border);
+    }
+
+</style>

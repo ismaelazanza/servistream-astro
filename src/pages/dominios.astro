@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import SubmenuDominios from "../components/dominios/SubmenuDominios.astro";
+import Footer from "../components/Footer.astro";
+import BuscarDominiosDos from "../components/dominios/BuscarDominiosDos.astro";
+import CardDescripUno from "../components/dominios/CardDescripUno.astro";
+import CardDescripDos from "../components/dominios/CardDescripDos.astro";
+
+---
+
+<Layout title="Hosting Internet Services | Hosting Cloud">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <header class="css-selector">
+        <Top />
+        <div class="hidden lg:block">
+            <Menu />
+        </div>
+        <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div
+            class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+        >
+
+            <h1 class="text-white text-6xl font-bold pb-5">
+                Busca tu Dominio
+            </h1>
+            <p class="text-white">
+                Escribe el nombre que buscas en el comprobador de dominios y <br> descubre en segundos si está disponible
+            </p>
+
+        </div>
+        <section class="contenedor__lgo__server mx-auto pb-10">
+			<BuscarDominiosDos />
+		</section>
+
+        <section class="contenedor__lgo__server mx-auto grid grid-cols-4 content-center py-10">
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white text-6xl">.com</h3>
+                <p class="text-white font-semibold text-2xl">$15<span class="text-sm">.00/anual</span></p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white text-6xl">.net</h3>
+                <p class="text-white font-semibold text-2xl">$16<span class="text-sm">.00/anual</span></p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white text-6xl">.org</h3>
+                <p class="text-white font-semibold text-2xl">$16<span class="text-sm">.00/anual</span></p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white text-6xl">.info</h3>
+                <p class="text-white font-semibold text-2xl">$16<span class="text-sm">.00/anual</span></p>
+            </div>
+        </section>
+
+        <div>
+            <p class="contenedor__lgo__server mx-auto text-center text-white pb-10 font-bold">Cuentas con una protección de privacidad gratis con cada dominio elegible</p>
+        </div>
+
+    </header>
+
+    <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
+
+    <section>
+        <SubmenuDominios />
+    </section>
+
+    <section class="contenedor mx-auto my-20">
+        <h2 class="text-center">¿Por qué registrar tus dominios con servistream?</h2>
+        <p class="text-center">Disfruta de una activación instantánea y un soporte directo y en español al comprar dominios web y hosting con servistream.</p>
+
+        <div class="grid grid-cols-3 gap-5 mt-20">
+            <CardDescripUno titulo="Soporte profesional 24/7" descrip="Nuestro equipo de soporte estará disponible cuando lo necesites. Hemos hecho la busqueda y registro de dominios lo más fácil posible, pero a veces todos necesitamos algo de ayuda. Solo contáctanos y te explicaremos todo." />
+            <CardDescripUno titulo="Registrador de dominios confiable" descrip="Servistream es miembro de una comunidad de registradores de dominios acreditados por la ICANN. Somos elegidos por millones de usuarios web a nivel mundial para el registro de sus dominios." />
+            <CardDescripUno titulo="Configuración instantanea y control fácil" descrip="Una vez hayas elegido tu nombre ideal, es hora de registrar tu dominio web y enlazarlo a tu sitio." />
+        
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="contenedor mx-auto grid grid-cols-2 p-20">
+            <div>
+                <img src="/img/server2.svg" width="400" height="400" alt="Imagen">
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-4xl"><span class="font-extralight">Starter</span><span class="font-semibold"> Plan</span></p>
+                <p class="text-6xl font-bold">Web Hosting</p>
+                <div class="flex flex-wrap items-center">
+                    <p class="uppercase font-light text-sm tracking-widest mr-3">100 GB de espacio</p>
+                    <p class="font-extralight">|</p>
+                    <p class="uppercase font-light text-sm tracking-widest mx-3">Tráfico Ilimitado</p>
+                    <p class="font-extralight">|</p>
+                    <p class="uppercase font-light text-sm tracking-widest mx-3">100 correos</p>
+                    <p class="font-extralight">|</p>
+                    <p class="uppercase font-light text-sm tracking-widest mr-3">Backups Diarios</p>
+                </div>
+                <p class="my-5">Todos los planes incluyen migraciones, SSL gratis, copias de seguridad y 99,99% de tiempo de actividad garantizado</p>
+                <div>
+                    <a href="https://clientes.servistream.net/index.php?rp=/store/web-hosting-cloud/starter-plan" type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Comprar Ahora</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contenedor mx-auto grid grid-cols-3 py-20 gap-10">
+        <CardDescripDos img="/img/SolarCodeFileOutline.svg" titulo="Fácil gestión de dominios" descrip="Administre todos los aspectos de sus dominios desde un único panel de control fácil de usar." />
+        <CardDescripDos img="/img/SolarDiplomaVerifiedOutline.svg" titulo="Auto renovación" descrip="Protege tu dominio de caducar sin que muevas un dedo." />
+        <CardDescripDos img="/img/SolarKeyMinimalisticSquare3Outline.svg" titulo="Bloqueo de dominio" descrip="Una vez que encuentre su dominio perfecto, lo ayudaremos a bloquearlo." />
+        <CardDescripDos img="/img/SolarIncomingCallRoundedOutline.svg" titulo="Soporte" descrip="Listo para acudir en su ayuda por teléfono o chat en cualquier momento, por cualquier motivo." />
+        <CardDescripDos img="/img/SolarMagniferOutline.svg" titulo="Búsqueda ultrarrápida" descrip="Encuentre rápidamente ese dominio perfecto entre la multitud de opciones disponibles." />
+        <CardDescripDos img="/img/SolarNotificationLinesRemoveOutline.svg" titulo="Privacidad de dominio" descrip="Mantenga su información personal oculta de posibles spammers y ladrones de identidad." />
+    </section>
+
+
+
+
+    <!-- INICIO CODIGO SECCION FOOTER-->
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    .contenedor__lgo__server {
+        max-width: 900px;
+    }
+
+    header {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #181414;
+
+    }
+
+    .bak__barra {
+        background-color: #22b5734d;
+        width: 15rem;
+        border-radius: 0.5rem;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .border__cuadro {
+        border: 0.1px solid #ffffff44;
+    }
+
+    .img__descuento{
+        background-image: url(../img/hosting-reseller.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1rem;
+    }
+
+    .contenedor__hosting__preguntas {
+        max-width: 1000px;
+
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+</style>

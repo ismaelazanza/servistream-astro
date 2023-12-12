@@ -1,0 +1,151 @@
+---
+interface Props {
+    plan: string;
+    precio: string;
+    activacion: string;
+    link: string;
+    des1: string;
+    des2: string;
+    des3: string;
+}
+
+const { plan, precio, activacion, link, des1, des2, des3 } = Astro.props;
+---
+
+<section class="p-5">
+    <p class="text-white uppercase font-light text-sm tracking-widest">
+        Plan {plan}
+    </p>
+    <p class="text-white mt-5">
+        <span class="text-4xl font-semibold">{precio}</span><span
+            class="text-xs">.00/mes</span>
+    </p>
+    <p class="text-is-gradient font-semibold text-sm">{activacion}</p>
+
+    <ul class="mt-5">
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm"><strong>{des1}</strong> oyentes</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Hasta <strong>{des2}</strong></p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Tranferencia Ilimitada</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Compatible con SSL</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm"><strong>{des3}</strong> AutoDJ</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Soporte para móviles</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Reproductor HTML5</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Shoutcast</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">Panel CentovaCast</p>
+        </li>
+        <li class="flex items-center">
+            <img
+                src="../img/PhCircleFill.svg"
+                class="mr-1"
+                width="10"
+                height="10"
+                alt="Circle"
+            />
+            <p class="text-white text-sm">App Android (aplica restricciones)</p>
+        </li>
+    </ul>
+
+    <a
+    href={link}
+    class="mt-10 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+>
+    <span
+        class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+    >
+        Realizar Pedido
+    </span>
+</a>
+</section>
+
+<style>
+    .text-is-gradient {
+        background-image: linear-gradient(
+            to right,
+            var(--gradient-text) 11%,
+            var(--gradient-color-2)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+</style>

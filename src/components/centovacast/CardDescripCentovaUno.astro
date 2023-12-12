@@ -1,0 +1,15 @@
+---
+interface Props {
+    content: string;
+    src: string;
+    title: string;
+}
+
+const { src, content, title } = Astro.props;
+---
+
+<section class="p-5 flex flex-col justify-center items-center text-center">
+    <img class="mb-5" src={src} alt="Icono">
+    <p class="text-white font-bold text-xl mb-4" >{title}</p>
+    <p class="text-white">{content}</p>
+</section>

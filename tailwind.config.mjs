@@ -24,9 +24,10 @@ export default {
 			  colors: {
 				transparent: 'transparent',
 				current: 'currentColor',
-				'principal': '#22b573',
+				'principal': '#00b285',
 				'principalDegra': '#159159',
 				'oscuro': '#0e141b',
+				'morado': '#1e1b3d',
 			  },
 
 		},

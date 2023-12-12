@@ -1,0 +1,96 @@
+---
+interface Props {
+    plan: string;
+    precio: string;
+    opcion: string
+    des1: string;
+    des2: string;
+    link: string;
+}
+
+const {
+    plan,
+    precio,
+    opcion,
+    des1,
+    des2,
+    link,
+} = Astro.props;
+---
+
+<section class="hover__planes bg-white rounded-t-lg">
+    <div class="p-10">
+        <p class="uppercase mb-5 font-semibold text-sm tracking-wider text-gray-500">Planes Incluyen</p>
+        <ul>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">LiteSpeed Webserver</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">{des1} cPanel cuentas</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">{des2} SSD espacio</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">Transferencia Ilimitada</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">2GB LVE RAM por cPanel</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">Correos Electrónicos</p>
+            </li>
+    
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">Backup 2 por dia</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">Migración Gratis</p>
+            </li>
+            <li class="flex items-center">
+                <img src="/img/PhCheckCircleBold.svg" width="15" class="mr-2" alt="Icono">
+                <p class="text-sm font-semibold">Facturación upmind.com</p>
+            </li>
+            
+        </ul>
+
+    </div>
+
+    <div class="bg-blue-50 p-10 rounded-b-lg">
+        <p class="uppercase mb-5 font-semibold text-sm tracking-wider text-gray-500">{plan}</p>
+        <div class="grid grid-cols-2 gap-2">
+
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-sm font-semibold">{opcion}</p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-4xl font-bold">{precio} <span class="text-sm">/mes</span></p>
+                <p class="text-xs">Descuento Anual</p>
+            </div>
+
+        </div>
+
+        <a
+        class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded-lg w-full inline-block mt-10"
+        href={link}>
+        Comenzar Ahora
+    </a>
+
+    </div>
+
+
+</section>
+
+<style>
+
+
+
+</style>

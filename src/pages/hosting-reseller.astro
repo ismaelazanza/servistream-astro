@@ -3,117 +3,405 @@ import Layout from "../layouts/Layout.astro";
 import Top from "../components/Top.astro";
 import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
-import SubmenuHosting from "../components/hosting_cloud/SubmenuHostingCloud.astro";
+import SubmenuHostingReseller from "../components/hosting_reseller/SubmenuHostingReseller.astro";
 import Footer from "../components/Footer.astro";
-import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
-import PlanesHostingCloud from "../components/hosting_cloud/PlanesHostingCloud.astro";
-import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
-import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
+import CardPlanesHostingReseller from "../components/hosting_reseller/cardPlanesHostingReseller.astro";
+import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
+
 ---
 
 <Layout title="Hosting Internet Services | Hosting Cloud">
     <!-- INICIA CODIGO SECCION HEADER-->
 
-    <header class="h-auto">
+    <header class="h-screen css-selector">
         <Top />
         <div class="hidden lg:block">
             <Menu />
         </div>
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
-        <div class="contenedor mx-auto grid grid-cols-2 pt-10 pb-20">
-            <div>
-                <section>
-                    <p class="text-white text-center bak__barra">
-                        A partir de <strong>$4.99</strong> USD/mes
-                    </p>
-                    <h1 class="text-white text-6xl font-bold pb-5">
-                        Web Reseller
-                    </h1>
-                    <p class="text-white text-lg">
-                        Nuestro servicio compartido ofrece una plataforma
-                        potente y comprobada eso es perfecto para alojar sus
-                        sitios web
-                    </p>
-                    <section class="contenedor mx-auto mb-5">
-                        <div class="grid grid-cols-4">
-                            <CardHostingLinux
-                                src="/img/SolarSpedometerMaxBroken.svg"
-                                content="Velocidad Extrema"
-                            />
-                            <CardHostingLinux
-                                src="/img/SolarDevicesBroken.svg"
-                                content="Potentes Herramientas"
-                            />
-                            <CardHostingLinux
-                                src="/img/SolarCircleBottomUpBroken.svg"
-                                content="Migración de Sitios"
-                            />
-                            <CardHostingLinux
-                                src="/img/SolarSmileCircleBroken.svg"
-                                content="Soporte Experto"
-                            />
-                        </div>
-                    </section>
-					<div class="mt-10 flex">
-						
-						<a
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-2"
-							href="/hosting-cloud"
-						>
-							Comenzar Ahora
-						</a>
-						<a
-							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-lg "
-							href="/paginas-web"
-						>
-							Más que un sitio web
-							<i class="fa-solid fa-arrow-right ml-3"></i>
-						</a>
-					</div>
-                </section>
+        <div
+            class="contenedor mx-auto text-center flex flex-col justify-center items-center h-[70%]"
+        >
+            <p
+                class="text-white border-[.1px] border__cuadro rounded-full text-sm px-4 py-2 mb-10"
+            >
+                Trabajamos desde cero para crear una plataforma de alojamiento
+                ultrarrápida.
+            </p>
+
+            <h1 class="text-white text-6xl font-bold pb-5">
+                cPanel Reseller Hosting
+            </h1>
+            <p class="text-white text-2xl">
+                Dirija su propio negocio de hosting con la última plataforma <br
+                /> de hosting para revendedores ilimitados cPanel/WHM.
+            </p>
+
+            <a
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-2 inline-block my-10"
+                href="/hosting-cloud"
+            >
+                Inicia una prueba desde $10.00
+            </a>
+        </div>
+
+        <div
+            class="contenedor__lgo__server mx-auto grid grid-cols-5 gap-5 place-content-center"
+        >
+            <div class="flex">
+                <img
+                    src="/img/CircleFlagsUs.svg"
+                    class="mr-2"
+                    width="20"
+                    height="20"
+                    alt="Icon"
+                />
+                <p class="text-white font-bold">Costa Este</p>
             </div>
-            <div></div>
+            <div class="flex">
+                <img
+                    src="/img/CircleFlagsUs.svg"
+                    class="mr-2"
+                    width="20"
+                    height="20"
+                    alt="Icon"
+                />
+                <p class="text-white font-bold">Costa Oeste</p>
+            </div>
+            <div class="flex">
+                <img
+                    src="/img/uk.svg"
+                    class="mr-2"
+                    width="20"
+                    height="20"
+                    alt="Icon"
+                />
+                <p class="text-white font-bold">Reino Unido</p>
+            </div>
+            <div class="flex">
+                <img
+                    src="/img/europe.svg"
+                    class="mr-2"
+                    width="20"
+                    height="20"
+                    alt="Icon"
+                />
+                <p class="text-white font-bold">Europa</p>
+            </div>
+            <div class="flex">
+                <img
+                    src="/img/australia.svg"
+                    class="mr-2"
+                    width="20"
+                    height="20"
+                    alt="Icon"
+                />
+                <p class="text-white font-bold">Australia</p>
+            </div>
         </div>
     </header>
 
     <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
 
     <section>
-        <SubmenuHosting />
+        <SubmenuHostingReseller />
     </section>
 
- 
+    <section class="contenedor mx-auto my-20">
+        <h2 class="text-center">Planes de hosting <br /> para revendedores</h2>
+        <p class="text-center">
+            Utilizamos infraestructura de Amazon Web Server, Google Cloud,
+            Digital Ocean, Linode.
+        </p>
 
+        <section class="contenedor mx-auto grid grid-cols-4 gap-2 mt-10">
+            <section class="col-[2/3]">
+                <CardPlanesHostingReseller
+                    plan="Go Reseller"
+                    des1="20"
+                    des2="20"
+                    precio="$20"
+                    opcion="Una gran manera de empezar"
+                    link="https://clientes.servistream.net/index.php?rp=/store/reseller-hosting-cpanel/go-reseller"
+                />
+            </section>
+    
+            <section class="col-[3/4]">
+                <CardPlanesHostingReseller
+                    plan="Unlimited Reseller"
+                    des1="50"
+                    des2="Ilimitado"
+                    precio="$42"
+                    opcion="Sin limites de espacio "
+                    link="https://clientes.servistream.net/index.php?rp=/store/reseller-hosting-cpanel/unlimited-reseller"
+                />
+            </section>
+        </section>
+    </section>
+
+
+
+    <section class="img__descuento contenedor mx-auto p-20 grid grid-cols-2 my-10">
+        <div>
+            <p class="text-white mb-5">Gran Oferta por tiempo limitado
+            </p>
+            <h2 class="text-white mb-5">¡Use el código de descuento MESRESELLER
+                para obtener un mes por $10.00!</h2>
+                <p class="text-white">Cada cuenta de revendedor de hosting es completamente
+                    de marca blanca y viene con almacenamiento SSD súper rápido,
+                    ancho de banda ilimitado, correos electrónicos, SSL automáticos y migraciones</p>
+
+        <a class="bg-principal hover:bg-principalDegra text-white font-bold py-2 px-4 rounded-lg inline-block mt-5" href="#">Comprar Ahora <i class="fa-solid fa-chevron-right text-xs pl-2"></i></a>
+
+        </div>
+
+    </section>
+
+    <section class="grid grid-cols-3 contenedor mx-auto my-20 gap-10">
+        <DescripcionHosting src="/img/SolarVirusLinear.svg" title="Escaneo y eliminación de malware" content="Protegemos su sitio web de hackers y otros programas maliciosos escaneándolo diariamente" />
+        <DescripcionHosting src="/img/SolarCloudUploadOutline.svg" title="Centro de datos" content="Nuestros servidores premium y de baja densidad están ubicados en todo el mundo, para impulsar el rendimiento de su negocio" />
+        <DescripcionHosting src="/img/SolarSquareTransferHorizontalOutline.svg" title="Migraciones fáciles" content="Si ya utiliza WHM o cPanel con su host actual, podemos migrar fácilmente las copias de seguridad de cPanel a su nueva cuenta de revendedor" />
+        <DescripcionHosting src="/img/SolarSoundwaveSquareOutline.svg" title="Web Host Manager" content="Administre cuentas de clientes, sitios web ilimitados, correos electrónicos y mucho más sin ninguna carga" />
+        <DescripcionHosting src="/img/SolarWidgetOutline.svg" title="Etiquetado blanca" content="La etiqueta 100% blanca con todos los planes fortalece su marca y la ayuda a crecer a nivel mundial" />
+        <DescripcionHosting src="/img/SolarPlain3Outline.svg" title="Instalador de 1 clic" content="Cada cuenta que cree en su espacio de alojamiento de revendedor obtiene Softcaluous que puede instalar WordPress, Joomla y más" />
+        <DescripcionHosting src="/img/SolarScreencast2Outline.svg" title="cPanel / WHM" content="Dé acceso a cPanel a sus clientes para que puedan administrar sus propios correos electrónicos, dominios y sitios web desde una interfaz basada en la web" />
+        <DescripcionHosting src="/img/SolarServerPathOutline.svg" title="Almacenamiento 100% SSD" content="Los sitios web que se almacenan en servidores 100% SSD experimentan velocidades de página más rápidas" />
+        <DescripcionHosting src="/img/SolarSettingsLinear.svg" title="Licencia WHMCS" content="Una poderosa herramienta automatizada, WHMCS es una solución de gestión de clientes, facturación y soporte todo en uno para sus negocios en línea" />
+    </section>
+
+        <!-- INICIO CODIGO SECCION PREGUNTAS FRECUENTES-->
+
+        <section class="bg-white pt-20 pb-20">
+            <div class="contenedor__hosting__preguntas mx-auto px-5">
+                <h2 class="mb-12">Preguntas Frecuentes</h2>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-1"
+                        >
+                            <span>¿Cómo puede el espacio en disco ser ilimitado?</span>
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-1"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        Debido a que ejecutamos nuestra plataforma sobre los proveedores de la nube, podemos seguir agregando espacio a los servidores. Siempre que su espacio en disco se utilice para sitios web, no limitaremos su uso.
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-2"
+                        >
+                            <span>¿Estoy buscando migrar, ¿podrías ayudarme a mover mi sitio web?</span>
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-2"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        El equipo de especialistas en migración interno de servistream.net estará encantado de ayudarlo a mudarse. Podemos trabajar con usted para migrar sus sitios web a la velocidad que más le convenga. El primer paso es realizar el pedido del paquete deseado. Una vez hecho esto, puede ir a Soporte y pedir una transferencia e ingresar los detalles de su antiguo host. También podemos mover correos electrónicos.
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-3"
+                        >
+                            <span>¿Dónde están ubicadas sus copias de seguridad?</span>
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-3"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        Usamos varios proveedores de nube diferentes para las copias de seguridad. Nunca realizamos copias de seguridad en el mismo centro de datos que su sitio web. Sin embargo, siempre realizamos copias de seguridad en la misma jurisdicción, por lo que no tiene ningún problema de residencia de datos. Los datos están encriptados en reposo.
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-4"
+                        >
+                            <span
+                                >¿Cuántos visitantes manejará una cuenta de revendedor?</span
+                            >
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-4"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        Esto depende enteramente del sitio web. Nuestro alojamiento compartido creemos que es el mejor que existe, pero en algún momento un sitio supera al alojamiento compartido. Un sitio de WordPress con una buena configuración de almacenamiento en caché debería poder recibir millones de visitantes mensuales.
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-5"
+                        >
+                            <span
+                                >¿Puedo poner varias cuentas de revendedor en un servidor?</span
+                            >
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-5"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        Sí, puede agregar tantas cuentas de revendedor como desee a un servidor. Esto le permitiría tener un único inicio de sesión de revendedor con miles de cuentas de cPanel. Sin embargo, recomendamos dividir a los revendedores entre ubicaciones y servidor. Nuestro único clúster de DNS hace que esto sea realmente sencillo.
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-3">
+                    <h6 class="mb-0">
+                        <button
+                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
+                            data-collapse-target="collapse-6"
+                        >
+                            <span>¿Existe alguna restrcción sobre lo que no puedo alojar?</span>
+                            <i
+                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
+                            ></i>
+                            <i
+                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
+                            ></i>
+                        </button>
+                    </h6>
+                    <div
+                        data-collapse="collapse-6"
+                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
+                        >
+                        Nuestros servicios están diseñados para alojar sitios web. Específicamente, no permitimos sitios de video «tubo» (para adultos o de otro tipo), servicios de respaldo de archivos o en la nube, mineros de criptografía, intercambio de archivos o cualquier directorio de contenido con derechos de autor. Pregunte si no está seguro.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
 
     <!-- INICIO CODIGO SECCION FOOTER-->
     <Footer />
 </Layout>
 
 <style lang="scss">
+    .contenedor__lgo__server {
+        max-width: 900px;
+    }
+
     header {
-        background-image: url(../img/young-people-urban-city-lifestyle-street-outdoor-2022-12-16-02-32-23-utc.avif);
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: #181414;
 
-        .bak__barra {
-            background-color: #22b5734d;
-            width: 15rem;
-            border-radius: 0.5rem;
-            padding: 0 0.5rem;
-            margin-bottom: 2rem;
+        background: linear-gradient(300deg, #9d1cc5, #373fd1, #199b92, #0c061b);
+        background-size: 240% 240%;
+        animation: gradient-animation 24s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
         }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .bak__barra {
+        background-color: #22b5734d;
+        width: 15rem;
+        border-radius: 0.5rem;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .border__cuadro {
+        border: 0.1px solid #ffffff44;
+    }
+
+    .img__descuento{
+        background-image: url(../img/hosting-reseller.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1rem;
+    }
+
+    .contenedor__hosting__preguntas {
+        max-width: 1000px;
+
     }
 
     /*
     CSS SECCION PLANES HOSTING
     */
-
-    .contenedor__hosting__precios {
-        max-width: 1100px;
-        background: linear-gradient(97.03deg, #edf4ff -0.58%, #deedff 92.09%);
-        border-radius: 1rem;
-    }
 </style>
+
+<script
+    src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"
+></script>

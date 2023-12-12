@@ -1,0 +1,17 @@
+---
+interface Props {
+    titulo: string;
+    descrip: string;
+}
+
+const {
+    titulo,
+    descrip,
+} = Astro.props;
+---
+
+<section>
+    <p class="font-bold text-xl mb-4 underline">{titulo}</p>
+    <p>{descrip}</p>
+</section>
+
