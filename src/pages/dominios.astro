@@ -12,6 +12,7 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
 ---
 
 <Layout title="Hosting Internet Services | Dominios">
+
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <header class="css-selector">
@@ -22,10 +23,10 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
         <div
-            class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+            class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10 px-5"
         >
 
-            <h1 class="text-white text-6xl font-bold pb-5">
+            <h1 class="text-white text-3xl font-bold pb-5 md:text-5xl lg:text-6xl">
                 Busca tu Dominio
             </h1>
             <p class="text-white">
@@ -33,11 +34,11 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
             </p>
 
         </div>
-        <section class="contenedor__lgo__server mx-auto pb-10">
+        <section class="contenedor__lgo__server mx-auto pb-10 px-5">
 			<BuscarDominiosDos />
 		</section>
 
-        <section class="contenedor__lgo__server mx-auto grid grid-cols-4 content-center py-10">
+        <section class="contenedor__lgo__server mx-auto grid grid-cols-2 content-center py-10 md:grid-cols-3 lg:grid-cols-4">
             <div class="flex flex-col justify-center items-center">
                 <h3 class="text-white text-6xl">.com</h3>
                 <p class="text-white font-semibold text-2xl">$15<span class="text-sm">.00/anual</span></p>
@@ -64,15 +65,18 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
 
     <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
 
-    <section>
+    <section class="hidden lg:block">
         <SubmenuDominios />
     </section>
 
-    <section class="contenedor mx-auto my-20">
+    <!-- INICIA CODIGO SECCION BUSCAR DOMINIOS DESCRIPCION-->
+
+
+    <section class="contenedor mx-auto my-20 px-5">
         <h2 class="text-center">¿Por qué registrar tus dominios con servistream?</h2>
         <p class="text-center">Disfruta de una activación instantánea y un soporte directo y en español al comprar dominios web y hosting con servistream.</p>
 
-        <div class="grid grid-cols-3 gap-5 mt-20">
+        <div class="grid grid-cols-1 gap-5 mt-20 md:grid-cols-2 lg:grid-cols-3">
             <CardDescripUno titulo="Soporte profesional 24/7" descrip="Nuestro equipo de soporte estará disponible cuando lo necesites. Hemos hecho la busqueda y registro de dominios lo más fácil posible, pero a veces todos necesitamos algo de ayuda. Solo contáctanos y te explicaremos todo." />
             <CardDescripUno titulo="Registrador de dominios confiable" descrip="Servistream es miembro de una comunidad de registradores de dominios acreditados por la ICANN. Somos elegidos por millones de usuarios web a nivel mundial para el registro de sus dominios." />
             <CardDescripUno titulo="Configuración instantanea y control fácil" descrip="Una vez hayas elegido tu nombre ideal, es hora de registrar tu dominio web y enlazarlo a tu sitio." />
@@ -81,11 +85,11 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
     </section>
 
     <section class="bg-white">
-        <div class="contenedor mx-auto grid grid-cols-2 p-20">
+        <div class="contenedor mx-auto grid gap-5 grid-cols-1 p-10 md:p-20 md:grid-cols-2">
             <div>
                 <img src="/img/server2.svg" width="400" height="400" alt="Imagen">
             </div>
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center mt-10 md:mt-0">
                 <p class="text-4xl"><span class="font-extralight">Starter</span><span class="font-semibold"> Plan</span></p>
                 <p class="text-6xl font-bold">Web Hosting</p>
                 <div class="flex flex-wrap items-center">
@@ -106,7 +110,7 @@ import CardDescripDos from "../components/dominios/CardDescripDos.astro";
         </div>
     </section>
 
-    <section class="contenedor mx-auto grid grid-cols-3 py-20 gap-10">
+    <section class="contenedor mx-auto grid grid-cols-1 py-20 px-5 gap-10 md:grid-cols-2 lg:grid-cols-3">
         <CardDescripDos img="/img/SolarCodeFileOutline.svg" titulo="Fácil gestión de dominios" descrip="Administre todos los aspectos de sus dominios desde un único panel de control fácil de usar." />
         <CardDescripDos img="/img/SolarDiplomaVerifiedOutline.svg" titulo="Auto renovación" descrip="Protege tu dominio de caducar sin que muevas un dedo." />
         <CardDescripDos img="/img/SolarKeyMinimalisticSquare3Outline.svg" titulo="Bloqueo de dominio" descrip="Una vez que encuentre su dominio perfecto, lo ayudaremos a bloquearlo." />
