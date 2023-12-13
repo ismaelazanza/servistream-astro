@@ -1,0 +1,68 @@
+---
+interface Props {
+    plan: string;
+    descrip: string;
+    precio: string;
+    configuracion: string;
+    link: string;
+    des1: string;
+    des2: string;
+    des3?: string;
+}
+
+const { descrip, link, precio, plan, configuracion, des1, des2, des3} = Astro.props;
+---
+
+
+<section class="p-5">
+    <p class="font-semibold text-xl text-is-gradient">{plan}</p>
+    <p class="text-white text-sm">{descrip}</p>
+
+    <div class="flex flex-col my-10">
+        <p class="text-white"><span class="text-6xl font-semibold">{precio}</span>/mes</p>
+        <p class="text-white text-sm">{configuracion}</p>
+    </div>
+
+    <ul class="">
+        <li class="text-white">
+           {des1} televidentes
+        </li>
+        <li class="text-white">
+           {des2} tranferencia
+        </li>
+        <li class="text-white">Transmite hasta 1080p</li>
+        <li class="text-white underline">{des3}</li>
+    </ul>
+
+    <div class="flex mt-5">
+        <p class="text-white text-xs">Panel</p>
+        <p class="text-white text-xs mx-2">App Android</p>
+        <p class="text-white text-xs">Retransmisión</p>
+    </div>
+
+    <a
+    href={link}
+    class="mt-10 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+>
+    <span
+        class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+    >
+        Realizar Pedido
+    </span>
+</a>
+
+</section>
+
+
+<style>
+    .text-is-gradient {
+        background-image: linear-gradient(
+            to right,
+            var(--gradient-text) 11%,
+            var(--gradient-color-2)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+</style>

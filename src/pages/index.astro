@@ -26,13 +26,15 @@ import Footer from "../components/Footer.astro";
 			<div class="pt-4 lg:hidden"><MobileMenu /></div>
 
 			<section
-				class="mt-20 px-5 contenedor mx-auto grid grid-cols-1 grid-rows-1 gap-2 place-content-center  lg:grid-cols-2"
+				class="mt-20 px-5 contenedor mx-auto grid grid-cols-1 grid-rows-1 gap-2 place-content-center lg:grid-cols-2"
 			>
 				<div>
-					<h2 class="text-white pb-3 text-lg underline ">
+					<h2 class="text-white pb-3 text-lg underline">
 						Expertos en soluciones web desde 2014
 					</h2>
-					<h1 class="text-white text-4xl font-bold  md:text-5xl lg:text-7xl">
+					<h1
+						class="text-white text-4xl font-bold md:text-5xl lg:text-7xl"
+					>
 						El mejor Hosting y Radio Streaming del Ecuador
 					</h1>
 					<p class="text-white text-xl pt-2 lg:text-2xl">
@@ -41,9 +43,8 @@ import Footer from "../components/Footer.astro";
 						de búsqueda confíen en ti. Garantizado.
 					</p>
 					<div class="mt-10 flex flex-col lg:flex-row">
-						
 						<a
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mb-4 lg:mb-0 lg:mr-2 "
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mb-4 lg:mb-0 lg:mr-2"
 							href="/hosting-cloud"
 						>
 							Comenzar Ahora
@@ -96,7 +97,7 @@ import Footer from "../components/Footer.astro";
 			class="contenedor mx-auto grid mt-[10rem] mb-[10rem] grid-cols-1 gap-4 px-5 lg:grid-cols-2"
 		>
 			<div class="flex flex-col justify-center">
-				<h2 class="mt-15">¿Listo para <br> más Velocidad?</h2>
+				<h2 class="mt-15">¿Listo para <br /> más Velocidad?</h2>
 				<h5 class="mb-5">
 					Hacemos que sea fácil aprovechar más de 20 años de
 					experiencia — nuestros expertos web se encargarán de todo
@@ -104,17 +105,18 @@ import Footer from "../components/Footer.astro";
 				</h5>
 				<div>
 					<a
-					class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
-					href="/radio-streaming"
-				>
-					Conoce más
-					<i class="fa-solid fa-arrow-right ml-3"></i>
-				</a>
+						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
+						href="/radio-streaming"
+					>
+						Conoce más
+						<i class="fa-solid fa-arrow-right ml-3"></i>
+					</a>
 				</div>
-
 			</div>
 
-			<div class="grid gap-4 grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2">
+			<div
+				class="grid gap-4 grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2"
+			>
 				<TarjetasIndex
 					title1="Hosting"
 					title2="Linux"
@@ -177,17 +179,18 @@ import Footer from "../components/Footer.astro";
 
 				<div>
 					<a
-					class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
-					href="/hosting-cloud"
-				>
-					Ver nuestro planes
-					<i class="fa-solid fa-arrow-right ml-3"></i>
-				</a>
+						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
+						href="/hosting-cloud"
+					>
+						Ver nuestro planes
+						<i class="fa-solid fa-arrow-right ml-3"></i>
+					</a>
 				</div>
-
 			</div>
 			<div>
-				<div class="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-2">
+				<div
+					class="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-2"
+				>
 					<HostingServicios
 						src="/img/SolarCodeScanOutline.svg"
 						title="cPanel con CloudLinux"
@@ -277,7 +280,25 @@ import Footer from "../components/Footer.astro";
 		<!-- FIN CODIGO SECCION TESTIMONIO -->
 
 		<Footer />
-		
+
+		<!-- CODIGO DE CONTACTO TELEFONO-->
+		<div
+			class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10"
+		>
+			<div>
+				<a
+					title="Tienes Dudas"
+					href="https://walink.co/4f797c"
+					target="_blank"
+					class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+				>
+					<img
+						class="object-cover object-center w-full h-full rounded-full"
+						src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo-whatsapp-512.png"
+					/>
+				</a>
+			</div>
+		</div>
 	</main>
 </Layout>
 

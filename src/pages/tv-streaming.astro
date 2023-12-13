@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import FooterOscuro from "../components/FooterOscuro.astro";
+import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
+import CardTvStreaming from "../components/tv_streaming/CardTvStreaming.astro";
+import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStreaming.astro";
+
+---
+
+<Layout title="Hosting Internet Services | Hosting Cloud">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <main>
+        <header class="css-selector">
+            <Top />
+            <div class="hidden lg:block">
+                <Menu />
+            </div>
+            <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div
+                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+            >
+                <h1
+                    class="text-white text-6xl font-light pb-5 tracking-tighter"
+                >
+                    <span class="text-is-gradient">Video Live Streaming</span>
+                </h1>
+
+                <p class="text-white">
+                    Su señal contará con la mejor calidad de streaming en Internet y con las mejores <br> condiciones, una plataforma tecnológica segura, robusta y fiable
+                </p>
+
+                <iframe class="mt-10" width="100%" height="415" src="https://www.youtube.com/embed/pgmyuzBg_kI?si=n0gNOTrwd_G99HbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <div>
+                    <p class="text-white bg-morado inline-block py-1 px-4 rounded-md mt-10 text-sm font-semibold">Proporcionado por VDO, Panel de control de transmisión de video líder en la industria
+                    </p>
+                </div>
+
+                <div class="flex items-center mt-10">
+                    <a
+                        href="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-basico"
+                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                    >
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                        >
+                            Comprar Streaming Ahora
+                        </span>
+                    </a>
+                    <a href="#ver_precios" class="text-sm font-medium text-white ml-5"
+                        >Comparar Precios <i class="fa-solid fa-arrow-down-long"
+                        ></i></a
+                    >
+                </div>
+
+                <!-- INICIO CODIGO SECCION LOGOS CLIENTES SCROLL HOSTING-->
+
+                <article class="py-10">
+                    <section class="contenedor mx-auto">
+                        <LogosScrollHosting />
+                    </section>
+                </article>
+            </div>
+        </header>
+
+
+        <section class="grid grid-cols-3 contenedor mx-auto gap-5">
+            <CardTvStreaming img="/img/SolarAirbudsCaseMinimalisticOutline.svg" title="Marca" content="Le permite cargar/agregar su propio logotipo y el nombre de su empresa a su transmisión"/>
+            <CardTvStreaming img="/img/SolarCardTransferLinear_2.svg" title="Retransmitir" content="Transmisión simultánea al programador de redes sociales: retransmisión automática a las redes sociales según el programa"/>
+            <CardTvStreaming img="/img/SolarHelpOutline_2.svg" title="Soporte" content="Contamos con expertos que trabajan las 24 horas administrando sus transmisiones, su red y su hardware"/>
+        </section>
+
+
+         <!-- INICIO CODIGO SECCION PRECIO-->
+
+         <div id="ver_precios" class="my-20 contenedor mx-auto">
+            <h2 class="text-white text-center">
+                Transmisión de video administrada
+            </h2>
+            <p class="text-white text-center">Servicio de alojamiento de transmisión de video administrado con automatización de canales de TV, <br>
+                programador avanzado de listas de reproducción y grabación para transmisión en vivo.</p>
+         </div>
+
+        <section class="contenedor__precios mx-auto grid grid-cols-3 pb-20 gap-10">
+
+          <div class="p-5">
+            <p class="text-4xl text-white font-semibold">Nuestros planes y precios asequibles</p>
+            <p class="text-white mt-2">Seleccione un plan adecuado para su alojamiento y transmisión de video profesional</p>
+            </div>  
+
+         <CardPrecioTvStreaming plan="Live Streaming Small" descrip="Transmisión solo en vivo" precio="15" configuracion="Activación en unas horas" des1="99" des2="600 GB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-tv/live-streaming-small"/>
+         <CardPrecioTvStreaming plan="Live Streaming Profesional" descrip="Transmisión solo en vivo" precio="25" configuracion="Activación en unas horas" des1="499" des2="4 TB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-tv/live-streaming-profesional"/>
+         <CardPrecioTvStreaming plan="Cloud Streaming Basic" descrip="Transmisión en vivo y con AutoDj" precio="21" configuracion="Activación en unas horas" des1="99" des2="800 GB" des3="18 GB disco SSL" link="https://clientes.servistream.net/index.php?rp=/store/streaming-tv/live-cloud-streaming-basic"/>
+         <CardPrecioTvStreaming plan="Cloud Streaming Medium" descrip="Transmisión en vivo y con AutoDj" precio="35" configuracion="Activación en unas horas" des1="299" des2="2.5 TB" des3="60 GB disco SSL" link="https://clientes.servistream.net/index.php?rp=/store/streaming-tv/live-cloud-streaming-medium"/>
+         <CardPrecioTvStreaming plan="Cloud Streaming Large" descrip="Transmisión en vivo y con AutoDj" precio="70" configuracion="Activación en unas horas" des1="499" des2="4 TB" des3="100 GB disco SSL" link="https://clientes.servistream.net/index.php?rp=/store/streaming-tv/live-cloud-streaming-large"/>
+
+        </section>
+
+
+         <!-- INICIO CODIGO SECCION PLAYER RADIO-->
+
+
+         <div class="player-tv">
+            <div class="contenedor-tv-player mx-auto">
+                <iframe src="https://playerhd.eu/tv/servistream/" width="100%" height="505px" frameborder="0" scrolling="auto" allowfullscreen style="position:relative; margin:0; padding:0; top:0; left: 0;width: 100%; height: 505px;"></iframe>
+            </div>
+    
+        </div>
+
+
+        <!-- INICIO CODIGO SECCION DESCRIPCION DOS-->
+
+        <section class="grid grid-cols-4 contenedor mx-auto py-20 gap-3">
+            <CardDescripCentovaDos title="Sin Restricciones" content="Podrá alternar la transmisión entre las cámaras que tenga instaladas, videos alojados en su computadora o imágenes" />
+            <CardDescripCentovaDos title="Compatible" content="Cada cliente que posee nuestros servicios puede visualizar sus transmisiones a través de diferentes dispositivos" />
+            <CardDescripCentovaDos title="Adaptive bitrate" content="Sistema que permite optimizar su señal de Streaming en diferentes calidades: 1080p, 720p y 480p" />
+            <CardDescripCentovaDos title="Software" content="Nuestros servidores son compatibles con toda clase de encoders del mercado" />
+        </section>
+
+            <!-- INICIO CODIGO SECCION FOOTER-->
+    <FooterOscuro />
+
+
+    </main>
+
+
+</Layout>
+
+<style lang="scss">
+    .text-is-gradient {
+        background-image: linear-gradient(
+            to right,
+            var(--gradient-text) 11%,
+            var(--gradient-color-2)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    main {
+        background-color: #0e141b;
+    }
+
+    .contenedor-tv-player {
+        max-width: 900px;
+    }
+
+    .contenedor__precios {
+        max-width: 1000px;
+    }
+
+    iframe{
+        border-radius: 1rem;
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+</style>

@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import FooterOscuro from "../components/FooterOscuro.astro";
+import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+import CardDescripCentovaUno from "../components/centovacast/CardDescripCentovaUno.astro";
+import CardPreciosCentova from "../components/centovacast/CardPreciosCentova.astro";
+import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
+import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosResellerRadio.astro";
+---
+
+<Layout title="Hosting Internet Services | Hosting Cloud">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <main>
+        <header class="css-selector">
+            <Top />
+            <div class="hidden lg:block">
+                <Menu />
+            </div>
+            <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div
+                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+            >
+                <h1
+                    class="text-white text-6xl font-light pb-5 tracking-tighter"
+                >
+                    <span class="text-is-gradient">Reseller Radio</span>
+                </h1>
+                <p class="text-white">
+                    Inicia tu negocio de radio por internet, nosotros te
+                    ayudamos a crecer
+                </p>
+
+                <div class="flex items-center mt-10">
+                    <a
+                        href="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-smart"
+                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                    >
+                        <span
+                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                        >
+                            Comprar Reseller Ahora
+                        </span>
+                    </a>
+                    <a
+                        href="#ver_precios"
+                        class="text-sm font-medium text-white ml-5"
+                        >Comparar Precios <i class="fa-solid fa-arrow-down-long"
+                        ></i></a
+                    >
+                </div>
+
+                <!-- INICIO CODIGO SECCION LOGOS CLIENTES SCROLL HOSTING-->
+
+                <article class="py-10">
+                    <section class="contenedor mx-auto">
+                        <LogosScrollHosting />
+                    </section>
+                    <p
+                        class="text-white bg-morado inline-block py-1 px-4 rounded-md mt-10 text-sm font-semibold"
+                    >
+                        Grandes medios de comunicación ya confían en nosotros.
+                        Súmate a la experiencia de nuestro soporte
+                    </p>
+                </article>
+            </div>
+        </header>
+
+        <section class="contenedor mx-auto grid grid-cols-3 py-10">
+            <CardDescripCentovaUno
+                src="/img/SolarCodeScanBold.svg"
+                title="CentovaCast"
+                content="Administra tu estación personal, o automatiza tu negocio de hospedaje de radio con miles de clientes"
+            />
+            <CardDescripCentovaUno
+                src="/img/SolarKeyMinimalisticSquare2Outline.svg"
+                title="Certificado SSL"
+                content="Todas las conexiones de reseller streaming radio contiene certificado de SSL"
+            />
+            <CardDescripCentovaUno
+                src="/img/SolarLaptopMinimalisticOutline.svg"
+                title="Panel Propio"
+                content="Al ser revendedor de streaming radio contara con un panel propio e independiente"
+            />
+        </section>
+
+        <!-- INICIO CODIGO SECCION PRECIO-->
+
+        <div id="ver_precios" class="my-20 contenedor mx-auto">
+            <h2 class="text-white text-center">Planes Reseller <br> Streaming Radio</h2>
+            <p class="text-white text-center">
+                Nuestros precios son incomparables
+            </p>
+        </div>
+
+        <section
+            class="contenedor mx-auto flex items-center flex-wrap justify-center pb-20"
+        >
+            <CardPreciosResellerRadio
+                plan="Star"
+                precio="$10"
+                activacion="Plan de Inicio"
+                des1="10"
+                des2="192 KBPS"
+                des3="50 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-start"
+            />
+            <CardPreciosResellerRadio
+                plan="Smart"
+                precio="$20"
+                activacion="Plan Basico"
+                des1="30"
+                des2="192 KBPS"
+                des3="80 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-smart"
+            />
+            <CardPreciosResellerRadio
+                plan="Max"
+                precio="$30"
+                activacion="Plan Intermedio"
+                des1="50"
+                des2="192 KBPS"
+                des3="100 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-max"
+            />
+            <CardPreciosResellerRadio
+                plan="Pro"
+                precio="$40"
+                activacion="Plan Avanzado"
+                des1="100"
+                des2="192 KBPS"
+                des3="200 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-pro"
+            />
+        </section>
+
+        <!-- INICIO CODIGO SECCION PLAYER RADIO-->
+
+        <div class="player-radio">
+            <iframe
+                src="https://playerhd.eu/radio/electrofactoryradio/"
+                frameborder="0"
+                allowtransparency="true"
+                style="width: 100%; min-height: 540px; border: 0;"></iframe>
+        </div>
+
+        <!-- INICIO CODIGO SECCION DESCRIPCION DOS-->
+
+        <section class="grid grid-cols-4 contenedor mx-auto py-20 gap-3">
+            <CardDescripCentovaDos
+                title="100% Seguro"
+                content="Todos nuestros servicios se encuentra 100% seguros en servidores que son totalmente gestionados por nuestro equipo de soporte las 24/7"
+            />
+            <CardDescripCentovaDos
+                title="Cuentas Independientes"
+                content="Las cuentas de revendedor streaming radio son independiente, usted tendrá control absoluto de su cuenta"
+            />
+            <CardDescripCentovaDos
+                title="Fácil Instalación"
+                content="Instalación fácil con facturación automática, si usted cuenta con WHMCS puede integrarlo"
+            />
+            <CardDescripCentovaDos
+                title="Soporte 24/7/365"
+                content="Contamos con soporte 24/7 vía ticket, correo o llamada"
+            />
+        </section>
+
+        <!-- INICIO CODIGO SECCION FOOTER-->
+        <FooterOscuro />
+    </main>
+</Layout>
+
+<style lang="scss">
+    .text-is-gradient {
+        background-image: linear-gradient(
+            to right,
+            var(--gradient-text) 11%,
+            var(--gradient-color-2)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    main {
+        background-color: #0e141b;
+    }
+
+    .contenedor__lgo__server {
+        max-width: 900px;
+    }
+
+    .contenedor__hosting__preguntas {
+        max-width: 1000px;
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+</style>
