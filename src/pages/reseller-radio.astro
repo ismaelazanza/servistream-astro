@@ -23,10 +23,10 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
             <div
-                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10 px-5"
             >
                 <h1
-                    class="text-white text-6xl font-light pb-5 tracking-tighter"
+                    class="text-white text-3xl font-light pb-5 tracking-tighter md:text-5xl lg:text-6xl"
                 >
                     <span class="text-is-gradient">Reseller Radio</span>
                 </h1>
@@ -35,10 +35,10 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
                     ayudamos a crecer
                 </p>
 
-                <div class="flex items-center mt-10">
+                <div class="flex flex-col items-center mt-10 md:flex-row">
                     <a
                         href="https://clientes.servistream.net/index.php?rp=/store/streaming-reseller-radio/streaming-smart"
-                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mb-5 md:mb-0"
                     >
                         <span
                             class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
@@ -56,7 +56,7 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
 
                 <!-- INICIO CODIGO SECCION LOGOS CLIENTES SCROLL HOSTING-->
 
-                <article class="py-10">
+                <article class="py-10 hidden md:block">
                     <section class="contenedor mx-auto">
                         <LogosScrollHosting />
                     </section>
@@ -70,7 +70,9 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
             </div>
         </header>
 
-        <section class="contenedor mx-auto grid grid-cols-3 py-10">
+         <!-- INICIO CODIGO SECCION SERVICIOS UNO-->
+
+        <section class="contenedor mx-auto grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3">
             <CardDescripCentovaUno
                 src="/img/SolarCodeScanBold.svg"
                 title="CentovaCast"
@@ -90,7 +92,7 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
 
         <!-- INICIO CODIGO SECCION PRECIO-->
 
-        <div id="ver_precios" class="my-20 contenedor mx-auto">
+        <div id="ver_precios" class="my-20 contenedor mx-auto px-5">
             <h2 class="text-white text-center">Planes Reseller <br> Streaming Radio</h2>
             <p class="text-white text-center">
                 Nuestros precios son incomparables
@@ -150,7 +152,7 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
 
         <!-- INICIO CODIGO SECCION DESCRIPCION DOS-->
 
-        <section class="grid grid-cols-4 contenedor mx-auto py-20 gap-3">
+        <section class="grid grid-cols-1 contenedor mx-auto py-20 gap-3 md:grid-cols-2 lg:grid-cols-4">
             <CardDescripCentovaDos
                 title="100% Seguro"
                 content="Todos nuestros servicios se encuentra 100% seguros en servidores que son totalmente gestionados por nuestro equipo de soporte las 24/7"

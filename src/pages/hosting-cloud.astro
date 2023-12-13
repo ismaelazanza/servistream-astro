@@ -12,6 +12,7 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
 ---
 
 <Layout title="Hosting Internet Services | Hosting Cloud">
+
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <header class="h-auto">
@@ -21,13 +22,13 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
         </div>
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
-        <div class="contenedor mx-auto grid grid-cols-2 pt-10 pb-20">
+        <div class="contenedor mx-auto grid grid-cols-1 pt-10 pb-20 lg:grid-cols-2 px-5">
             <div>
                 <section>
-                    <p class="text-white text-center bak__barra">
+                    <p class="text-white hidden text-center bak__barra sm:block">
                         A partir de <strong>$4.99</strong> USD/mes
                     </p>
-                    <h1 class="text-white text-6xl font-bold pb-5">
+                    <h1 class="text-white text-4xl font-bold pb-5 lg:text-6xl">
                         Web Hosting Cloud
                     </h1>
                     <p class="text-white text-lg">
@@ -36,7 +37,7 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
                         sitios web
                     </p>
                     <section class="contenedor mx-auto mb-5">
-                        <div class="grid grid-cols-4">
+                        <div class="grid grid-cols-2 lg:grid-cols-4">
                             <CardHostingLinux
                                 src="/img/SolarSpedometerMaxBroken.svg"
                                 content="Velocidad Extrema"
@@ -55,21 +56,33 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
                             />
                         </div>
                     </section>
-					<div class="mt-10 flex">
-						
-						<a
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-2"
+					<div class="mt-10 flex flex-col md:flex-row">
+
+                        <div>
+
+                            <a
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 inline-block mb-5 rounded-lg mr-0 md:mr-2 md:mb-0"
 							href="/hosting-cloud"
 						>
 							Comenzar Ahora
 						</a>
-						<a
-							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-lg "
+
+                        </div>
+
+                        <div>
+
+                            <a
+							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border inline-block border-white hover:border-transparent rounded-lg "
 							href="/paginas-web"
 						>
 							Más que un sitio web
 							<i class="fa-solid fa-arrow-right ml-3"></i>
 						</a>
+
+                        </div>
+						
+
+
 					</div>
                 </section>
             </div>
@@ -79,20 +92,20 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
 
     <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
 
-    <section>
+    <section class="hidden lg:block">
         <SubmenuHosting />
     </section>
 
     <!-- INICIO CODIGO SECCION DESCRIPCION -->
 
-    <section class="mt-20 mb-20 contenedor mx-auto">
+    <section class="mt-20 mb-20 contenedor mx-auto px-5">
         <h2 class="text-center">Porque Hosting Cloud es superior</h2>
         <h5 class="text-center">
             Póngase en marcha rápidamente con un servidor totalmente <br />
              optimizado respaldado por el Soporte técnico prioritario
         </h5>
 
-        <div class="grid grid-cols-3 text-center mt-10 gap-20">
+        <div class="grid grid-cols-1 text-center mt-10 gap-20 md:grid-cols-2 lg:grid-cols-3">
             <div>
                 <h3 class="text-lg font-semibold pb-2">Migración Asistida</h3>
                 <p>
@@ -124,7 +137,7 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
     <!-- INICIO CODIGO SECCION PLANES -->
 
     <section>
-        <aside class="grid grid-cols-3 mx-auto contenedor__hosting__precios">
+        <aside class="grid grid-cols-1 mx-auto contenedor__hosting__precios md:grid-cols-2 lg:grid-cols-3">
             <PlanesHostingCloud
                 title="Starter"
                 descuento="Descuento por más de 2 años"
@@ -177,9 +190,9 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
 
             <!-- INICIO CODIGO SECCION LITESPEED-->
 
-        <section class="bg-[#1e1b3d] py-20">
+        <section class="bg-[#1e1b3d] py-20 px-5">
             <div class="contenedor mx-auto">
-                <h2 class="text-white">LiteSpeed + Discos SSD = 16x sitios web más rápidos</h2>
+                <h2 class="text-white mb-2">LiteSpeed + Discos SSD = 16x sitios web más rápidos</h2>
                 <p class="text-white">Todos nuestros paquetes de alojamiento utilizan LiteSpeed, un almacenamiento en caché de memoria ultrarrápido para acelerar incluso el sitio web más ocupado sin necesidad de cambios de código. Combine esto con nuestros discos 100% SSD para archivos y MySQL, experimentará un rendimiento superior para su sitio web.</p>
             </div>
             

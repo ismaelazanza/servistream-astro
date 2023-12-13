@@ -11,6 +11,8 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 ---
 
 <Layout title="Hosting Internet Services | Hosting Reseller">
+
+
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <header class="h-screen css-selector">
@@ -21,7 +23,7 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
         <div
-            class="contenedor mx-auto text-center flex flex-col justify-center items-center h-[70%]"
+            class="contenedor mx-auto text-center flex flex-col justify-center items-center px-5 h-[70%]"
         >
             <p
                 class="text-white border-[.1px] border__cuadro rounded-full text-sm px-4 py-2 mb-10"
@@ -30,10 +32,10 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
                 ultrarrápida.
             </p>
 
-            <h1 class="text-white text-6xl font-bold pb-5">
+            <h1 class="text-white text-4xl font-bold pb-5 md:text-6xl">
                 cPanel Reseller Hosting
             </h1>
-            <p class="text-white text-2xl">
+            <p class="text-white text-1xl md:text-2xl">
                 Dirija su propio negocio de hosting con la última plataforma <br
                 /> de hosting para revendedores ilimitados cPanel/WHM.
             </p>
@@ -47,7 +49,7 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
         </div>
 
         <div
-            class="contenedor__lgo__server mx-auto grid grid-cols-5 gap-5 place-content-center"
+            class="contenedor__lgo__server mx-auto grid grid-cols-2 gap-5 px-5 place-content-center  md:grid-cols-3 lg:grid-cols-5"
         >
             <div class="flex">
                 <img
@@ -104,19 +106,21 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 
     <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
 
-    <section>
+    <section class="hidden lg:block">
         <SubmenuHostingReseller />
     </section>
 
-    <section class="contenedor mx-auto my-20">
-        <h2 class="text-center">Planes de hosting <br /> para revendedores</h2>
+        <!-- INICIO CODIGO SECCION PLANES HOSTING-->
+
+    <section class="contenedor mx-auto my-20 px-5">
+        <h2 class="text-center text-4xl md:text-5xl">Planes de hosting <br /> para revendedores</h2>
         <p class="text-center">
             Utilizamos infraestructura de Amazon Web Server, Google Cloud,
             Digital Ocean, Linode.
         </p>
 
         <section class="contenedor mx-auto grid grid-cols-4 gap-2 mt-10">
-            <section class="col-[2/3]">
+            <section class="col-[1/-1] lg:col-[2/3]">
                 <CardPlanesHostingReseller
                     plan="Go Reseller"
                     des1="20"
@@ -127,7 +131,7 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
                 />
             </section>
     
-            <section class="col-[3/4]">
+            <section class="col-[1/-1] lg:col-[3/4]">
                 <CardPlanesHostingReseller
                     plan="Unlimited Reseller"
                     des1="50"
@@ -140,9 +144,10 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
         </section>
     </section>
 
+        <!-- INICIO CODIGO SECCION GRAN OFERTA-->
 
 
-    <section class="img__descuento contenedor mx-auto p-20 grid grid-cols-2 my-10">
+    <section class="img__descuento contenedor mx-auto p-10 grid grid-cols-1 my-10 lg:grid-cols-2 md:p-20">
         <div>
             <p class="text-white mb-5">Gran Oferta por tiempo limitado
             </p>
@@ -158,7 +163,10 @@ import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 
     </section>
 
-    <section class="grid grid-cols-3 contenedor mx-auto my-20 gap-10">
+        <!-- INICIO CODIGO SECCION DESCRIPCION-->
+
+
+    <section class="grid grid-cols-1 contenedor mx-auto my-20 gap-10 px-5 md:grid-cols-2 lg:grid-cols-3">
         <DescripcionHosting src="/img/SolarVirusLinear.svg" title="Escaneo y eliminación de malware" content="Protegemos su sitio web de hackers y otros programas maliciosos escaneándolo diariamente" />
         <DescripcionHosting src="/img/SolarCloudUploadOutline.svg" title="Centro de datos" content="Nuestros servidores premium y de baja densidad están ubicados en todo el mundo, para impulsar el rendimiento de su negocio" />
         <DescripcionHosting src="/img/SolarSquareTransferHorizontalOutline.svg" title="Migraciones fáciles" content="Si ya utiliza WHM o cPanel con su host actual, podemos migrar fácilmente las copias de seguridad de cPanel a su nueva cuenta de revendedor" />

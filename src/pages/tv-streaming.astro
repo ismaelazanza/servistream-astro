@@ -23,10 +23,10 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
 
             <div
-                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10"
+                class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10 px-5"
             >
                 <h1
-                    class="text-white text-6xl font-light pb-5 tracking-tighter"
+                    class="text-white text-3xl font-light pb-5 tracking-tighter md:text-5xl lg:text-6xl"
                 >
                     <span class="text-is-gradient">Video Live Streaming</span>
                 </h1>
@@ -42,10 +42,10 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
                     </p>
                 </div>
 
-                <div class="flex items-center mt-10">
+                <div class="flex flex-col  items-center mt-10 md:flex-row">
                     <a
                         href="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-basico"
-                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                        class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mb-5 md:mb-0"
                     >
                         <span
                             class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
@@ -62,7 +62,7 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
                 <!-- INICIO CODIGO SECCION LOGOS CLIENTES SCROLL HOSTING-->
 
                 <article class="py-10">
-                    <section class="contenedor mx-auto">
+                    <section class="contenedor mx-auto hidden lg:block">
                         <LogosScrollHosting />
                     </section>
                 </article>
@@ -70,24 +70,27 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
         </header>
 
 
-        <section class="grid grid-cols-3 contenedor mx-auto gap-5">
+        <section class="grid grid-cols-1 contenedor mx-auto gap-5 px-5 md:grid-cols-2 lg:grid-cols-3">
             <CardTvStreaming img="/img/SolarAirbudsCaseMinimalisticOutline.svg" title="Marca" content="Le permite cargar/agregar su propio logotipo y el nombre de su empresa a su transmisión"/>
             <CardTvStreaming img="/img/SolarCardTransferLinear_2.svg" title="Retransmitir" content="Transmisión simultánea al programador de redes sociales: retransmisión automática a las redes sociales según el programa"/>
             <CardTvStreaming img="/img/SolarHelpOutline_2.svg" title="Soporte" content="Contamos con expertos que trabajan las 24 horas administrando sus transmisiones, su red y su hardware"/>
         </section>
 
 
-         <!-- INICIO CODIGO SECCION PRECIO-->
+         <!-- INICIO CODIGO SECCION SELLECION-->
 
-         <div id="ver_precios" class="my-20 contenedor mx-auto">
-            <h2 class="text-white text-center">
+         <div id="ver_precios" class="my-20 contenedor mx-auto px-5 hidden md:block">
+            <h2 class="text-white text-3xl text-center md:text-4xl lg:text-5xl">
                 Transmisión de video administrada
             </h2>
             <p class="text-white text-center">Servicio de alojamiento de transmisión de video administrado con automatización de canales de TV, <br>
                 programador avanzado de listas de reproducción y grabación para transmisión en vivo.</p>
          </div>
 
-        <section class="contenedor__precios mx-auto grid grid-cols-3 pb-20 gap-10">
+         <!-- INICIO CODIGO SECCION PRECIO-->
+
+
+        <section class="contenedor__precios mx-auto grid grid-cols-1 pb-20 gap-10 md:grid-cols-2 lg:grid-cols-3">
 
           <div class="p-5">
             <p class="text-4xl text-white font-semibold">Nuestros planes y precios asequibles</p>
@@ -116,7 +119,7 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
 
         <!-- INICIO CODIGO SECCION DESCRIPCION DOS-->
 
-        <section class="grid grid-cols-4 contenedor mx-auto py-20 gap-3">
+        <section class="grid grid-cols-1 contenedor mx-auto py-20 gap-3 md:grid-cols-2 lg:grid-cols-4">
             <CardDescripCentovaDos title="Sin Restricciones" content="Podrá alternar la transmisión entre las cámaras que tenga instaladas, videos alojados en su computadora o imágenes" />
             <CardDescripCentovaDos title="Compatible" content="Cada cliente que posee nuestros servicios puede visualizar sus transmisiones a través de diferentes dispositivos" />
             <CardDescripCentovaDos title="Adaptive bitrate" content="Sistema que permite optimizar su señal de Streaming en diferentes calidades: 1080p, 720p y 480p" />
