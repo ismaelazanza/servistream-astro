@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+	content: string;
+	src: string;
+}
+
+const { src, title, content } = Astro.props;
+---
+
+
+<section class=" rounded-1xl">
+    
+    <div class="px-9 py-20">
+        <img class="rounded-full bg-black p-3" src={src} width="50" alt="Icono">
+        <p class="text-2xl my-5 font-semibold">{title}</p>
+        <p class="text-sm">{content}</p>
+    </div>
+
+</section>
+
+
+
+<style>
+
+    .generador__shadow{
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+
+
+
+</style>
