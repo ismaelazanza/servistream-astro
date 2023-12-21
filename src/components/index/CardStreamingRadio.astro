@@ -9,9 +9,9 @@ const { src, title, content } = Astro.props;
 ---
 
 <div
-    class="border__card px-6 py-6 text-center flex flex-col justify-center items-center pb-20"
+    class="border__card px-6 py-6 text-center flex flex-col justify-center group items-center pb-20"
 >
-    <img class="color__icono pb-3" src={src} width="40" alt="Icono" />
+    <img class="color__icono pb-3 transition ease-in-out group-hover:transform group-hover:translate-y-1" src={src} width="40" alt="Icono" />
     <h2 class="font-semibold pt-3 pb-2 text-2xl text-white">{title}</h2>
     <p class="text-base text-white">{content}</p>
 </div>
@@ -33,5 +33,9 @@ const { src, title, content } = Astro.props;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.084);
+        transition: all 0.2s ease-out;
+    }
+    .border__card:hover{
+        border: 1px solid #ffffff64;
     }
 </style>

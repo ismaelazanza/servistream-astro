@@ -11,6 +11,10 @@ import TemasEnvato from "../components/index/TemasEnvato.astro";
 import Footer from "../components/Footer.astro";
 import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
+
+import BotonTres from "../components/BotonTres.astro";
+import BotonSeisBlack from "../components/BotonSeisBlack.astro";
+
 ---
 
 <Layout title="Hosting Internet Services | Hosting Linux">
@@ -218,15 +222,8 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
                 tiempo de inactividad utilizando nuestro plugin gratuito de
                 migración automatizada.
             </h5>
-            <div>
-                <button
-                onclick="window.location.href='https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan'"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block mt-5"
-            >
-                Comprar Plan
-                <i class="fa-solid fa-arrow-right ml-3"></i>
-            </button>
-
+            <div class="mt-5">
+                <BotonTres href="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan" title="Comprar Plan"/>
             </div>
 
         </div>
@@ -312,9 +309,9 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
         class="contenedor mx-auto mt-[10rem] mb-[10rem] pl-2 pr-2 text-center"
     >
         <TemasEnvato />
-        <a class="text-lg font-bold mt-32 block uppercase underline" href="https://elements.envato.com/es/cms-templates" target="_blank"
-            >Ver todos los temas <i class="fa-solid fa-arrow-right ml-3"></i></a
-        >
+        <div class="flex justify-center mt-20">
+            <BotonSeisBlack href="https://elements.envato.com/es/cms-templates" title="Ver todos los temas" />
+        </div>
     </section>
 
     <!-- INICIO CODIGO SECCION TARJETAS FUNCIONES CPANEL-->
@@ -397,7 +394,7 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
 
             <div class="flex flex-col items-center">
                 <img
-                    src="img/drupal2.svg"
+                    src="/img/drupal2.svg"
                     width="200"
                     height="200"
                     alt="Drupal"

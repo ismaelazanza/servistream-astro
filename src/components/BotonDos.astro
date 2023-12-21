@@ -1,0 +1,15 @@
+---
+interface Props {
+    href: string;
+    title: string;
+}
+
+const { href, title } = Astro.props;
+---
+
+<a href={href} class="bg-transparent hover:bg-[#00b285] group transition ease-in-out text-white font-semibold inline-block hover:text-white py-2 px-8 border border-white hover:border-transparent rounded-lg" >
+    <div class="flex items-center ">
+        <p class="text-white font-semibold">{title}</p>
+        <img class="h-4 w-4 ml-3 opacity-50 group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-x-1" src="/img/SolarArrowRightBoldDuotone.svg" alt="Icono">
+    </div>
+</a>

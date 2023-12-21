@@ -4,14 +4,19 @@ import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import Top from "../components/Top.astro";
 import LogoScroll from "../components/index/LogoScroll.astro";
-import TarjetasIndex from "../components/index/CardServiciosIndex.astro";
+import CardServiciosIndex from "../components/index/CardServiciosIndex.astro";
 import BuscarDominios from "../components/index/BuscarDominios.astro";
 import TemasEnvato from "../components/index/TemasEnvato.astro";
-import HostingServicios from "../components/index/CardHosting.astro";
-import StreamingRadio from "../components/index/CardStreamingRadio.astro";
+import CardHosting from "../components/index/CardHosting.astro";
+import CardStreamingRadio from "../components/index/CardStreamingRadio.astro";
 import StreamigCard from "../components/index/StreamingCard.astro";
 import Testimonio from "../components/index/Testimonial.astro";
 import Footer from "../components/Footer.astro";
+
+import BotonUno from "../components/BotonUno.astro";
+import BotonDos from "../components/BotonDos.astro";
+import BotonTres from "../components/BotonTres.astro";
+import BotonCuatro from "../components/BotonCuatro.astro";
 ---
 
 <Layout title="Hosting Internet Services | Radio y Tv Streaming">
@@ -35,7 +40,7 @@ import Footer from "../components/Footer.astro";
 					<h1
 						class="text-white text-4xl font-bold md:text-5xl lg:text-7xl"
 					>
-						El mejor Hosting y Radio Streaming del Ecuador
+						El mejor Hosting y Radio Streaming
 					</h1>
 					<p class="text-white text-xl pt-2 lg:text-2xl">
 						Nos aseguramos de que tu sitio web sea rápido, seguro y
@@ -44,29 +49,15 @@ import Footer from "../components/Footer.astro";
 					</p>
 					<div class="mt-10 flex flex-col md:flex-row">
 						<div>
-							<a
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 inline-block rounded-lg mb-4 lg:mb-0 md:mr-2"
-							href="/hosting-cloud"
-						>
-							Comenzar Ahora
-						</a>
-
+						<BotonUno href="/hosting-cloud/" title="Comenzar ahora"/>
 						</div>
 						<div>
-							<a
-							class="bg-transparent hover:bg-blue-500 text-white font-semibold inline-block hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-lg"
-							href="/paginas-web"
-						>
-							Más que un sitio web
-							<i class="fa-solid fa-arrow-right ml-3"></i>
-						</a>
+						<BotonDos href="/paginas-web/" title="Más que un sitio web"/>
 						</div>
-
-
 					</div>
 				</div>
 				<div class="items-center justify-center hidden lg:flex">
-					<img src="/img/server_izquiera-01.svg" width="500" alt="" />
+					<img src="/img/server_izquiera-01.svg" width="500" alt="Server" />
 				</div>
 			</section>
 
@@ -111,42 +102,36 @@ import Footer from "../components/Footer.astro";
 					para que tu sitio sea exitoso.
 				</h5>
 				<div>
-					<a
-						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
-						href="/centovacast"
-					>
-						Conoce más
-						<i class="fa-solid fa-arrow-right ml-3"></i>
-					</a>
+					<BotonTres href="/centovacast/" title="Conoce más" />
 				</div>
 			</div>
 
 			<div
 				class="grid gap-4 grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2"
 			>
-				<TarjetasIndex
+				<CardServiciosIndex
 					title1="Hosting"
 					title2="Linux"
 					img="/img/SolarServerPathBroken.svg"
-					href="/hosting-linux"
+					href="/hosting-linux/"
 				/>
-				<TarjetasIndex
+				<CardServiciosIndex
 					title1="Hosting"
 					title2="Cloud"
 					img="/img/SolarServerSquareCloudBroken.svg"
-					href="/hosting-cloud"
+					href="/hosting-cloud/"
 				/>
-				<TarjetasIndex
+				<CardServiciosIndex
 					title1="Radio"
 					title2="Streaming"
 					img="/img/SolarRadioBroken.svg"
-					href="/centovacast"
+					href="/centovacast/"
 				/>
-				<TarjetasIndex
+				<CardServiciosIndex
 					title1="Streaming"
 					title2="de TV"
 					img="/img/SolarTvBroken.svg"
-					href="/tv-streaming"
+					href="/tv-streaming/"
 				/>
 			</div>
 		</section>
@@ -172,7 +157,7 @@ import Footer from "../components/Footer.astro";
 		<!-- INICIA CODIGO SECCION PORQUE ELEGIR servistream -->
 
 		<section
-			class="contenedor mx-auto mt-[10rem] mb-[10rem] grid grid-cols-1 gap-4 px-5 lg:grid-cols-2"
+			class="contenedor mx-auto mt-[10rem] mb-[10rem] grid grid-cols-1 gap-2 px-5 lg:grid-cols-2"
 		>
 			<div class="flex flex-col justify-center">
 				<h2 class="text-4xl lg:text-5xl">
@@ -185,35 +170,29 @@ import Footer from "../components/Footer.astro";
 				</h5>
 
 				<div>
-					<a
-						class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block"
-						href="/hosting-cloud"
-					>
-						Ver nuestro planes
-						<i class="fa-solid fa-arrow-right ml-3"></i>
-					</a>
+					<BotonTres href="/hosting-cloud/" title="Ver nuestro planes" />
 				</div>
 			</div>
 			<div>
 				<div
-					class="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-2"
+					class="grid grid-cols-1 grid-rows-auto gap-2 md:grid-cols-2 lg:grid-cols-2"
 				>
-					<HostingServicios
+					<CardHosting
 						src="/img/SolarCodeScanOutline.svg"
 						title="cPanel con CloudLinux"
 						content="¡Hasta 4 GB de RAM por cuenta de cPanel con CloudLinux, que le permite ejecutar versiones de PHP desde PHP 5.2 hasta 8.0!"
 					/>
-					<HostingServicios
+					<CardHosting
 						src="/img/SolarArchiveUpMinimlisticBroken.svg"
 						title="Jetbackup incluido"
 						content="Explore, restaure y descargue copias de seguridad utilizando la herramienta Jetbackup directamente en su panel de control de cPanel."
 					/>
-					<HostingServicios
+					<CardHosting
 						src="/img/SolarLockPasswordBroken.svg"
 						title="SSL gratuitos ilimitados"
 						content="Certificados SSL para cada dominio y subdominio que agregue a su panel de control."
 					/>
-					<HostingServicios
+					<CardHosting
 						src="/img/SolarServerSquareBroken.svg"
 						title="Servidores NvME"
 						content="Ejecutamos los últimos y mejores servidores en la nube, con discos NvME de alto rendimiento."
@@ -236,45 +215,40 @@ import Footer from "../components/Footer.astro";
 			<div
 				class="grid gap-8 grid-cols-1 grid-rows-auto contenedor__logos text-white pb-20 md:grid-cols-2 lg:grid-cols-3"
 			>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarCheckSquareBroken.svg"
 					title="Fácil Instalación"
 					content="Hazlo fácil y sin complicaciones con nuestra guía de instalación"
 				/>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarHeadphonesRoundSoundLineDuotone.svg"
 					title="ACC+ o MP3"
 					content="Tú decides como quieres que suene la estación de radio con Icecast o Shoutcast"
 				/>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarServer2Broken.svg"
 					title="Disco Sólido"
 					content="300% más velocidad leyendo las canciones en función automática AutoDj"
 				/>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarCallChatRoundedLineDuotone.svg"
 					title="Soporte"
 					content="Asistencia permanente y monitoreo de cada servidor durante las 24hs"
 				/>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarCardTransferLinear.svg"
 					title="Control Total"
 					content="Transmite en vivo o AutoDJ, tú decides como manejar tu estación de radio"
 				/>
-				<StreamingRadio
+				<CardStreamingRadio
 					src="/img/SolarCpuOutline.svg"
 					title="Hardware"
 					content="Servidores rápidos con 50 GB de RAM y procesadores Intel Xeon de 10 núcleos"
 				/>
 			</div>
 
-			<div
-				class="contenedor mx-auto pb-20 text-center font-semibold text-xl"
-			>
-				<a class="text-white underline" href="/centovacast"
-					>Ver todos los planes <i
-						class="fa-solid pl-2 fa-arrow-right-long"></i></a
-				>
+			<div class="contenedor mx-auto pb-20 flex items-center justify-center">
+				<BotonCuatro href="/centovacast/" title="Ver todos los planes"/>
 			</div>
 		</section>
 

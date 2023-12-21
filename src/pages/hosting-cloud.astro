@@ -9,6 +9,11 @@ import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
 import PlanesHostingCloud from "../components/hosting_cloud/PlanesHostingCloud.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
 import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
+
+import BotonUno from "../components/BotonUno.astro";
+import BotonDos from "../components/BotonDos.astro";
+
+
 ---
 
 <Layout title="Hosting Internet Services | Hosting Cloud">
@@ -56,34 +61,15 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
                             />
                         </div>
                     </section>
-					<div class="mt-10 flex flex-col md:flex-row">
-
-                        <div>
-
-                            <a
-							class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 inline-block mb-5 rounded-lg mr-0 md:mr-2 md:mb-0"
-							href="/hosting-cloud"
-						>
-							Comenzar Ahora
-						</a>
-
-                        </div>
-
-                        <div>
-
-                            <a
-							class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border inline-block border-white hover:border-transparent rounded-lg "
-							href="/paginas-web"
-						>
-							Más que un sitio web
-							<i class="fa-solid fa-arrow-right ml-3"></i>
-						</a>
-
-                        </div>
-						
-
-
+                    <div class="mt-10 flex flex-col md:flex-row">
+						<div>
+						<BotonUno href="/hosting-cloud/" title="Comenzar ahora"/>
+						</div>
+						<div>
+						<BotonDos href="/paginas-web/" title="Más que un sitio web"/>
+						</div>
 					</div>
+
                 </section>
             </div>
             <div></div>
@@ -154,7 +140,7 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
                 title="Business"
                 descuento="Descuento por más de 2 años"
                 precio="$6.99"
-                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-cloud/starter-plan"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-cloud/business-plan"
                 des1="200 GB"
                 des3="10"
                 des6="20"
@@ -166,7 +152,7 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
                 title="Corporate"
                 descuento="Descuento por más de 2 años"
                 precio="$8.25"
-                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-cloud/starter-plan"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-cloud/corporate-plan"
                 des1="Ilimitado GB"
                 des3="20"
                 des6="30"

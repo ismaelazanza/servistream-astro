@@ -40,11 +40,12 @@ const {
         <p class="text-xs pb-5"><i class="fa-solid fa-circle text-[6px] pr-1 mb-3"></i>2vCPU, Memory 2GB, IO 10MB/S</p>
         <p class="font-semibold bg-cyan-200 inline-block">{descuento}</p>
         <p class="text-4xl font-extrabold mt-5">{precio} <span class="text-sm font-normal">/mes</span></p>
-        <a
-            class="bg-principal hover:bg-principalDegra text-white font-bold py-2 px-4 rounded-lg mt-5 inline-block"
-            href={link}
-            >Realizar Pedido <i class="text-xs pl-2 fa-solid fa-chevron-right"></i></a
-        >
+        <a class="bg-[#00b285] hover:bg-[#378671] mt-10 group py-2 px-8 inline-block rounded-lg transition ease-in-out border border-transparent mb-4 lg:mb-0 md:mr-2" href={link}>
+            <div class="flex items-center">
+                <p class="text-white font-semibold">Realizar Pedido</p>
+                <img class="h-4 w-4 ml-3 opacity-100 group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-x-1" src="/img/SolarCartLarge2Bold.svg" alt="Icono">
+            </div>
+        </a>
         <p class="uppercase font-semibold text-sm tracking-wider text-gray-500 py-5">Incluye:</p>
         <p class="underline text-sm font-semibold"> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des1}</strong> de espacio</p>
         <p class="text-sm font-semibold"> <i class="fa-solid fa-check mr-2 text-xs"></i>Tráfico Ilimitado</p>
