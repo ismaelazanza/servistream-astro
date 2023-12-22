@@ -14,8 +14,7 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
 
 import BotonTres from "../components/BotonTres.astro";
 import BotonSeisBlack from "../components/BotonSeisBlack.astro";
-import ExternalScript from "../components/ExternalScript.astro";
-import Acordion from "../components/Acordion.astro";
+import Acordion from "../components/hosting_linux/Acordion.astro";
 
 ---
 
@@ -438,19 +437,23 @@ import Acordion from "../components/Acordion.astro";
 
     <!-- INICIO CODIGO SECCION PREGUNTAS FRECUENTES-->
 
-    <div class="bg-white py-20">
+    <div class="contenedor__preguntas mx-auto my-20">
         <Acordion/>
     </div>
     
-
     <!-- INICIO CODIGO SECCION FOOTER-->
     <Footer />
 </Layout>
+
 
 <style lang="scss">
     /*
     CSS SECCION HEADER
     */
+
+    .contenedor__preguntas{
+        max-width: 900px;
+    }
 
     .contenedor__logos {
         max-width: 55rem;

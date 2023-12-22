@@ -1,0 +1,124 @@
+---
+import ExternalScript from "../ExternalScript.astro";
+---
+
+<head> 
+    <!-- Fontawesome CDN link -->
+    <link rel="stylesheet"
+        href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
+</head> 
+<section> 
+    <div class="accordion"> 
+        <h2 class="mb-10 text-center">Preguntas Frecuentes
+    </h2> 
+        <div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Cómo puede el espacio en disco ser ilimitado? 
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                Debido a que ejecutamos nuestra plataforma sobre los proveedores de la nube, podemos seguir agregando espacio a los servidores. Siempre que su espacio en disco se utilice para sitios web, no limitaremos su uso.            </p> 
+        </div> 
+        <div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Estoy buscando migrar, ¿podrías ayudarme a mover mi sitio web?
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                El equipo de especialistas en migración interno de servistream.net estará encantado de ayudarlo a mudarse. Podemos trabajar con usted para migrar sus sitios web a la velocidad que más le convenga. El primer paso es realizar el pedido del paquete deseado. Una vez hecho esto, puede ir a Soporte y pedir una transferencia e ingresar los detalles de su antiguo host. También podemos mover correos electrónicos.            </p> 
+        </div> 
+        <div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Dónde están ubicadas sus copias de seguridad? 
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                Usamos varios proveedores de nube diferentes para las copias de seguridad. Nunca realizamos copias de seguridad en el mismo centro de datos que su sitio web. Sin embargo, siempre realizamos copias de seguridad en la misma jurisdicción, por lo que no tiene ningún problema de residencia de datos. Los datos están encriptados en reposo.            </p> 
+        </div> 
+		<div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Cuántos visitantes manejará una cuenta de revendedor?
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                Esto depende enteramente del sitio web. Nuestro alojamiento compartido creemos que es el mejor que existe, pero en algún momento un sitio supera al alojamiento compartido. Un sitio de WordPress con una buena configuración de almacenamiento en caché debería poder recibir millones de visitantes mensuales.            </p> 
+        </div> 
+		<div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Puedo poner varias cuentas de revendedor en un servidor?
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                Sí, puede agregar tantas cuentas de revendedor como desee a un servidor. Esto le permitiría tener un único inicio de sesión de revendedor con miles de cuentas de cPanel. Sin embargo, recomendamos dividir a los revendedores entre ubicaciones y servidor. Nuestro único clúster de DNS hace que esto sea realmente sencillo.            </p> 
+        </div> 
+		<div class="accordion-content"> 
+            <header> 
+                <span class="accordion-content-title"> 
+                    ¿Existe alguna restrcción sobre lo que no puedo alojar?
+                </span> 
+                <i class="fa-solid fa-plus"></i> 
+            </header> 
+            <p class="accordion-content-description"> 
+                Nuestros servicios están diseñados para alojar sitios web. Específicamente, no permitimos sitios de video «tubo» (para adultos o de otro tipo), servicios de respaldo de archivos o en la nube, mineros de criptografía, intercambio de archivos o cualquier directorio de contenido con derechos de autor. Pregunte si no está seguro.            </p> 
+        </div> 
+    </div> 
+</section> 
+</html>
+
+<style>
+
+.accordion{ 
+    width: 100%; 
+} 
+.accordion .accordion-content{ 
+    margin:10px 0; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    border-color: #bbffaa; 
+    overflow: hidden; 
+} 
+
+.accordion-content.is-open{ 
+    padding-bottom: 10px; 
+} 
+.accordion-content header{ 
+    display:flex; 
+    min-height: 50px; 
+    padding: 0 15px; 
+    cursor: pointer; 
+    align-items: center; 
+    justify-content: space-between; 
+    transition:all 0.2s linear; 
+} 
+.accordion-content.is-open header{ 
+    min-height: 35px; 
+} 
+.accordion-content-title{ 
+    font-size: 1rem; 
+    font-weight: 600; 
+    color:#000000; 
+} 
+.accordion-content-description{ 
+    height:0; 
+    font-size: 15px; 
+    color:#000000; 
+    font-weight: 400; 
+    padding: 0 15px; 
+}
+
+</style>
+
+<ExternalScript/>
+

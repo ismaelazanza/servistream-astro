@@ -9,6 +9,7 @@ import CardPlanesHostingReseller from "../components/hosting_reseller/cardPlanes
 import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 
 import BotonDos from "../components/BotonDos.astro";
+import Acordion from "../components/hosting_reseller/Acordion.astro";
 
 ---
 
@@ -183,171 +184,9 @@ import BotonDos from "../components/BotonDos.astro";
 
         <!-- INICIO CODIGO SECCION PREGUNTAS FRECUENTES-->
 
-        <section class="bg-white pt-20 pb-20">
-            <div class="contenedor__hosting__preguntas mx-auto px-5">
-                <h2 class="mb-12">Preguntas Frecuentes</h2>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-1"
-                        >
-                            <span>¿Cómo puede el espacio en disco ser ilimitado?</span>
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-1"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        Debido a que ejecutamos nuestra plataforma sobre los proveedores de la nube, podemos seguir agregando espacio a los servidores. Siempre que su espacio en disco se utilice para sitios web, no limitaremos su uso.
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-2"
-                        >
-                            <span>¿Estoy buscando migrar, ¿podrías ayudarme a mover mi sitio web?</span>
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-2"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        El equipo de especialistas en migración interno de servistream.net estará encantado de ayudarlo a mudarse. Podemos trabajar con usted para migrar sus sitios web a la velocidad que más le convenga. El primer paso es realizar el pedido del paquete deseado. Una vez hecho esto, puede ir a Soporte y pedir una transferencia e ingresar los detalles de su antiguo host. También podemos mover correos electrónicos.
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-3"
-                        >
-                            <span>¿Dónde están ubicadas sus copias de seguridad?</span>
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-3"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        Usamos varios proveedores de nube diferentes para las copias de seguridad. Nunca realizamos copias de seguridad en el mismo centro de datos que su sitio web. Sin embargo, siempre realizamos copias de seguridad en la misma jurisdicción, por lo que no tiene ningún problema de residencia de datos. Los datos están encriptados en reposo.
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-4"
-                        >
-                            <span
-                                >¿Cuántos visitantes manejará una cuenta de revendedor?</span
-                            >
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-4"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        Esto depende enteramente del sitio web. Nuestro alojamiento compartido creemos que es el mejor que existe, pero en algún momento un sitio supera al alojamiento compartido. Un sitio de WordPress con una buena configuración de almacenamiento en caché debería poder recibir millones de visitantes mensuales.
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-5"
-                        >
-                            <span
-                                >¿Puedo poner varias cuentas de revendedor en un servidor?</span
-                            >
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-5"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        Sí, puede agregar tantas cuentas de revendedor como desee a un servidor. Esto le permitiría tener un único inicio de sesión de revendedor con miles de cuentas de cPanel. Sin embargo, recomendamos dividir a los revendedores entre ubicaciones y servidor. Nuestro único clúster de DNS hace que esto sea realmente sencillo.
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-3">
-                    <h6 class="mb-0">
-                        <button
-                            class="border-slate-100 text-slate-700 rounded-t-1 group relative flex w-full cursor-pointer items-center border-b border-solid p-4 text-left font-semibold text-dark-500 transition-all ease-in"
-                            data-collapse-target="collapse-6"
-                        >
-                            <span>¿Existe alguna restrcción sobre lo que no puedo alojar?</span>
-                            <i
-                                class="fa fa-plus absolute right-0 pt-1 text-xs group-open:opacity-0"
-                            ></i>
-                            <i
-                                class="fa fa-minus absolute right-0 pt-1 text-xs opacity-0 group-open:opacity-100"
-                            ></i>
-                        </button>
-                    </h6>
-                    <div
-                        data-collapse="collapse-6"
-                        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-                    >
-                        <div
-                            class="p-4 text-sm leading-normal text-blue-gray-500/80"
-                        >
-                        Nuestros servicios están diseñados para alojar sitios web. Específicamente, no permitimos sitios de video «tubo» (para adultos o de otro tipo), servicios de respaldo de archivos o en la nube, mineros de criptografía, intercambio de archivos o cualquier directorio de contenido con derechos de autor. Pregunte si no está seguro.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="contenedor__preguntas mx-auto my-20">
+            <Acordion/>
+        </div>
     
 
     <!-- INICIO CODIGO SECCION FOOTER-->
@@ -355,6 +194,11 @@ import BotonDos from "../components/BotonDos.astro";
 </Layout>
 
 <style lang="scss">
+
+.contenedor__preguntas{
+        max-width: 900px;
+    }
+    
     .contenedor__lgo__server {
         max-width: 900px;
     }
