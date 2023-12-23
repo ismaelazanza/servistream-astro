@@ -8,6 +8,7 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
 import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
 import CardTvStreaming from "../components/tv_streaming/CardTvStreaming.astro";
 import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStreaming.astro";
+import PlayerTv from "../components/tv_streaming/PlayerTv.astro";
 
 ---
 
@@ -31,12 +32,12 @@ import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStream
                     <span class="text-is-gradient">Video Live Streaming</span>
                 </h1>
 
-                <p class="text-white">
+                <p class="text-white mb-10">
                     Su señal contará con la mejor calidad de streaming en Internet y con las mejores <br> condiciones, una plataforma tecnológica segura, robusta y fiable
                 </p>
 
-                <iframe class="mt-10" width="100%" height="415" src="https://www.youtube.com/embed/pgmyuzBg_kI?si=n0gNOTrwd_G99HbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                    <PlayerTv/>
+    
                 <div>
                     <p class="text-white bg-morado inline-block py-1 px-4 rounded-md mt-10 text-sm font-semibold">Proporcionado por VDO, Panel de control de transmisión de video líder en la industria
                     </p>

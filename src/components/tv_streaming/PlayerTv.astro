@@ -1,0 +1,28 @@
+---
+import '../../style/video-js.css'
+import '../../style/playerForest.css'
+---
+
+  <body>
+    <video
+      id="my-video"
+      class="video-js vjs-theme-forest"
+      controls
+      preload="auto"
+      width="840"
+      height="auto"
+      poster="/img/stats-vdo.png"
+      data-setup="{}"
+    >
+      <source src="/img/vdopanel.mp4" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
+  
+    <script is:inline src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+  </body>
