@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import MenuBlack from "../components/MenuBlack.astro";
+import MobileMenuBlack from "../components/paginasweb/MovileMenuBlack.astro"
+import Footer from "../components/Footer.astro";
+import CardAzuraUno from "../components/server_azuracast/CardAzuraUno.astro"
+import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro"
+
+---
+
+<Layout title="Hosting Internet Services | Páginas Web">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <main>
+        <header class="css-selector">
+            <Top />
+            <div class="hidden lg:block">
+                <MenuBlack />
+            </div>
+            <div class="pt-4 lg:hidden"><MobileMenuBlack /></div>
+
+            <div class="contenedor mx-auto my-20 flex flex-col items-center px-5">
+                <div class="text-center">
+                    <h2>AzuraCast Server Cloud <br>
+                        para Stream Radio</h2>
+                        <p>Servidores con recursos dedicados y totalmente administrado <br> por nosotros.
+                            Para que usted se solo se proucupe por lo importante, su estación de radio.</p>
+                </div>
+                <div class="mt-10">
+
+                    <a  href="https://walink.co/4f797c" target="_blank"
+                    type="button"
+                    class="text-white inline-block bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >¡Quiero unirme al mundo digital!</a>
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <section class="contenedor mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 ">
+            <CardAzuraUno num="1." descrip="Emisión/Transmisión directamente desde el navegador. No es necesario encoders, ni programas adicionales. Mucho más fácil de conecarse sus DJ en VIVO. Emisión desde la nube"/>
+            <CardAzuraUno num="2." descrip="Fundidos suaves entre AUTODJ y LIVE DJ. El cambio entre el AUTODJ y la conexión LIVE, se efectua con un suave fundido"/>
+            <CardAzuraUno num="3." descrip="Subida y edición de los archivos de audio directamente desde el navegador. Editar metadatos, vista previa de las canciones. Organizar los audios música en carpetas. Administrar listas de reproducción"/>
+            <CardAzuraUno num="4." descrip="Web Hooks, que permiten integrar su estación con envío de Email, Telegram, Twitter, TuneIn AIR, Mastodom, Slack, Discord y más. Sencilla configuración de los Web Hooks, para conectarse a servicios de terceros"/>
+            <CardAzuraUno num="5." descrip="Nosotros nos encargamos de mantener su servidor al día y actualizado a las últimas versiones de AzuraCast. Para que usted solo se preocupe de mantener y gestionar su estación de radio"/>
+            <CardAzuraUno num="6." descrip="Servidor en Cloud, con recursos dedicados y en exclusiva, sin compartir con otros usuarios"/>
+            <CardAzuraUno num="7." descrip="Emisión en HLS (protocolo de bitrate adaptivo). Su Streaming se adapta a la calidad y recursos de cada usuario, con un bitrate adaptable, permitiendo que los dispositivos del oyente se adapten a las condiciones cambiantes de internet"/>
+            <CardAzuraUno num="8." descrip="Su emisión en TLS/SSL y mediante puerto PROXY. Sin necesitad de puertos. El puerto solo será necesario para enviar su audio LIVE"/>
+        </section>
+
+    <section class="my-20">
+
+        <div class="contenedor_planes mx-auto mb-5">
+            <PreciosAzura plan="Azure Cloud S" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="8 GB RAM" core="4 vCPU Cores" capacidad="200 GB SSD" conexion="32 TB Traffic" ubicacion="Estados Unidos" precio="$15" >
+
+        </div>
+        <div class="contenedor_planes mx-auto mb-5">
+            <PreciosAzura plan="Azure Cloud M" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="16 GB RAM" core="6 vCPU Cores" capacidad="400 GB SSD" conexion="32 TB Traffic" ubicacion="Estados Unidos" precio="$30" >
+
+        </div>
+        <div class="contenedor_planes mx-auto mb-5">
+            <PreciosAzura plan="Azure Cloud L" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="30 GB RAM" core="8 vCPU Cores" capacidad="800 GB SSD" conexion="32 TB Traffic" ubicacion="Estados Unidos" precio="$40" >
+
+        </div>
+        <div class="contenedor_planes mx-auto mb-5">
+            <PreciosAzura plan="Azure Cloud XL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="60 GB RAM" core="10 vCPU Cores" capacidad="1.6 TB SSD" conexion="32 TB Traffic" ubicacion="Estados Unidos" precio="$65" >
+
+        </div>
+        <div class="contenedor_planes mx-auto">
+            <PreciosAzura plan="Azure Cloud XXXL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="120 GB RAM" core="24 vCPU Cores" capacidad="2.4 TB SSD" conexion="32 TB Traffic" ubicacion="Estados Unidos" precio="$105" >
+
+        </div>
+        
+    </section>
+
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="flex flex-col justify-center p-5 md:p-20">
+                <h2>Gestión de estaciones basada en web</h2>
+                <p>Cargue medios, administre listas de reproducción, cree puntos de montaje locales y retransmisiones remotas, vea análisis e informes y mucho más, todo desde la comodidad de su navegador web.</p>
+            </div>
+            <div>
+                <img class="object-cover hidden md:block" src="/img/bg-showcase-1.jPAR3Efh.avif" alt="Imagen">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div>
+                <img class="object-cover hidden md:block" src="/img/bg-showcase-2.VXKeS9vy.avif" alt="Imagen">
+            </div>
+            <div class="flex flex-col justify-center p-5 md:p-20">
+                <h2>Administración de estaciones múltiples</h2>
+                <p>Aloje varias estaciones en una sola instalación, cree nuevas cuentas de usuario y roles únicos con permisos granulares. Realice una copia de seguridad de su instalación y realice un seguimiento de cada estación desde una ubicación central.</p>
+            </div>
+
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="flex flex-col justify-center p-5 md:p-20">
+                <h2>Páginas públicas integradas</h2>
+                <p>Fuera de la caja, cada estación incluye una página de reproductor pública que también puede integrarse en su propio sitio web. Nuestras potentes API le permiten crear sus propios reproductores e interfaces que aprovechan nuestro rico soporte de metadatos.</p>
+            </div>
+            <div>
+                <img class="object-cover hidden md:block" src="/img/bg-showcase-3.rRQA_8SN.avif" alt="Imagen">
+            </div>
+        </div>
+    </section>
+
+
+<section class="bg-white py-20 px-5">
+    <div class="flex flex-col justify-center items-center">
+        <h2 class="text-center">AzuraCast Demo</h2>
+        <p class="text-center">Tenemos un sitio de demostración con una pequeña instalación de AzuraCast y una única estación de radio, <br> donde puede ver los conceptos básicos de la interfaz web de AzuraCast en acción</p>
+        <div class="mt-10">
+
+            <a  href="https://demo.azuracast.com/login" target="_blank"
+            type="button"
+            class="text-white inline-block bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            >Panel DEMO AzuraCast</a>
+            
+        </div>
+    </div>
+</section>
+
+        <!-- INICIO CODIGO SECCION FOOTER-->
+        <Footer />
+    </main>
+</Layout>
+
+<style lang="scss">
+    main {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-image: linear-gradient(to right top, #e4ecfc, #dfeefc, #dbf0fa, #d8f2f7, #d8f3f3, #dbf4f0, #def5ed, #e3f6eb, #e9f8ea, #eff9ea, #f6fbeb, #fcfcec);*/
+    }
+
+    .back__banner{
+        background-color: #fff;
+    }
+
+    .contenedor_planes{
+        max-width: 900px ;
+    }
+
+    /*
+    CSS SECCION PLANES HOSTING
+    */
+</style>
+
+

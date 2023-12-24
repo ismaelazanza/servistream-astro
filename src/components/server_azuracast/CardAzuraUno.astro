@@ -1,0 +1,15 @@
+---
+interface Props {
+    num: string;
+    descrip: string;
+}
+
+const { descrip, num } = Astro.props;
+---
+
+<div class="p-5">
+
+    <h3 class="text-5xl text-principal">{num}</h3>
+    <p class="text-sm">{descrip}</p>
+
+</div>
