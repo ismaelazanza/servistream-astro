@@ -1,36 +1,1034 @@
-<div class="w-full">
-    <div class="relative right-0">
-      <ul class="relative flex flex-wrap p-1 list-none rounded-lg bg-blue-gray-50/60" data-tabs="tabs" role="list">
-        <li class="z-30 flex-auto text-center">
-          <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
-            data-tab-target="" active role="tab" aria-selected="true">
-            <span class="ml-1">HTML</span>
-          </a>
-        </li>
-        <li class="z-30 flex-auto text-center">
-          <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
-            data-tab-target="" role="tab" aria-selected="false">
-            <span class="ml-1">React</span>
-          </a>
-        </li>
-        <li class="z-30 flex-auto text-center">
-          <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
-            data-tab-target="" role="tab" aria-selected="false">
-            <span class="ml-1">Vue</span>
-          </a>
-        </li>
-        <li class="z-30 flex-auto text-center">
-          <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
-            data-tab-target="" role="tab" aria-selected="true">
-            <span class="ml-1">Angular</span>
-          </a>
-        </li>
-        <li class="z-30 flex-auto text-center">
-          <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-700 bg-inherit"
-            data-tab-target="" role="tab" aria-selected="true">
-            <span class="ml-1">Svelte</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div> 
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import Footer from "../components/Footer.astro";
+import ExternalScript from "../components/ExternalScript.astro";
+---
+
+<Layout title="Hosting Internet Services | Preguntas Frecuentes">
+    <!-- INICIA CODIGO SECCION HEADER-->
+
+    <header class="css-selector">
+        <Top />
+        <div class="hidden lg:block">
+            <Menu />
+        </div>
+        <div class="pt-4 lg:hidden"><MobileMenu /></div>
+    </header>
+
+    <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
+
+    <section class="contenedor mx-auto my-20 px-5">
+        <h2 class="text-balance">Preguntas Frecuentes</h2>
+        <h3>
+            El presente documento sufre modificaciones y actualizaciones, se
+            recomienda leerlo constantemente
+        </h3>
+    </section>
+
+    <main class="contenedor mx-auto grid grid-cols-1 lg:grid-cols-12 px-5">
+        <div class="menu__lateral col-[1/4] relative hidden lg:block">
+            <ul class="fixed w-60 p-8 bg-white rounded-md">
+                <li>
+                    <a href="#webhosting" class="hover:text-[#00b285] hover:underline transition-all ease-out">Web Hosting</a>
+                </li>
+                <li>
+                    <a href="#webreseller" class="hover:text-[#00b285] hover:underline transition-all ease-out">Hosting Reseller</a>
+                </li>
+                <li>
+                    <a href="#radiostreaming" class="hover:text-[#00b285] hover:underline transition-all ease-out">Radio Streaming</a>
+                </li>
+                <li>
+                    <a href="#dominios" class="hover:text-[#00b285] hover:underline transition-all ease-out">Dominios</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-[4/-1] mb-20">
+            <section>
+                <div class="accordion">
+                    <div class="mb-10">
+                        <h2 id="webhosting" class="text-2xl">Web Hosting</h2>
+                        <h3>Responderemos a sus inquietudes</h3>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué es el alojamiento web?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                El alojamiento web es un servicio que
+                                proporciona espacio en un servidor conectado a
+                                Internet en un centro de datos. Cargar o crear
+                                su sitio web en alojamiento web es lo que
+                                permite que personas de todo el mundo visiten su
+                                sitio en Internet.
+                            </p>
+                            <p>
+                                Servistream.net hace que este proceso sea muy
+                                sencillo y rentable. Desde solo unos pocos
+                                dólares al mes, brindamos un servicio de
+                                alojamiento web para su sitio web y correos
+                                electrónicos, impulsado por el panel de control
+                                cPanel líder en la industria y fácil de usar.
+                                Esto pone todo lo que necesita al alcance de su
+                                mano, ya sea que esté cargando una nueva imagen
+                                de logotipo para su sitio web o creando un nuevo
+                                buzón de correo o un reenviador de correo
+                                electrónico.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Necesito tener experiencia técnica en
+                                desarrollo de sitios web o administración de
+                                servidores?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Todo lo que vendemos está diseñado para que no
+                                necesites tener ninguna experiencia o
+                                conocimiento técnico previo.
+                            </p>
+                            <p>
+                                En cuanto a la gestión del servidor, nos
+                                encargamos de todo. Ya sea que elija nuestro
+                                plan de alojamiento web más pequeño o si opta
+                                por un servidor dedicado, los sistemas están
+                                completamente administrados. En última
+                                instancia, gestionamos todo hasta su sitio web.
+                            </p>
+                            <p>
+                                Puede optar por utilizar un desarrollador o
+                                diseñador web para crear su sitio web. Estarán
+                                felices de usar servistream.net. Pero esto no es
+                                necesario. Ofrecemos más de 300 aplicaciones de
+                                creación de sitios web diferentes que puede
+                                instalar automáticamente para crear un sitio
+                                usted mismo. Con mucho, el más popular es
+                                WordPress, que impulsa más del 35% de los sitios
+                                web en línea y funciona perfectamente en
+                                servistream.net.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cuánto tiempo tarda en configurarse mi paquete
+                                de alojamiento web?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                La configuración con servistream.net es casi
+                                instantánea y, después de realizar el pedido,
+                                debería recibir los detalles de bienvenida en
+                                tan solo unos minutos. Este contiene los
+                                detalles de su panel de control de alojamiento (
+                                cPanel ), así como otra información básica de
+                                configuración, como servidores de nombres para
+                                apuntar su dominio a servistream.net.
+                            </p>
+                            <p>
+                                Si ha pedido un nombre de dominio con
+                                servistream.net, se registrará de inmediato y
+                                comenzará a funcionar tan pronto como se
+                                propague el DNS (generalmente unos minutos, pero
+                                a veces puede demorar un par de horas). Si tiene
+                                un dominio en otro lugar, solo necesita cambiar
+                                los servidores de nombres en su dominio con su
+                                registrador de dominios para que apunten a
+                                servistream.net. Las instrucciones para esto
+                                estarán en su correo electrónico de bienvenida,
+                                pero si hay algún problema o confusión, no dude
+                                en ponerse en contacto.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cómo puede servistream.net ser tan generoso con
+                                los límites de recursos?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                En nuestros planes de alojamiento web, ofrecemos
+                                límites de recursos realmente altos. Esto se
+                                aplica tanto al espacio en disco como al ancho
+                                de banda. En algunos paquetes no tenemos límites
+                                de ningún tipo.
+                            </p>
+                            <p>Hay tres razones para esto.</p>
+                            <p>
+                                En primer lugar, hemos invertido mucho en
+                                nuestra configuración tecnológica y la hemos
+                                diseñado a escala. Eso significa que
+                                automatizamos gran parte de la configuración y
+                                administración del servidor, lo que reduce
+                                nuestros gastos generales. Cada servidor que
+                                ejecutamos, por ejemplo (miles), está
+                                configurado de manera idéntica. Ese ahorro te lo
+                                pasamos a ti.
+                            </p>
+                            <p>
+                                En segundo lugar, debido a que estamos basados
+                                en la nube, podemos seguir aumentando los
+                                recursos. Si un servidor se está quedando sin
+                                espacio en el disco físico, podemos adjuntar
+                                nuevos volúmenes de almacenamiento.
+                            </p>
+                            <p>
+                                Tercero, generalmente es más simple. Operamos a
+                                tal escala que tenemos enormes compromisos de
+                                ancho de banda que podemos transmitir. Siempre
+                                que utilice su alojamiento web para alojar
+                                sitios web y correos electrónicos (y no, por
+                                ejemplo, para el almacenamiento de copias de
+                                seguridad), no limitaremos su uso.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Hay alguna restricción sobre lo que no puedo
+                                hospedar?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Siempre que su contenido sea legal según las
+                                leyes del Reino Unido y los EE. UU. (así como la
+                                jurisdicción en la que elija su alojamiento
+                                web), no restringiremos el contenido
+                            </p>
+                            <p>
+                                Nuestros servicios están diseñados para alojar
+                                sitios web y correo electrónico únicamente.
+                            </p>
+                            <p>
+                                En concreto, no puede utilizar nuestro hosting
+                                para:
+                            </p>
+                            <p>Específicamente no permitimos</p>
+                            <p>
+                                Sitios de "tubo" de video (para adultos o de
+                                otro tipo) - Servicios de copia de seguridad de
+                                archivos o en la nube - Mineros de criptografía
+                                - Compartición de archivos - Cualquier
+                                directorio de contenido protegido por derechos
+                                de autor
+                            </p>
+                            <p>
+                                Siéntase libre de iniciar un chat en vivo con
+                                uno de nuestros representantes si no está seguro
+                                y con gusto podemos ayudarlo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Servistream.net puede migrar mis sitios web
+                                existentes por mí?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Sí. Contamos con un equipo de migraciones
+                                dedicado que moverá sus sitios web de su
+                                proveedor existente a servistream.net.
+                            </p>
+                            <p>
+                                Necesitaríamos acceso a su antiguo proveedor de
+                                alojamiento.
+                            </p>
+                            <p>
+                                Una vez que haya realizado un pedido de
+                                alojamiento, abra un ticket de migración en
+                                nuestra área de clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Puedo alojar varios dominios en mi cuenta de
+                                alojamiento?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Puede alojar varios sitios mediante el uso de
+                                dominios adicionales en todos nuestros paquetes
+                                de alojamiento, excepto en los planes de Web
+                                Hosting Linux, que solo admiten un único sitio
+                                distinto. Tanto los paquetes de Web Hosting
+                                Cloud admiten alias de dominio, lo que significa
+                                que puede apuntar varios dominios al mismo
+                                sitio. Por ejemplo, podría tener yoursite.com,
+                                yoursite.co.uk, yoursite.net, todos apuntando a
+                                un sitio web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cómo puedo ver la información de mi servidor?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Una vez que su cuenta esté configurada, recibirá
+                                un correo electrónico de bienvenida con toda la
+                                información necesaria para comenzar. Esto
+                                incluye el nombre de host de su servidor, la
+                                dirección IP, el nombre de usuario y la
+                                contraseña de su panel de control. También puede
+                                iniciar sesión directamente en el panel de
+                                control a través de su área de cliente de
+                                servistream.net.
+                            </p>
+                            <p>
+                                Si registra un nombre de dominio con nosotros,
+                                apuntará automáticamente a su plan de
+                                alojamiento. Si registra uno en otro lugar,
+                                incluiremos los registros DNS o los servidores
+                                de nombres que necesita configurar para apuntar
+                                ese dominio a su nuevo paquete de alojamiento de
+                                servistream.net.
+                            </p>
+                            <p>
+                                También puede ver la dirección IP de su servidor
+                                en cPanel en el lado derecho debajo de la
+                                pestaña de información general.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Puedo actualizar o degradar mi plan?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Sí. Es fácil de actualizar o degradar. Por
+                                favor, hágaselo saber a nuestro equipo de
+                                soporte o solicite la actualización a través del
+                                sistema.
+                            </p>
+                            <p>
+                                Para las actualizaciones, le cobraremos el costo
+                                de la actualización a prorrata hasta el final de
+                                su período de facturación actual.
+                            </p>
+                            <p>
+                                Para rebajas, podemos rebajarle al final de su
+                                decisión. No devolvemos el crédito prorrateado
+                                por las rebajas en la mitad de su ciclo de
+                                facturación.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cómo inicio sesión en mi Cpanel?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Ofrecemos varios métodos para acceder a su panel
+                                de control de hosting.
+                            </p>
+                            <p>
+                                Si tiene el nombre de usuario y la contraseña y
+                                desea iniciar sesión a través de una URL
+                                directa, puede hacerlo utilizando el nombre de
+                                host del servidor y agregando '/cpanel' al
+                                final. Puede encontrar el nombre de host del
+                                servidor en el correo electrónico de bienvenida
+                                que le enviamos con el pedido inicial.
+                            </p>
+                            <p>
+                                Este método también funcionaría con su nombre de
+                                dominio, por ejemplo mydomain.com/cpanel,
+                                siempre que apunte a su servidor con nosotros.
+                            </p>
+                            <p>
+                                Además, puede utilizar la función de inicio de
+                                sesión automático a través de su área de cliente
+                                de servistream.net. Para esto, una vez que haya
+                                iniciado sesión, vaya a Mis servicios > Cuentas
+                                de alojamiento > Haga clic en su cuenta de
+                                alojamiento y, debajo de Inicio de sesión
+                                rápido, encontrará el botón para acceder a su
+                                panel de control de cPanel.
+                            </p>
+                            <p>
+                                ¡Nuestro equipo de soporte permanece disponible
+                                si encuentra algún problema en el camino!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Puedo cambiar el dominio principal de mi cuenta
+                                de hosting?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                El nombre de dominio principal en cPanel ocupa
+                                una parte central de la estructura de la cuenta.
+                            </p>
+                            <p>
+                                Podemos cambiarlo por usted, sin embargo, tenga
+                                en cuenta que los siguientes servicios se
+                                modificarán como resultado: correos
+                                electrónicos, archivos de sitios web, cuentas
+                                FTP, registros DNS y subdominios.
+                            </p>
+                            <p>
+                                Si desea cambiar el dominio principal, puede
+                                ponerse en contacto con nosotros a través de un
+                                ticket de soporte y estaremos encantados de
+                                ayudarle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion mt-20">
+                    <div class="mb-10">
+                        <h2 id="webreseller" class="text-2xl">
+                            Reseller Hosting
+                        </h2>
+                        <h3>Responderemos a sus inquietudes</h3>
+                    </div>
+
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué es Reseller Hosting y me beneficiaría?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                El alojamiento de revendedor es una excelente
+                                opción para varios casos de uso. El primer caso,
+                                y el más obvio, es para una persona o empresa
+                                que quiere "revender" espacio de alojamiento,
+                                por lo que se le otorga una cierta cantidad de
+                                recursos y cuentas máximas, y puede dividirlo y
+                                vender espacio de alojamiento a sus clientes.
+                                Tal vez esto podría ser para amigos y
+                                familiares, o de manera profesional podría ser
+                                para vender a sus clientes como una forma de
+                                generar ingresos recurrentes. Esto es perfecto
+                                para las agencias de diseño web o desarrollo web
+                                que están felices de administrar el espacio web
+                                para sus clientes, y significa que a menudo
+                                puede "participar" y solucionar y ayudar con los
+                                problemas que sus clientes puedan tener con su
+                                acceso de revendedor, ahorrando tiempo. porque
+                                no necesita pedirles inicios de sesión, etc.
+                            </p>
+                            <p>
+                                El otro caso de uso es para otros profesionales
+                                de la web que pueden tener muchos sitios web
+                                desarrollados y están buscando una manera de
+                                alojarlos económicamente sin preocuparse por la
+                                administración del servidor y las copias de
+                                seguridad, etc. Todos los sitios bajo su cuenta
+                                de revendedor también están lógicamente aislados
+                                usando Cloud Linux, lo que significa que un
+                                sitio no puede afectar a otro si por alguna
+                                razón está comprometido o tiene otros problemas.
+                                Si desea analizar las características de nuestro
+                                alojamiento para revendedores o no está seguro
+                                de si sería adecuado para sus necesidades, no
+                                dude en ponerse en contacto
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cuánto tiempo se tarda en activar mi paquete de
+                                Reseller Hosting?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Una vez que haya pedido y pagado su cuenta de
+                                alojamiento de revendedor, debe recibir sus
+                                detalles de bienvenida para iniciar sesión y
+                                comenzar en solo unos minutos. En raras
+                                ocasiones, es posible que debamos comunicarnos
+                                con usted para discutir más detalles con usted
+                                si su pedido es un poco inusual o si falta
+                                alguna información, pero le informaremos lo
+                                antes posible si este es el caso.
+                            </p>
+                            <p>
+                                Si tiene algún problema para comenzar o si
+                                necesita ayuda o asistencia, no dude en ponerse
+                                en contacto con nuestro equipo de soporte.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué sistema de facturación me recomiendan?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Un sistema de facturación proporciona una manera
+                                fácil de administrar la forma en que factura a
+                                sus clientes. La creación de facturas o la
+                                repetición de la facturación de los clientes
+                                cada mes se puede automatizar por completo con
+                                este software. También puede automatizar la
+                                configuración de cuentas con su revendedor, así
+                                como automatizar el proceso de envío de correos
+                                electrónicos de bienvenida, etc., a sus
+                                clientes. El líder de la industria en este
+                                espacio es WHMCS ("WHM Complete Solution") y
+                                este producto es propiedad de cPanel. Es un
+                                software pago, por lo que requiere una licencia,
+                                y la tarifa mensual depende de la cantidad de
+                                clientes activos en su instalación. Puede
+                                obtener más información sobre WHMCS aquí
+                                https://www.whmcs.com/
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                Actualmente tengo una cuenta de alojamiento de
+                                revendedor en otro lugar, ¿pueden ayudarme a
+                                migrar mis sitios web?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Tenemos un departamento de migración interno que
+                                se enfoca principalmente en solo migrar
+                                clientes/cuentas, ya sea un solo sitio o muchos
+                                más. El proceso de migración más sencillo es
+                                cuando su host existente usa cPanel/WHM como
+                                nosotros. Podemos tomar las copias de seguridad
+                                de cPanel e importar todo a nuestros sistemas.
+                                Si su host de revendedor actual usa una
+                                plataforma diferente, infórmenos los detalles y
+                                podemos comenzar a planificar el proceso de
+                                migración, solo que podría demorar un poco más
+                                debido a los procesos manuales involucrados.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cómo administro mi cuenta de alojamiento de
+                                revendedor?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Su cuenta de revendedor viene con dos paneles de
+                                control, cPanel y WHM. WHM es su panel de
+                                control de revendedor y aquí es donde administra
+                                todas sus cuentas de sub-cPanel para sus
+                                clientes. Desde aquí puede crear cuentas
+                                adicionales, administrar recursos y
+                                limitaciones, agregar funciones adicionales,
+                                etc. Esta es esencialmente una vista de nivel
+                                superior de todo en su cuenta de revendedor.
+                            </p>
+                            <p>
+                                Cada cliente o cuenta de cPanel que crea en WHM
+                                tiene su propio inicio de sesión de cPanel por
+                                separado. cPanel es donde administra cada sitio
+                                o cuenta individual, y aquí es donde crea
+                                buzones, instala WordPress o verifica las
+                                estadísticas de su sitio.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿El panel de control de mi cliente tendrá las
+                                mismas funciones que yo?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Sí, hasta cierto punto. Solo usted, el
+                                revendedor, tiene acceso al panel de revendedor
+                                general que le permite controlar y administrar
+                                todas sus cuentas de cPanel. Luego tiene control
+                                sobre las funciones a las que tiene acceso cada
+                                cuenta individual de cPanel, ya sea
+                                individualmente o a través de paquetes.
+                                Entonces, si desea restringir el acceso a
+                                ciertas funciones en cPanel, puede hacerlo o si
+                                desea dar a sus clientes acceso a todas las
+                                funciones en cPanel, también puede hacerlo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion mt-20">
+                    <div class="mb-10">
+                        <h2 id="radiostreaming" class="text-2xl">
+                            Radio Streaming
+                        </h2>
+                        <h3>Responderemos a sus inquietudes</h3>
+                    </div>
+
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué es HE-AAC Plus v2 HD?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                El HE-AAC v2 HD es un formato audio digital
+                                comprimido para transmisión de audio, el cual
+                                está basado en el MPEG-4 y combina tres
+                                técnicas: Advance Audio Coding (AAC), Spectral
+                                Band Replication (SBR) y estéreo paramétrico
+                                (PS). Fué diseñado con el fin de remplazar al
+                                MP3, logrando una mayor calidad y eficiencia en
+                                su señal de audio, consumiendo además menores
+                                tasas de bits (Bitrate de su radio online) y
+                                logrando un delay (retardo) de pocos segundos,
+                                produciendo un sonido más cristalino.
+                            </p>
+                            <p>
+                                El streaming HE-AAC v2 HD puede ser reproducido
+                                por un player flash, esto garantiza el ser
+                                escuchado en la mayoría de computadoras, ya que
+                                a nivel mundial el 98% de computadoras tienen
+                                instalado el plugin de adobe flash, puede
+                                escucharse en winamp, itunes y realplayer sin
+                                ningún problema. También puede ser reproducido
+                                en Smartphones, iPhone, iPad, Blackberry,
+                                Playbook, Android y OS Firefox.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                Ventajas de usar Streaming HE-AAC v2 HD
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Calidad de audio superior por un mismo bitrate.
+                                (ej 32kbps en aac v2 equivalen a 128 kbps .mp3
+                                calidad tipo cd)
+                            </p>
+                            <p>
+                                Delay (Retardo) de audio 1 a 10 segundos.
+                                (Mientras que un streaming clásico tiene hasta
+                                60 segundos de retraso)
+                            </p>
+                            <p>
+                                Le proporcionamos un reproductor en HTML5 que no
+                                necesitara de ningún plugin o reproductor de
+                                audio auxiliar para sintonizar la radio.
+                            </p>
+                            <p>
+                                Sus usuarios podrán escucharle en iPhone, iPad,
+                                Blackberry, Android, TuneIn, Claro Radio y
+                                otros.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Ofrecen planes de Streaming con usuarios
+                                ilimitados?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Por el momento no ofrecemos planes de radio y tv
+                                streaming con usuarios ilimitados, sin embargo,
+                                ofrecemos planes muy buenos e incluso hacemos
+                                planes a medida en base a los requerimientos de
+                                nuestros clientes. Si desea un plan con
+                                capacidades específicas, contáctenos a través
+                                del Chat de Atención al Cliente de nuestra web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Los planes de Streaming que venden incluyen
+                                página web?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Ninguno de nuestros planes de Radio Streaming
+                                incluye diseño de página web, el cliente debe
+                                tener su página web, sino tiene página web
+                                comuníquese con nosotros para asesorarle y
+                                ofrecerle algunas opciones de diseño web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué necesito para poner mi radio en línea?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Si su radio actualmente funciona vía terrestre
+                                con AM o FM, asumimos que ya cuenta con equipo
+                                de cómputo, consolas o mixers y micrófonos, por
+                                lo tanto, únicamente necesitará contratar
+                                cualquiera de nuestros planes de Radio Streaming
+                                y también debe contar con lo que se le indica a
+                                continuación:
+                            </p>
+                            <p>
+                                - 2 Cables (Cada cable debe tener una punta 3.5
+                                mm y otra punta de ¼ de pulgada o XLR Canon)<br
+                                />
+                                 - Internet estable (512 kbps de UPLOAD como
+                                mínimo)<br />
+                                 - Página Web o blog para poder incrustar el
+                                reproductor y los enlaces para escuchar su radio
+                                en celulares.
+                            </p>
+                            <p>
+                                Si su radio no es AM o FM, entonces necesitará
+                                tener el equipo necesario que le detallamos a
+                                continuación:
+                            </p>
+                            <p>
+                                - Computadora potente con Windows XP, Windows 7,
+                                Windows 8, Windows 8.1, Windows 10. - Micrófono
+                                conectado a la computadora (Solo para un
+                                locutor)<br />
+                                 - Si piensa hacer programación formal con
+                                varios locutores, entonces necesitará varios
+                                micrófonos y también una consola mixer o
+                                mezcladora para conectar el audio de la
+                                computadora y los micrófonos.<br />
+                                 - 2 Cables, cada cable debe tener un extremo
+                                3.5 mm y el otro extremo de ¼ de pulgada o XLR
+                                Canon)<br />
+                                 = Internet estable (512 kbps de UPLOAD como
+                                mínimo).<br />
+                                 - Página Web o blog para poder incrustar el
+                                reproductor y los enlaces para escuchar su radio
+                                en celulares.
+                            </p>
+                            <p>
+                                NOTA: Esta es sólamente una sugerencia básica
+                                pero muy funcional, sin embargo, usted puede
+                                implementar su cabina de radio con mejores
+                                equipos, cables, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                Después de hacer el pago o depósito… ¿que hago?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Si su pago fue con Tarjeta de Crédito o PayPal,
+                                debe esperar a que nuestro equipo de facturación
+                                e implementación de servicios le envíe un
+                                correo, donde encontrará toda la información
+                                necesaria para poner a funcionar su servicio
+                                contratado. Si no le llega el correo debe
+                                escribir a nuestro WhatsApp +593 991220769
+                            </p>
+                            <p>
+                                Si su pago fue con Depósito Bancario, Pago
+                                Fácil, Rapipago, Transferencia Western Union o
+                                Money Gram, o alguna otra empresa de pagos, debe
+                                reportar su pago a través de nuestro WhatsApp
+                                +593 991220769 o al correo
+                                soporte@servistream.net
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿En cuanto tiempo me habilitan el servicio?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Su servicio de radio streaming se habilitará de
+                                30 minutos a dos horas después de confirmar su
+                                pago.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué me enviarán ustedes después de que yo
+                                realice mi pago?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>Nosotros le enviaremos lo siguiente:</p>
+                            <p>
+                                - IP, Puerto, Contraseña y Mountpoint, para
+                                conectar el encoder al servidor.<br />
+                                 - Reproductor HTML5 funcional en iPhone,
+                                Android, HMS Huawei, Blackberry y Otros, para
+                                que usted incruste en su página web.<br />
+                                 - Manual de Configuración FÁCIL del Encoder en
+                                su computadora.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Cuáles programas necesito para hacer funcionar
+                                mi streaming de radio?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Automatizador de Radio:<br />
+                                 Si su radio ya está funcionando, estamos
+                                seguros que ya cuenta con un software
+                                automatizador de radio, como por ejemplo,
+                                Zararadio, Dinesat, HDX, SamBroadcaster, Radio
+                                Boss o algún otro, por lo tanto, solamente
+                                necesitará instalar el ENCODER el cual se
+                                encargará de enviar el audio de su radio hacia
+                                nuestros servidores.
+                            </p>
+                            <p>
+                                Encoder:<br />
+                                 Hay varias opciones, por ejemplo StreamS, Butt,
+                                Opticodec, SAM Cast, Simplecast v3, SAM
+                                Broadcaster o en último caso utilice winamp dsp.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Ustedes pueden ayudarme a configurar mi Radio
+                                Streaming?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Sí, podemos ayudarle vía remota, desde nuestro
+                                centro de soporte en español. Usted necesitará
+                                instalar un programa para conexión remota,
+                                llamado Anydesk, puede descargarlo en
+                                https://anydesk.com e instalarlo en su
+                                computadora. Dicho programa le mostrará en
+                                pantalla un ID, los cuales deberá proporcionár a
+                                nuestro técnico de atención online, quien se
+                                conectará a su computadora y le ayudará
+                                inmediatamente para hacer la configuración de su
+                                radio online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion mt-20">
+                    <div class="mb-10">
+                        <h2 id="dominios" class="text-2xl">
+                            Dominios
+                        </h2>
+                        <h3>Responderemos a sus inquietudes</h3>
+                    </div>
+
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Qué es un nombre de dominio?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Un nombre de dominio es una parte fundamental de un sitio web: es la dirección que visita o ingresa en su navegador para visitar su sitio web. Recientemente, ha habido una explosión de extensiones de dominio disponibles, por lo que ya no tiene que tener yoursite.com o yourwebsite.co.uk, puede tener yoursite.club o yoursite.pro entre muchos más. Utilice nuestra herramienta de búsqueda de dominios para encontrar un excelente nombre de dominio disponible para su nuevo sitio web y complete el proceso de pago para comprar el nombre de dominio y agregarlo a su cuenta.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Necesito comprar un nombre de dominio para comenzar?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                No, si ya tiene un nombre de dominio, simplemente ingréselo cuando haga un pedido y el sistema le preguntará si desea transferir el nombre de dominio a servistream.net o actualizar los servidores de nombres para "vincular" su dominio existente a su nuevo servicio de alojamiento con nosotros. 
+                            </p>
+                            <p>
+                                Si aún no tiene un nombre de dominio, puede comprar uno cuando ordene su alojamiento a través de servistream.net, o puede comprar uno de otro proveedor y apuntar los servidores de nombres a eso.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <header>
+                            <span class="accordion-content-title">
+                                ¿Puedo transferir mis nombres de dominio a servistream.net?
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </header>
+                        <div class="accordion-content-description">
+                            <p>
+                                Sí, puede transferir más de cien tipos diferentes de dominios a servistream.net, desde .com, .net, .org, .uk y muchos más. La opción de transferir un dominio está disponible en tu área de cliente. Algunos dominios requieren que se pague una tarifa de transferencia en el momento de la transferencia. Cuando este es el caso, se agrega un año a la fecha de renovación una vez que la transferencia se completa con éxito. Otros dominios, como los dominios .uk, son gratuitos para transferir y la fecha de renovación no cambia. 
+                            </p>
+                            <p>
+                                Una vez que haya realizado un pedido de transferencia, recibirá una actualización en un correo electrónico de confirmación para saber cuándo se nos ha transferido el dominio o si hay otros pasos que debe completar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- INICIO CODIGO SECCION FOOTER-->
+    </main>
+
+    <style lang="scss">
+        p {
+            margin-bottom: 0.8rem;
+        }
+        .contenedor__lgo__server {
+            max-width: 900px;
+        }
+
+        .css-selector {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #181414;
+        }
+
+        li {
+            padding-bottom: 0.5rem;
+
+            a {
+                font-weight: 700;
+                font-size: 1rem;
+            }
+        }
+
+        .accordion {
+            width: 100%;
+        }
+        .accordion .accordion-content {
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            border-color: #bbffaa;
+            overflow: hidden;
+        }
+
+        .accordion-content.is-open {
+            padding-bottom: 10px;
+        }
+        .accordion-content header {
+            display: flex;
+            min-height: 50px;
+            padding: 0 15px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s linear;
+        }
+        .accordion-content.is-open header {
+            min-height: 35px;
+        }
+        .accordion-content-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000000;
+        }
+        .accordion-content-description {
+            height: 0;
+            font-size: 15px;
+            color: #000000;
+            font-weight: 400;
+            padding: 0 15px;
+        }
+
+        /*
+    CSS SECCION PLANES HOSTING
+    */
+    </style>
+
+    <ExternalScript />
+</Layout>
