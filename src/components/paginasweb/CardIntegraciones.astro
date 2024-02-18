@@ -1,0 +1,11 @@
+---
+interface Props {
+	logo: string;
+}
+
+const { logo } = Astro.props;
+---
+
+<section class="border__logos__inte">
+    <img src={logo} width="40" height="40" alt="Logo App">
+</section>

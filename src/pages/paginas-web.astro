@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Top from "../components/Top.astro";
 import MenuBlack from "../components/MenuBlack.astro";
 import MobileMenu from "../components/MobilMenu.astro";
-import MobileMenuBlack from "../components/paginasweb/MovileMenuBlack.astro"
+import MobileMenuBlack from "../components/paginasweb/MovileMenuBlack.astro";
 import Footer from "../components/Footer.astro";
 import CardDescripcionPaginasWeb from "../components/paginasweb/CardDescripcionPaginasWeb.astro";
+import CardIntegraciones from "../components/paginasweb/CardIntegraciones.astro";
+
 ---
 
 <Layout title="Hosting Internet Services | Páginas Web">
@@ -19,92 +21,161 @@ import CardDescripcionPaginasWeb from "../components/paginasweb/CardDescripcionP
             </div>
             <div class="pt-4 lg:hidden"><MobileMenuBlack /></div>
 
-            <div class="contenedor mx-auto grid grid-cols-1 my-10 gap-3 lg:grid-cols-2 px-5">
-                <div class="flex flex-col justify-center">
-                    <h1 class="text-6xl">
-                        Incorpórate al mundo digital con un <strong
-                            class="italic">sitio web</strong
-                        > SEO Friendly
-                    </h1>
-                    <p class="mt-5">
-                        La era digital llegó para quedarse y con ella la
-                        presencia web en donde con unos cuántos clics podemos
-                        acercarnos a nuestros clientes finales
+            <div class="contenedor mx-auto grid grid-cols-1 lg:grid-cols-2 px-5">
+                <div></div>
+                <div class="pb-20 pt-10">
+                    <p class="text-3xl font-bold">
+                        Somos un estudio creativo que se especializa en brindar soluciones de diseño y marca de alta calidad a personas y empresas.
                     </p>
-                    <div class="flex flex-col mt-5 items-center md:flex-row">
-                        <div>
+                </div>
+            </div>
 
-                            <a  href="https://walink.co/4f797c" target="_blank"
-                            type="button"
-                            class="text-white inline-block bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-                            >¡Quiero unirme al mundo digital!</a>
-                            
-                        </div>
-
-                        <div>
-
-                            <a class="font-semibold underline ml-5 hidden md:inline-block" href="https://walink.co/4f797c" target="_blank"
-                            >Comprar Precios</a>
-
-                        </div>
-
-
-
+            <div class="flex flex-col contenedor mx-auto justify-center">
+                <div class="flex justify-center z-10">
+                    <div class="px-5">
+                        <p class="text-1xl lg:text-2xl">CONSTRUCCIÓN DE DISEÑO DIGITAL</p>
+                        <p class="text-6xl lg:text-9xl font-semibold text-principal">
+                            AGENCIA CREATIVA
+                        </p>
                     </div>
                 </div>
-                <div><img src="/img/diseno-web1.svg" alt="Imagen"/></div>
-                <div class="mt-10">
-                    <p
-                        class="font-light uppercase text-sm tracking-widest mb-2"
-                    >
-                        Trabajando para
-                    </p>
-                    <div class="flex">
-                        <div>
-                            <h2>100+</h2>
-                            <p>Clientes Satisfechos</p>
-                        </div>
-                        <div class="ml-5">
-                            <h2>14+</h2>
-                            <p>Años de Experiencia</p>
-                        </div>
-                    </div>
-                </div>
+                <img
+                    class="mt-[-60px] z-0"
+                    src="/img/backweb.avif"
+                    alt="Imagen Back"
+                />
             </div>
         </header>
 
-        <article class="bg-[#F4F3EF] py-20 mt-20">
+        <section class="bg-[#1b1b1b] py-36">
+            <div>
+                <div class="grid grid-cols-1 gap-20 contenedor mx-auto lg:grid-cols-2 px-5">
+                    <p class="text-white text-4xl">
+                        Si está buscando un especialista para construir un proyecto digital significativo, puede comunicarse con nosotros.
+                    </p>
+                    <p class="text-white">
+                        Si usted es una agencia de desarrollo que busca subcontratar el trabajo de diseño, una empresa que busca un diseñador o un equipo de trabajo, una agencia de marketing que necesita una página de destino, una startup que quiere lanzar una aplicación o una empresa que planea cambiar su marca o rediseñar su sitio web, realizamos cualquier reto con los brazos abiertos.
+                    </p>
+                </div>
+            </div>
 
-            <section class="contenedor mx-auto my-20 flex flex-col items-center">
+            <div class="mt-20 contenedor mx-auto grid grid-cols-1 gap-20 lg:grid-cols-2">
+                <div class="flex items-end">
+                    <p class="text-white text-7xl font-semibold px-5">15</p>
+                    <p class="text-white pb-3 ml-8">AÑOS DE EXPERIENCIA</p>
+                </div>
+                <div>
+                    <article>
+                        <object class="scroll text4">
+                          <object>
+                            Online <span>Desarrollo * </span> Agencia <span>Desarrollo * </span> Agencia <span>Desarrollo * </span> Agencia <span>Desarrollo * </span>
+                          </object>
+                          <object>
+                            Online <span>Desarrollo * </span> Agencia <span>Desarrollo * </span> Agencia <span>Desarrollo * </span> Agencia <span>Desarrollo * </span>
+                          </object>
+                        </object>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor mx-auto grid grid-cols-1 gap-10 py-20 lg:grid-cols-2">
+
+            <div class="flex flex-col justify-center">
+                <div class="px-5">
+                    <p class="text-principal mb-4">QUIENES SOMOS</p>
+                    <p class="text-4xl">Nuestro equipo está formado por profesionales que tienen años de experiencia en el lanzamiento y gestión de proyectos.</p>
+                </div>
+            <div class="grid grid-cols-12 mt-10 gap-5 px-5">
+                    <div class="flex items-end col-[1/5]">
+                        <p class="pb-5 text-sm">CERCA</p>
+                        <img src="/img/SolarArrowRightUpOutline.svg" alt="Icono">
+                    </div>
+                    <div class="col-[5/-1] flex items-end pb-5 ">
+                        <p>SERVISTREAM es el aliado en soluciones de hosting y cloud. Somos expertos en diseño y ofrecemos un portafolio de soluciones para posicionar a las empresas online y para que éstas puedan trabajar en el mundo digital. </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="rounded-3xl" src="/img/imagen_web.avif" alt="Imagen">
+            </div>
+            
+        </section>
+
+        <section class="contenedor mx-auto py-20 grid grid-cols-1 md:lg:grid-cols-2 lg:grid-cols-3">
+            <div class="flex justify-center">
+                <div class="flex items-center">
+                    <p class="text-8xl mr-5">1K</p>
+                    <p>PROYECTOS <br> COMPLETADOS</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="flex items-center">
+                    <p class="text-8xl mr-5">10</p>
+                    <p>MIEMBROS DEL <br> EQUIPO</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="flex items-center">
+                    <p class="text-8xl mr-5">6K</p>
+                    <p>CLIENTES <br> SATISFECHOS</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <article class="bg-[#F4F3EF] py-20">
+            <section
+                class="contenedor mx-auto my-20 flex flex-col items-center"
+            >
                 <p class="text-center tracking-widest uppercase px-5">
                     Apuesta por las Mejores
                 </p>
-                <p class="text-center text-5xl px-5" >
-                    Soluciones <strong class="italic">digitales</strong> <br /> para tu Empresa
+                <p class="text-center text-5xl px-5">
+                    Soluciones <strong class="italic">digitales</strong>
+                    <br /> para tu Empresa
                 </p>
-                <p class="text-center">Estrategia y creatividad a tu disposición</p>
-    
-                <section class="contenedor mx-auto grid grid-cols-1 pt-10 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <p class="text-center">
+                    Estrategia y creatividad a tu disposición
+                </p>
+
+                <section
+                    class="contenedor mx-auto grid grid-cols-1 pt-10 gap-4 md:grid-cols-2 lg:grid-cols-4"
+                >
+                <div>
                     <CardDescripcionPaginasWeb
                         src="/img/SolarCourseUpOutline.svg"
                         title="Creatividad"
                         content="Diseños Webs Inéditos, Originales y Funcionales. Creados exclusivamente para clientes exigentes y de buen gusto"
                     />
+                </div>
+
+                <div class="mt-10">
                     <CardDescripcionPaginasWeb
                         src="/img/SolarCropMinimalisticOutline.svg"
                         title="Calidad"
                         content="Páginas web funcionales y visualmente atractivas. Desarrolladas por especialistas altamente calificados"
                     />
+                </div>
+
+                <div>
                     <CardDescripcionPaginasWeb
-                        src="/img/SolarLightbulbLinear.svg"
-                        title="Diseño"
-                        content="Páginas web elegantes, visualmente atractivas. Diseños únicos, creados exclusivamente para cada empresa"
-                    />
+                    src="/img/SolarLightbulbLinear.svg"
+                    title="Diseño"
+                    content="Páginas web elegantes, visualmente atractivas. Diseños únicos, creados exclusivamente para cada empresa"
+                />
+                </div>
+
+                <div class="mt-10">
                     <CardDescripcionPaginasWeb
-                        src="/img/SolarExitOutline.svg"
-                        title="Innovación"
-                        content="Páginas web modernas creadas por profesionales. Desarrolladas de acuerdo con los últimos avances tecnológicos"
-                    />
+                    src="/img/SolarExitOutline.svg"
+                    title="Innovación"
+                    content="Páginas web modernas creadas por profesionales. Desarrolladas de acuerdo con los últimos avances tecnológicos"
+                />
+
+                </div>
+
                 </section>
                 <a
                     href="/contacto"
@@ -113,136 +184,235 @@ import CardDescripcionPaginasWeb from "../components/paginasweb/CardDescripcionP
                     Infórmate de más servicios
                 </a>
             </section>
-
         </article>
 
 
+        <section class="bg-[#1b1b1b] py-20">
+            <div class="contenedor mx-auto px-5">
+                <h2 class="text-white">Nuestra experiencia</h2>
 
-        <div class="back__banner ">
+                <div class="grid grid-cols-1 gap-2 mt-10 md:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <p class="text-principal">.01</p>
+                        <h2 class="text-white underline">.Desarrollo</h2>
+                    </div>
+                    <div>
+                        <p class="text-principal">.02</p>
+                        <h2 class="text-white underline">.Marketing</h2>
+                    </div>
+                    <div>
+                        <p class="text-principal">.03</p>
+                        <h2 class="text-white underline">.Diseño UI</h2>
+                    </div>
+                    <div>
+                        <p class="text-principal">.04</p>
+                        <h2 class="text-white underline">.Datos & Analitica</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <div class="back__banner">
             <section class="contenedor mx-auto rounded-md py-20">
-
-                <div class=" flex flex-col items-center px-5">
-                    <p class="text-4xl text-center">Impulsa tu negocio con un <br> <strong class="italic">diseño web</strong> memorable</p>
-                    <p class="text-center">Estamos listo para realizar tu proyecto</p>
-                    <a href="https://walink.co/4f797c" target="_blank" type="button" class="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-10">
-                        <svg class="w-4 h-4 me-2 -ms-1 text-[#626890]" viewBox="0 0 24 24"><path fill="#626890" fill-rule="evenodd" d="M12 2.75A9.25 9.25 0 0 0 2.75 12c0 1.481.348 2.879.965 4.118c.248.498.343 1.092.187 1.677l-.596 2.225a.55.55 0 0 0 .673.674l2.227-.596a2.383 2.383 0 0 1 1.676.187A9.208 9.208 0 0 0 12 21.25a9.25 9.25 0 0 0 0-18.5M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75c-1.718 0-3.344-.404-4.787-1.122a.885.885 0 0 0-.62-.08l-2.226.595c-1.524.408-2.918-.986-2.51-2.51l.596-2.226a.885.885 0 0 0-.08-.62A10.709 10.709 0 0 1 1.25 12M12 7.25a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75m-4 2a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4A.75.75 0 0 1 8 9.25m8 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/></svg>
+                <div class="flex flex-col items-center px-5">
+                    <p class="text-4xl text-center">
+                        Impulsa tu negocio con un <br />
+                        <strong class="italic">diseño web</strong> memorable
+                    </p>
+                    <p class="text-center">
+                        Estamos listo para realizar tu proyecto
+                    </p>
+                    <a
+                        href="https://walink.co/4f797c"
+                        target="_blank"
+                        type="button"
+                        class="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-10"
+                    >
+                        <svg
+                            class="w-4 h-4 me-2 -ms-1 text-[#626890]"
+                            viewBox="0 0 24 24"
+                            ><path
+                                fill="#626890"
+                                fill-rule="evenodd"
+                                d="M12 2.75A9.25 9.25 0 0 0 2.75 12c0 1.481.348 2.879.965 4.118c.248.498.343 1.092.187 1.677l-.596 2.225a.55.55 0 0 0 .673.674l2.227-.596a2.383 2.383 0 0 1 1.676.187A9.208 9.208 0 0 0 12 21.25a9.25 9.25 0 0 0 0-18.5M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75c-1.718 0-3.344-.404-4.787-1.122a.885.885 0 0 0-.62-.08l-2.226.595c-1.524.408-2.918-.986-2.51-2.51l.596-2.226a.885.885 0 0 0-.08-.62A10.709 10.709 0 0 1 1.25 12M12 7.25a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75m-4 2a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4A.75.75 0 0 1 8 9.25m8 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                                clip-rule="evenodd"></path></svg
+                        >
                         Contáctate Ahora con Nosotros
-                        </a>
+                    </a>
                 </div>
-    
-    
             </section>
-
         </div>
 
-        <div class="contenedor mx-auto py-20">
-            <p class="text-center font-semibold">Integraciones</p>
-            <p class="text-center">Trabajamos con estas tecnologías</p>
-
-            <div class="grid gap-2 grid-cols-5 place-content-center my-10 md:grid-cols-10 lg:grid-cols-10">
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/wordpress-logo-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/html-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/css3-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/sass-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/astro-build.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/javascript-16-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/python-127-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/tailwind-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                <img class="w-10 h-10" src="/img/bootstrap-svgrepo-com.svg" alt="Wordpress">
-                </div>
-                <div class="flex justify-center">
-                    <img class="w-10 h-10" src="/img/linux-ubuntu-148-svgrepo-com.svg" alt="Wordpress">
-                    </div>
+        <section class="grid grid-cols-1 lg:grid-cols-4 contenedor mx-auto pb-20">
+            <div class="col-[1/-1] lg:col-[1/2] p-20 flex items-center justify-center border-red-[#eff6fc] border-y-[1px] border-l-[1px]">
+                <CardIntegraciones logo="/img/wordpress-logo-svgrepo-com.svg"/>
             </div>
-            <p class="text-center">Conectando a más de 300 páginas web</p>
-        </div>
-
-
-        <section class="bg-[#eaf7ff]">
-            <div class="pt-20 px-5">
-                <div class="contenedor mx-auto flex flex-col items-center">
-
-                    <p class="text-4xl text-center mb-5">Más de 100 empresas han contratado con servistream</p>
-    
-                    <div class="grid grid-cols-1 gap-2 py-10 md:grid-cols-2">
-                        <div class="flex flex-col justify-center">
-                            <div><p class="text-lg text-center">CLIENTES QUE CONFÍAN</p></div>
-        
-                            <div class="grid grid-cols-3 gap-2 p-8">
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/montalvologo.webp" width="120" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/logosolo.svg" width="120" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/logomancomunidad.png" width="120" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/logodrvertical.svg" width="120" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/LOGO-NUEVO_Mesa-de-trabajo-1.png" width="100" height="120"  alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/curaraylogo.png" width="120" height="100" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/logo-orqueta-2023.png" width="120" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/Logo1_-efecto4.png" width="80" height="120" alt="Logo">
-                                </div>
-                                <div class="flex justify-center items-center">
-                                    <img src="/img/colegiomilitar.png" width="80" height="120" alt="Logo">
-                                </div>
-            
-                            </div>
-                        </div>
-    
-                        <div class="flex flex-col justify-center p-8">
-                            <p class="text-center">“Servistream es un alojamiento rápido y fiable que resuelve los problemas tan pronto como surgen. La demanda de nuestro producto y contenido creció hasta el punto de que nuestro antiguo alojamiento se caía bajo presión; después de servir demasiados errores, nos cambiamos, y el resto fue historia.”</p>
-                            <div class="flex flex-col items-center mt-5">
-                                <img src="/img/avatar1.webp" class="mb-5 rounded-lg border-4 border-indigo-500/100" width="80" alt="Avatar">
-                                <p class="text-sm font-semibold">Juan Espinoza</p>
-                                <p class="text-sm font-semibold">SEO Radio la Plena</p>
-                            </div>
-
-                        </div>
-    
-                    </div>
-    
+            <div class="col-[1/-1] lg:col-[2/3] p-20 flex items-center justify-center border-red-[#eff6fc] border-y-[1px] border-l-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/html-svgrepo-com.svg"/>
+            </div>
+            <div class="col-[1/-1] hidden lg:col-[3/-1] lg:flex items-center bg-[#eff6fc]">
+                <div class="p-5">
+                    <p class="text-principal">INTEGRACIONES</p>
+                    <p class="text-4xl">Trabajamos con estas tecnologías</p>
                 </div>
-
             </div>
 
-            <div class="flex justify-center">
-                <img src="/img/6515cdabac091f50c74e8363_High Five-p-500.png" width="200" height="200" alt="Manos">
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-l-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/css3-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px]">
+                <CardIntegraciones logo="/img/sass-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-l-[1px] border-t-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/astro-build.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-r-[1px] border-t-[1px] ">
+                <CardIntegraciones logo="/img/javascript-16-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-l-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/python-127-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px]">
+                <CardIntegraciones logo="/img/tailwind-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-l-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/bootstrap-svgrepo-com.svg"/>
+            </div>
+
+            <div class="p-20 flex items-center justify-center border-red-[#eff6fc] border-b-[1px] border-r-[1px]">
+                <CardIntegraciones logo="/img/linux-ubuntu-148-svgrepo-com.svg"/>
             </div>
 
         </section>
 
 
+        <section class="bg-[#eaf7ff]">
+            <div class="pt-20 px-5">
+                <div class="contenedor mx-auto flex flex-col items-center">
+                    <p class="text-4xl text-center mb-5">
+                        Más de 100 empresas han contratado con servistream
+                    </p>
 
+                    <div class="grid grid-cols-1 gap-2 py-10 md:grid-cols-2">
+                        <div class="flex flex-col justify-center">
+                            <div>
+                                <p class="text-lg text-center">
+                                    CLIENTES QUE CONFÍAN
+                                </p>
+                            </div>
 
+                            <div class="grid grid-cols-3 gap-2 p-8">
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/montalvologo.webp"
+                                        width="120"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/logosolo.svg"
+                                        width="120"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/logomancomunidad.png"
+                                        width="120"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/logodrvertical.svg"
+                                        width="120"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/LOGO-NUEVO_Mesa-de-trabajo-1.png"
+                                        width="100"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/curaraylogo.png"
+                                        width="120"
+                                        height="100"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/logo-orqueta-2023.png"
+                                        width="120"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/Logo1_-efecto4.png"
+                                        width="80"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <img
+                                        src="/img/colegiomilitar.png"
+                                        width="80"
+                                        height="120"
+                                        alt="Logo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-center p-8">
+                            <p class="text-center">
+                                “Servistream es un alojamiento rápido y fiable
+                                que resuelve los problemas tan pronto como
+                                surgen. La demanda de nuestro producto y
+                                contenido creció hasta el punto de que nuestro
+                                antiguo alojamiento se caía bajo presión;
+                                después de servir demasiados errores, nos
+                                cambiamos, y el resto fue historia.”
+                            </p>
+                            <div class="flex flex-col items-center mt-5">
+                                <img
+                                    src="/img/avatar1.webp"
+                                    class="mb-5 rounded-lg border-4 border-indigo-500/100"
+                                    width="80"
+                                    alt="Avatar"
+                                />
+                                <p class="text-sm font-semibold">
+                                    Juan Espinoza
+                                </p>
+                                <p class="text-sm font-semibold">
+                                    SEO Radio la Plena
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <!-- INICIO CODIGO SECCION FOOTER-->
         <Footer />
@@ -258,9 +428,74 @@ import CardDescripcionPaginasWeb from "../components/paginasweb/CardDescripcionP
         /* background-image: linear-gradient(to right top, #e4ecfc, #dfeefc, #dbf0fa, #d8f2f7, #d8f3f3, #dbf4f0, #def5ed, #e3f6eb, #e9f8ea, #eff9ea, #f6fbeb, #fcfcec);*/
     }
 
-    .back__banner{
-        background-color: #fff;
+
+    article {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll {
+  display: flex;
+  width: 100%;
+
+  
+  object {
+    font-weight: 900;
+    font-size: 4em;
+    white-space: nowrap;
+    color: #fff;
+    animation: animate 40s -40s linear infinite;
+    will-change: transform;
+    
+    &:nth-child(2) {
+      animation: animate2 40s -20s linear infinite;
     }
+  }
+  
+  span {
+    -webkit-text-stroke: 2px #fff;
+    color: #000;
+  }
+}
+
+.text1 {
+  transform: rotate(30deg) translate(-200px, 200px);
+}
+
+.text2 {
+  transform: rotate(-25deg) translate(-200px, 120px);
+}
+
+.text3 {
+  transform: rotate(25deg) translate(-200px, 300px);
+}
+
+.text3 {
+  transform: rotate(-2deg) translate(-200px, -150px);
+}
+
+.text5 {
+  transform: rotate(5deg) translate(-200px, 250px);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
 
     /*
     CSS SECCION PLANES HOSTING

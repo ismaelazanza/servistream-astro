@@ -9,11 +9,11 @@ const { src, title, content } = Astro.props;
 ---
 
 
-<section class=" rounded-1xl">
+<section class="border__radius__card">
     
-    <div class="px-9 py-20">
+    <div class="px-9 py-32">
         <img class="rounded-full bg-black p-3" src={src} width="50" alt="Icono">
-        <p class="text-2xl my-5 font-semibold">{title}</p>
+        <p class="text-2xl my-5 uppercase">{title}</p>
         <p class="text-sm">{content}</p>
     </div>
 
@@ -27,6 +27,10 @@ const { src, title, content } = Astro.props;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
 
+    .border__radius__card{
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.01);
+    }
 
 
 </style>
