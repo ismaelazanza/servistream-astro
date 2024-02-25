@@ -8,9 +8,10 @@ interface Props {
     des1: string;
     des2: string;
     des3?: string;
+    des4?: string;
 }
 
-const { descrip, link, precio, plan, configuracion, des1, des2, des3} = Astro.props;
+const { descrip, link, precio, plan, configuracion, des1, des2, des3, des4} = Astro.props;
 ---
 
 
@@ -27,17 +28,18 @@ const { descrip, link, precio, plan, configuracion, des1, des2, des3} = Astro.pr
         <li class="text-white">
            {des1} televidentes
         </li>
+        <li class="text-white">Servidor Propio</li>
         <li class="text-white">
-           {des2} tranferencia
+           {des2} Ilimitada
         </li>
-        <li class="text-white">Transmite hasta 1080p</li>
+        <li class="text-white">Transmite hasta 2080p</li>
         <li class="text-white underline">{des3}</li>
+        <li class="text-white">{des4}</li>
     </ul>
 
     <div class="flex mt-5">
-        <p class="text-white text-xs">Panel</p>
-        <p class="text-white text-xs mx-2">App Android</p>
-        <p class="text-white text-xs">Retransmisión</p>
+        <p class="text-white text-xs mr-2">App Android</p>
+        <p class="text-white text-xs">Varias Regiones</p>
     </div>
 
     <a
