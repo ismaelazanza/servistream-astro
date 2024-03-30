@@ -7,9 +7,10 @@ interface Props {
     des1: string;
     des2: string;
     des3: string;
+    des4: string;
 }
 
-const { plan, precio, activacion, link, des1, des2, des3 } = Astro.props;
+const { plan, precio, activacion, link, des1, des2, des3, des4 } = Astro.props;
 ---
 
 <section class="p-5">
@@ -51,7 +52,7 @@ const { plan, precio, activacion, link, des1, des2, des3 } = Astro.props;
                 height="10"
                 alt="Circle"
             />
-            <p class="text-white text-sm">Tranferencia Ilimitada</p>
+            <p class="text-white text-sm">{des4}</p>
         </li>
         <li class="flex items-center">
             <img
@@ -111,7 +112,7 @@ const { plan, precio, activacion, link, des1, des2, des3 } = Astro.props;
                 height="10"
                 alt="Circle"
             />
-            <p class="text-white text-sm">Panel CentovaCast</p>
+            <p class="text-white text-sm">Panel SonicPanel</p>
         </li>
         <li class="flex items-center">
             <img
