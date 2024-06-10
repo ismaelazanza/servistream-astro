@@ -8,12 +8,13 @@ interface Props {
     conexion: string;
     precio: string;
     ubicacion: string;
+    link: string;
 }
 
-const { plan, activacion, ram, core, capacidad, conexion, precio, ubicacion } = Astro.props;
+const { plan, activacion, ram, core, capacidad, conexion, precio, ubicacion, link } = Astro.props;
 ---
 
-<a class="bg-[#fff] p-5 border-indigo-100/100 hover:border-2 hover:border-indigo-500/100  transition ease-in-out border-2 block" href="#">
+<a class="bg-[#fff] p-5 border-indigo-100/100 hover:border-2 hover:border-indigo-500/100  transition ease-in-out border-2 block" href={link}>
     <div>
         <div>
             <h2 class="text-sm">{plan}</h2>
