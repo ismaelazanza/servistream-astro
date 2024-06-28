@@ -30,43 +30,62 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 			</div>
 			<div class="pt-4 lg:hidden"><MobileMenu /></div>
 
-			<section
-				class="mt-20 px-5 contenedor mx-auto grid grid-cols-1 grid-rows-1 gap-2 place-content-center lg:grid-cols-2"
-			>
-				<div>
-					<h2 class="text-white pb-3 text-lg underline">
-						Expertos en soluciones web desde 2014
-					</h2>
-					<h1
-						class="text-white text-4xl font-bold md:text-5xl lg:text-7xl"
-					>
-						El mejor Hosting y Radio Streaming
-					</h1>
-					<p class="text-white text-xl pt-2 lg:text-2xl">
-						Nos aseguramos de que tu sitio web sea rápido, seguro y
-						esté siempre activo, para que tus visitantes y motores
-						de búsqueda confíen en ti. Garantizado.
-					</p>
-					<div class="mt-10 flex flex-col md:flex-row">
-						<div>
-						<BotonUno href="/hosting-cloud/" title="Comenzar ahora"/>
-						</div>
-						<div>
-						<BotonDos href="/paginas-web/" title="Más que un sitio web"/>
-						</div>
-					</div>
-				</div>
-				<div class="items-center justify-center hidden lg:flex">
-					<img src="/img/server_izquiera-01.svg" width="500" alt="Server" />
-				</div>
-			</section>
+			<section class="flex flex-col justify-center">
 
-			<div class="contenedor mx-auto px-5 mt-10">
-				<p class="text-white text-4xl font-bold">
-					Alojando a <span class="underline">1.245 sitios</span>,
-					clientes satisfechos +500
-				</p>
-			</div>
+				<section class="contenedor mx-auto">
+					<section
+						class="mt-20 px-5 grid grid-cols-1 grid-rows-1 gap-2 place-content-center lg:grid-cols-2"
+					>
+						<div>
+							<h2 class="text-white pb-3 text-lg underline">
+								Expertos en soluciones web desde 2014
+							</h2>
+							<h1
+								class="text-white text-4xl font-bold md:text-5xl lg:text-7xl"
+							>
+								El mejor Hosting y Radio Streaming
+							</h1>
+							<p class="text-white text-xl pt-2 lg:text-2xl">
+								Nos aseguramos de que tu sitio web sea rápido,
+								seguro y esté siempre activo, para que tus
+								visitantes y motores de búsqueda confíen en ti.
+								Garantizado.
+							</p>
+							<div class="mt-10 flex flex-col md:flex-row">
+								<div>
+									<BotonUno
+										href="/hosting-cloud/"
+										title="Comenzar ahora"
+									/>
+								</div>
+								<div>
+									<BotonDos
+										href="/paginas-web/"
+										title="Más que un sitio web"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="items-center justify-center hidden lg:flex">
+							<img
+								src="/img/server_izquiera-01.svg"
+								width="500"
+								alt="Server"
+							/>
+						</div>
+					</section>
+					<div class="px-5 mt-10">
+						<p class="text-white text-4xl font-bold">
+							Alojando a <span class="underline">1.245 sitios</span>,
+							clientes satisfechos +500
+						</p>
+					</div>
+				</section>
+
+			</section>
+			
+			
+
 		</header>
 
 		<!-- FIN CODIGO DE HEADER MENU INDEX -->
@@ -170,7 +189,10 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 				</h5>
 
 				<div>
-					<BotonTres href="/hosting-cloud/" title="Ver nuestro planes" />
+					<BotonTres
+						href="/hosting-cloud/"
+						title="Ver nuestro planes"
+					/>
 				</div>
 			</div>
 			<div>
@@ -247,8 +269,10 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 				/>
 			</div>
 
-			<div class="contenedor mx-auto pb-20 flex items-center justify-center">
-				<BotonCuatro href="/sonicpanel/" title="Ver todos los planes"/>
+			<div
+				class="contenedor mx-auto pb-20 flex items-center justify-center"
+			>
+				<BotonCuatro href="/sonicpanel/" title="Ver todos los planes" />
 			</div>
 		</section>
 
@@ -278,7 +302,6 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 						src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo-whatsapp-512.png"
 						alt="Icono"
 					/>
-
 				</a>
 			</div>
 		</div>
