@@ -38,9 +38,9 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
                     audio para sus oyentes
                 </p>
 
-                <div class="flex flex-col items-center mt-10 md:flex-row">
+                <div class="textos flex flex-col items-center mt-10 md:flex-row">
                     <a
-                        href="#"
+                        href="https://panel.servistream.net/order/product?pid=d5308768-251d-4801-532f-847e390921e6"
                         class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mb-5 md:mb-0"
                     >
                         <span
@@ -67,12 +67,6 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
             </div>
         </header>
 
-        <div>
-            <PromocionRadio />
-        </div>
-        
-
-
         <section class="contenedor mx-auto grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3">
             <CardDescripCentovaUno src="/img/SolarMusicNote2Outline.svg" title="Calidad de Sonido" content="Transmisiones de hasta 320kbps. Codificación en mp3PRO y aacPlus para mayor calidad con la misma conectividad." />
             <CardDescripCentovaUno src="/img/SolarAlignBottomOutline.svg" title="Estadísticas" content="Información sobre la actividad de tus oyentes: ubicación geográfica, cantidad de oyentes, tiempo de escucha, y mucho más." />
@@ -90,10 +84,10 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
 
         <section class="contenedor mx-auto flex items-center flex-wrap justify-center pb-20">
 
-            <CardPreciosCentova plan="Económico" precio="$5" activacion="Descuento por suscripción anual" des1="500" des2="128 KBPS" des3="10 GB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-economico"/>
-            <CardPreciosCentova plan="Básico" precio="$10" activacion="Descuento por suscripción anual" des1="1000" des2="192 KBPS" des3="30 GB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-basico"/>
-            <CardPreciosCentova plan="Plus" precio="$15" activacion="Descuento por suscripción anual" des1="3000" des2="320 KBPS" des3="50 GB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-plus"/>
-            <CardPreciosCentova plan="Profesional" precio="$20" activacion="Descuento por suscripción anual" des1="5000" des2="320 KBPS" des3="100 GB" link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-profesional"/>
+            <CardPreciosCentova plan="Económico" precio="$5" activacion="Descuento por suscripción anual" des1="500" des2="128 KBPS" des3="10 GB" link="https://panel.servistream.net/order/product?pid=61e50989-73d2-472e-500c-345e610832d7"/>
+            <CardPreciosCentova plan="Básico" precio="$10" activacion="Descuento por suscripción anual" des1="1000" des2="192 KBPS" des3="30 GB" link="https://panel.servistream.net/order/product?pid=d5308768-251d-4801-532f-847e390921e6"/>
+            <CardPreciosCentova plan="Plus" precio="$15" activacion="Descuento por suscripción anual" des1="3000" des2="320 KBPS" des3="50 GB" link="https://panel.servistream.net/order/product?pid=2e071d93-1d5e-4607-861c-546028758396"/>
+            <CardPreciosCentova plan="Profesional" precio="$20" activacion="Descuento por suscripción anual" des1="5000" des2="320 KBPS" des3="100 GB" link="https://panel.servistream.net/order/product?pid=196e02e5-136d-4295-076b-1429807875d3"/>
 
         </section>
 
@@ -152,6 +146,14 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
     .contenedor__hosting__preguntas {
         max-width: 1000px;
     }
+
+    .textos{
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+     }
 
     /*
     CSS SECCION PLANES HOSTING

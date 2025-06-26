@@ -27,7 +27,7 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro"
                         <p>Servidores con recursos dedicados y totalmente administrado <br> por nosotros.
                             Para que usted se solo se proucupe por lo importante, su estación de radio.</p>
                 </div>
-                <div class="mt-10">
+                <div class="mt-10 textos">
 
                     <a  href="https://walink.co/4f797c" target="_blank"
                     type="button"
@@ -53,23 +53,23 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro"
     <section class="my-20">
 
         <div class="contenedor_planes mx-auto mb-5">
-            <PreciosAzura plan="Azure Cloud S" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="2 GB RAM" core="2 vCPU Cores" capacidad="80 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$11" link="https://clientes.servistream.net/index.php?rp=/store/azuracast/azure-cloud-s" >
+            <PreciosAzura plan="Azure Cloud S" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="2 GB RAM" core="2 vCPU Cores" capacidad="80 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$11" link="https://panel.servistream.net/order/product?pid=196e02e5-136d-4295-986a-1429807875d3" >
 
         </div>
         <div class="contenedor_planes mx-auto mb-5">
-            <PreciosAzura plan="Azure Cloud M" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="4 GB RAM" core="2 vCPU Cores" capacidad="160 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$17" link="https://clientes.servistream.net/index.php?rp=/store/azuracast/azure-cloud-m" >
+            <PreciosAzura plan="Azure Cloud M" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="4 GB RAM" core="2 vCPU Cores" capacidad="160 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$17" link="https://panel.servistream.net/order/product?pid=052d137e-08d2-419d-98db-3495163789e6" >
 
         </div>
         <div class="contenedor_planes mx-auto mb-5">
-            <PreciosAzura plan="Azure Cloud L" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="8 GB RAM" core="4 vCPU Cores" capacidad="240 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$24" link="https://clientes.servistream.net/index.php?rp=/store/azuracast/azure-cloud-l" >
+            <PreciosAzura plan="Azure Cloud L" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="8 GB RAM" core="4 vCPU Cores" capacidad="240 GB SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$24" link="https://panel.servistream.net/order/product?pid=61e50989-73d2-472e-2d0b-345e610832d7" >
 
         </div>
         <div class="contenedor_planes mx-auto mb-5">
-            <PreciosAzura plan="Azure Cloud XL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="16 GB RAM" core="8 vCPU Cores" capacidad="320 SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$40" link="https://clientes.servistream.net/index.php?rp=/store/azuracast/azure-cloud-xl" >
+            <PreciosAzura plan="Azure Cloud XL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="16 GB RAM" core="8 vCPU Cores" capacidad="320 SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$40" link="https://panel.servistream.net/order/product?pid=80d1639e-237d-4350-582c-64610589e572" >
 
         </div>
         <div class="contenedor_planes mx-auto">
-            <PreciosAzura plan="Azure Cloud XXXL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="24 GB RAM" core="12 vCPU Cores" capacidad="640 SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$65" link="https://clientes.servistream.net/index.php?rp=/store/azuracast/azure-cloud-xxxl" >
+            <PreciosAzura plan="Azure Cloud XXXL" activacion="SERVIDOR PROPIO | INSTALACIÓN EN UNAS HORAS" ram="24 GB RAM" core="12 vCPU Cores" capacidad="640 SSD" conexion="Tráfico Ilimitado up to 1 Gbit/s" ubicacion="Estados Unidos" precio="$65" link="https://panel.servistream.net/order/product?pid=1e96d298-537d-4e58-5e3f-54e120637085" >
 
         </div>
         
@@ -111,7 +111,7 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro"
     <div class="flex flex-col justify-center items-center">
         <h2 class="text-center">AzuraCast Demo</h2>
         <p class="text-center">Tenemos un sitio de demostración con una pequeña instalación de AzuraCast y una única estación de radio, <br> donde puede ver los conceptos básicos de la interfaz web de AzuraCast en acción</p>
-        <div class="mt-10">
+        <div class="mt-10 textos">
 
             <a  href="https://demo.azuracast.com/login" target="_blank"
             type="button"
@@ -143,6 +143,14 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro"
     .contenedor_planes{
         max-width: 900px ;
     }
+
+         .textos{
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+ }
 
     /*
     CSS SECCION PLANES HOSTING

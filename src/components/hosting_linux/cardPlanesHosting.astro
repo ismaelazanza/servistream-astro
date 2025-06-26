@@ -60,7 +60,7 @@ import BotonCinco from '../BotonCinco.astro';
         <p class="text-sm font-semibold">{des9}</p>
         <a class="bg-[#00b285] hover:bg-[#378671] mt-10 group py-2 px-8 inline-block rounded-lg transition ease-in-out border border-transparent mb-4 lg:mb-0 md:mr-2" href={link}>
             <div class="flex items-center">
-                <p class="text-white font-semibold">Comprar Ahora</p>
+                <p class="text-white font-semibold textos">Comprar Ahora</p>
                 <img class="h-4 w-4 ml-3 opacity-100 group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-x-1" src="/img/SolarCartLarge2Bold.svg" alt="Icono">
             </div>
         </a>
@@ -91,4 +91,11 @@ import BotonCinco from '../BotonCinco.astro';
         margin-left: 4px;
     }
 
+ .textos{
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+ }
 </style>

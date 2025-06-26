@@ -8,7 +8,17 @@ const { href, title } = Astro.props;
 ---
 
 <a
-class="bg-[#00b285] hover:bg-[#378671] text-white font-semibold py-2 px-8 inline-block rounded-lg transition ease-in-out border border-transparent mb-4 lg:mb-0 md:mr-2"
+class="bg-[#71eaa6] hover:bg-[#86feba] text-[#16272d] font-semibold py-2 px-8 inline-block rounded-lg transition ease-in-out border border-transparent mb-4 textos lg:mb-0 md:mr-2"
 href={href}>
 {title}
 </a>
+
+<style>
+ .textos{
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+ }
+</style>

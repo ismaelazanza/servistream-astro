@@ -39,10 +39,10 @@ const {
         <h3 class="font-bold text-3xl">{title}</h3>
         <p class="text-xs pb-5"><i class="fa-solid fa-circle text-[6px] pr-1 mb-3"></i>2vCPU, Memory 2GB, IO 10MB/S</p>
         <p class="font-semibold bg-cyan-200 inline-block">{descuento}</p>
-        <p class="text-4xl font-extrabold mt-5">{precio} <span class="text-sm font-normal">/mes</span></p>
+        <p class="text-4xl font-bold mt-5">{precio} <span class="text-sm font-normal">/mes</span></p>
         <a class="bg-[#00b285] hover:bg-[#378671] mt-10 group py-2 px-8 inline-block rounded-lg transition ease-in-out border border-transparent mb-4 lg:mb-0 md:mr-2" href={link}>
             <div class="flex items-center">
-                <p class="text-white font-semibold">Realizar Pedido</p>
+                <p class="text-white font-semibold textos">Realizar Compra</p>
                 <img class="h-4 w-4 ml-3 opacity-100 group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-x-1" src="/img/SolarCartLarge2Bold.svg" alt="Icono">
             </div>
         </a>
@@ -58,3 +58,13 @@ const {
         <p class="text-sm font-semibold"> <i class="fa-solid fa-check mr-2 text-xs"></i> <strong>{des9}</strong> MySQL Base de datos</p>
     </div>
 </section>
+
+<style>
+ .textos{
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+ }
+</style>

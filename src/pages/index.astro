@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Menu from "../components/Menu.astro";
+import MenuBlack from "../components/MenuBlack.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import Top from "../components/Top.astro";
 import LogoScroll from "../components/index/LogoScroll.astro";
@@ -27,7 +27,7 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 			<div>
 				<Top />
 				<div class="hidden lg:block">
-					<Menu />
+					<MenuBlack />
 				</div>
 				<div class="pt-4 lg:hidden"><MobileMenu /></div>
 			</div>
@@ -41,11 +41,11 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 							Expertos en soluciones web desde 2014
 						</h2>
 						<h1
-							class="text-white text-4xl font-bold md:text-5xl lg:text-7xl"
+							class=" text-4xl md:text-5xl lg:text-7xl my-4"
 						>
-							El mejor Hosting y Radio Streaming
+							Hosting, Tv y Radio Streaming
 						</h1>
-						<p class="text-white text-xl pt-2 lg:text-2xl">
+						<p class="font-normal text-xl pt-2 lg:text-2xl">
 							Nos aseguramos de que tu sitio web sea rápido,
 							seguro y esté siempre activo, para que tus
 							visitantes y motores de búsqueda confíen en ti.
@@ -61,7 +61,7 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 							<div>
 								<BotonDos
 									href="/paginas-web/"
-									title="Más que un sitio web"
+									title="Crear sitio web"
 								/>
 							</div>
 						</div>
@@ -75,7 +75,7 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 					</div>
 				</section>
 				<div class="px-5 mt-10">
-					<p class="text-white text-4xl font-bold">
+					<p class="text-4xl font-bold">
 						Alojando a <span class="underline">1.245 sitios</span>,
 						clientes satisfechos +500
 					</p>
@@ -316,15 +316,6 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 			color: var(--color-primario);
 		}
 		header {
-			background-image: linear-gradient(
-				to right top,
-				#0e141b,
-				#0a1422,
-				#071429,
-				#06142f,
-				#071335
-			);
-			background-image: url(../img/hosting-reseller.webp);
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;

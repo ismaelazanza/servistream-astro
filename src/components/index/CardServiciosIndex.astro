@@ -10,13 +10,13 @@ const { href, title1, title2, img } = Astro.props;
 ---
 
 <a class="traslate-y group" href={href}>
-    <div class="box__services__index px-8 py-8 box__shadow__card">
+    <h2 class="box__services__index px-8 py-8 box__shadow__card">
         <img src={img} width="60" alt="Hosting Linux" />
         <div class="flex items-center justify-between mt-8">
             <p class="text-2xl font-semibold">{title1} <br /> {title2}</p>
             <img class="opacity-0 h-8 w-8 group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-x-1" src="/img/SolarArrowRightUpLineDuotone.svg" alt="Icono">
         </div>
-    </div>
+    </h2>
 </a>
 
 <style>
