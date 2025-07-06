@@ -1,0 +1,27 @@
+---
+interface Props {
+    title1: string;
+    title2: string;
+    href: string;
+    img_uno: string;
+}
+
+const { href, title1, title2, img_uno} = Astro.props;
+---
+
+<a class="traslate-y group" href={href}>
+    <section class="hover:bg-white transition ease-in-out p-10 h-[30rem] grid">
+        <section class="flex text-center content-center opacity-0 group-hover:opacity-100 transition ease-in-out">
+            <img src={img_uno} alt="Imagen">
+        </section>
+        <section class="place-content-end group-hover:opacity-100 transition ease-in-out group-hover:transform group-hover:translate-y-[-1.5rem]">
+            <div>
+                <p class="text-xs pb-4">{title1}</p>
+            </div>
+            <div class="flex justify-between justify-items-center">
+                <h3 class="">{title2}</h3>
+                <img class="group-hover:rotate-45 transition ease-in-out" width="25" height="25" src="/img/LineMdArrowRight.svg" alt="Icon">
+            </div>
+        </section>
+    </section>
+</a>

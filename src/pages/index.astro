@@ -4,7 +4,7 @@ import MenuBlack from "../components/MenuBlack.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import Top from "../components/Top.astro";
 import LogoScroll from "../components/index/LogoScroll.astro";
-import CardServiciosIndex from "../components/index/CardServiciosIndex.astro";
+import CardServiciosIndexDos from "../components/index/CardServiciosIndexDos.astro";
 import BuscarDominios from "../components/index/BuscarDominios.astro";
 import TemasEnvato from "../components/index/TemasEnvato.astro";
 import CardHosting from "../components/index/CardHosting.astro";
@@ -23,7 +23,7 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 	<main>
 		<!-- INICIA CODIGO DE HEADER MENU INDEX -->
 
-		<header class="h-screen flex flex-col justify-between">
+		<header class="flex flex-col justify-between">
 			<div>
 				<Top />
 				<div class="hidden lg:block">
@@ -33,25 +33,44 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 			</div>
 
 			<section class="container mx-auto">
-				<section
-					class="px-5 grid grid-cols-1 grid-rows-1 gap-2 place-content-center lg:grid-cols-1 text-center"
-				>
+
+				<section class="grid lg:grid-cols-12 md:grid-cols-3 sm:grid-cols-1 gap-8 mt-20 md:p-0 p-4">
+					<div class="lg:col-[1/4] md:col-[1/-1] place-content-end">
+						<p class="uppercase font-semibold tracking-widest pb-4 text-[14px]">Desde 2014</p>
+						<p>Nos aseguramos de que tu sitio web sea <strong>rápido, seguro</strong> y esté <strong><span class="italic font-semibold">siempre activo</span></strong></p>
+					</div>
+					<div class="lg:col-[4/6] place-content-center lg:inline hidden">
+						<img src="/img/rounde-vector.webp" alt="imagen">
+					</div>
+					<div class="lg:col-[6/-1] md:col-[1/-1] place-content-center">
+						<h1>Alojamiento web premium, tv y radio <span class="italic font-light">streaming para ti...</span></h1>
+					</div>
+				</section>
+				<section class="mt-24">
+					<img src="/img/img_header5.avif" alt="Imagen">
+				</section>
+
+			<!-- INICIA CODIGO DE LOGOS DE CLIENTES -->
+
+				<section class="contenedor mx-auto pl-2 pr-2 text-center font-semibold mt-9 mb-8">
+					<p>
+						Alojando a <strong>1.245 sitios,</strong> <span class="italic">clientes satisfechos</span> <strong>+500</strong>
+					</p>
+				</section>
+
+				<section class="contenedor__logos pl-2 pr-2">
+					<LogoScroll />
+				</section>
+
+				<!-- FIN CODIGO DE LOGOS DE CLIENTES -->
+
+
+				<section class="grid lg:grid-cols-[repeat(15,1fr)] p-10 my-48">
+					<div class="col-[1/4]"></div>
+					<div class="col-[4/13]">
+					<h2 class="text-black">Nos aseguramos de que tu sitio web sea rápido, seguro y esté siempre activo, para que tus visitantes y motores de búsqueda confíen en ti. Garantizado.</h2>
 					<div>
-						<h2 class="text-white pb-3 text-lg underline">
-							Expertos en soluciones web desde 2014
-						</h2>
-						<h1
-							class=" text-4xl md:text-5xl lg:text-7xl my-4"
-						>
-							Hosting, Tv y <br> Radio Streaming
-						</h1>
-						<p class="font-normal text-xl pt-2 lg:text-2xl">
-							Nos aseguramos de que tu sitio web sea rápido,
-							seguro y esté siempre activo, <br> para que tus
-							visitantes y motores de búsqueda confíen en ti.
-							Garantizado.
-						</p>
-						<div class="mt-10 flex flex-col md:flex-row justify-center">
+												<div class="mt-10 flex flex-col md:flex-row">
 							<div>
 								<BotonUno
 									href="/hosting-cloud/"
@@ -66,101 +85,37 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 							</div>
 						</div>
 					</div>
-					<div class="items-center justify-center hidden lg:flex">
-						<!-- <img
-							src="/img/server_izquiera-01.svg"
-							width="500"
-							alt="Server" 
-						/> -->
 					</div>
+					<div class="col-[13/-1]"></div>
 				</section>
-				<div class="px-5 mt-10 text-center">
-					<p class="text-4xl font-bold">
-						Alojando a <span class="underline">1.245 sitios</span>,
-						clientes satisfechos +500
-					</p>
-				</div>
 			</section>
 
-			<div class="h-[140px]"></div>
+
+
 		</header>
 
 		<!-- FIN CODIGO DE HEADER MENU INDEX -->
 
-		<!-- INICIA CODIGO DE LOGOS DE CLIENTES -->
-
-		<section
-			class="contenedor mx-auto pl-2 pr-2 text-center font-semibold mt-9 mb-8"
-		>
-			<p>
-				Con la confianza de <span class="color__principal"
-					>más de 500+</span
-				> empresas en crecimiento
-			</p>
-		</section>
-
-		<section class="contenedor__logos pl-2 pr-2">
-			<LogoScroll />
-		</section>
-
-		<!-- FIN CODIGO DE LOGOS DE CLIENTES -->
-
 		<!-- INICIA CODIGO SECCION MAS VELOCIDAD -->
 
-		<section
-			class="contenedor mx-auto grid mt-[10rem] mb-[10rem] grid-cols-1 gap-4 px-5 lg:grid-cols-2"
-		>
-			<div class="flex flex-col justify-center">
-				<h2 class="mt-15">¿Listo para <br /> más Velocidad?</h2>
-				<h5 class="mb-5">
-					Hacemos que sea fácil aprovechar más de 20 años de
-					experiencia — nuestros expertos web se encargarán de todo
-					para que tu sitio sea exitoso.
-				</h5>
-				<div>
-					<BotonTres href="/sonicpanel/" title="Conoce más" />
-				</div>
-			</div>
 
-			<div
-				class="grid gap-4 grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2"
-			>
-				<CardServiciosIndex
-					title1="Hosting"
-					title2="Linux"
-					img="/img/SolarServerPathBroken.svg"
-					href="/hosting-linux/"
-				/>
-				<CardServiciosIndex
-					title1="Hosting"
-					title2="Cloud"
-					img="/img/SolarServerSquareCloudBroken.svg"
-					href="/hosting-cloud/"
-				/>
-				<CardServiciosIndex
-					title1="Radio"
-					title2="Streaming"
-					img="/img/SolarRadioBroken.svg"
-					href="/sonicpanel/"
-				/>
-				<CardServiciosIndex
-					title1="Streaming"
-					title2="de TV"
-					img="/img/SolarTvBroken.svg"
-					href="/tv-streaming/"
-				/>
+		<section class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mb-24">
+			<div class="border-[1px] border-t-gray-400 border-r-gray-400 border-b-gray-400">
+				<CardServiciosIndexDos href="/hosting-linux" img_uno="/img/hostinindex1.png" title1="Alojamiento Compartido" title2="Web Hosting Linux">
+			</div>
+			<div class="border-[1px] border-t-gray-400 border-r-gray-400 border-b-gray-400">
+				<CardServiciosIndexDos href="/hosting-cloud" img_uno="/img/hostinindex2.png" title1="Plataforma Potente" title2="Web Hosting Cloud">
+			</div>
+			<div class="border-[1px] border-t-gray-400 border-r-gray-400 border-b-gray-400">
+				<CardServiciosIndexDos href="/sonicpanel" img_uno="/img/hostinindex3.png" title1="Potenciado por SonicPanel" title2="Radio Streaming">
+			</div>
+			<div class="border-[1px] border-t-gray-400  border-b-gray-400">
+				<CardServiciosIndexDos href="/tv-streaming" img_uno="/img/hostinindex4.png" title1="Plataforma Robusta y Confiable" title2="Tv Streaming">
 			</div>
 		</section>
+
 
 		<!-- FIN CODIGO SECCION MAS VELOCIDAD -->
-
-		<!-- INICIA CODIGO SECCION BUSCAR DOMINIOS -->
-
-		<section class="contenedor mx-auto">
-			<BuscarDominios />
-		</section>
-
-		<!-- FIN CODIGO SECCION BUSCAR DOMINIOS -->
 
 		<!-- INICIA CODIGO SECCION TEMAS GRATIS ENVATO -->
 
@@ -336,11 +291,6 @@ import BotonCuatro from "../components/BotonCuatro.astro";
 				#0e141b
 			);*/
 
-			section {
-				h2 {
-					color: var(--color-primario);
-				}
-			}
 		}
 
 		.bg__streaming__radio__index {
