@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuBlack from "../components/MenuBlack.astro";
+import Top from "../components/Top.astro";
+import BotonUno from "../components/BotonUno.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout 
+    title="Página no encontrada - Error 404 | ServiStream"
+    description="La página que buscas no existe o ha sido movida. Explora nuestros servicios de hosting, streaming de radio y TV en Ecuador."
+    keywords="error 404, página no encontrada, servistream"
+    noindex={true}
+>
+    <main>
+        <header>
+            <Top />
+            <div class="hidden lg:block">
+                <MenuBlack />
+            </div>
+        </header>
+
+        <section class="container mx-auto py-20 text-center">
+            <div class="max-w-2xl mx-auto px-4">
+                <h1 class="text-6xl font-bold mb-4 text-gray-800">404</h1>
+                <h2 class="text-3xl font-semibold mb-6 text-gray-700">Página no encontrada</h2>
+                <p class="text-lg mb-8 text-gray-600">
+                    Lo sentimos, la página que buscas no existe o ha sido movida. 
+                    Te invitamos a explorar nuestros servicios de hosting y streaming.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                    <div class="p-6 border rounded-lg">
+                        <h3 class="font-semibold mb-2">Hosting Web</h3>
+                        <p class="text-sm text-gray-600 mb-4">Hosting Linux con cPanel, SSL gratis y soporte 24/7</p>
+                        <BotonUno href="/hosting-linux/" title="Ver Hosting" />
+                    </div>
+                    <div class="p-6 border rounded-lg">
+                        <h3 class="font-semibold mb-2">Radio Streaming</h3>
+                        <p class="text-sm text-gray-600 mb-4">Streaming de radio profesional con SonicPanel</p>
+                        <BotonUno href="/sonicpanel/" title="Ver Radio" />
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <BotonUno href="/" title="Volver al inicio" />
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </main>
+</Layout>

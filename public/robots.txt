@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://servistream.net/sitemap-index.xml
+Sitemap: https://servistream.net/sitemap-0.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1
+
+# Block access to specific directories if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow access to CSS and JS files
+Allow: /fonts/
+Allow: /img/
+Allow: /scripts/
+Allow: /_astro/
+Allow: /favicon.png
+
+# Common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /

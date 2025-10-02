@@ -1,31 +1,83 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	keywords?: string;
+	image?: string;
+	canonical?: string;
+	noindex?: boolean;
 }
 
 // import { ViewTransitions } from 'astro:transitions';
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "Hosting Internet Services - Streaming Radio, TV, Páginas Web, Web Hosting, Reseller Hosting y Dominios. Hosting Web de alto rendimiento, tiempo de actividad del 99.9% y soporte técnico especializado.",
+	keywords = "streaming, radio, tv, hosting web, reseller hosting, certificados ssl, correo empresarial, streaming facebook, streaming ecuador, streaming tv, audio real, ecuador, streaming movil, streaming celulares, radio web, radio online, medios online, radios ecuador, radios fm, streaming radios, medios ecuador, arcotel, cordicom, frecuencias fm, streaming xhd, radio cloud, streaming cloud, streaming radio, streaming redes sociales, tricaster ecuador, OTT, streaming 4k, tv online, ip tv, encoder video, tv ecuador, streamingtv, canal tv, propia tv, video hd, transmitir video, video streaming ecuador, decoder video, canal online, canal tv online, full hd, capturadora video, streaming hd, streaming full hd, hosting ecuador, hosting empresarial, hosting dedicado, cpanel ecuador, node js, contenedores docker, virtualizacion ecuador, soluciones empresariales, hosting moodle, hosting wordpress, registro dominios, correo zimbra, zimbra ecuador, ecuador hosting, servidor dedicado, hosting windows, hosting linux, hosting java, net core, enlace ip, videoip, radio ip, enlaces tv, enlaces dedicados, audio sobre ip, video sobre ip, mpls ecuador, OTT ecuador",
+	image = "/img/servistream-og-image.png",
+	canonical,
+	noindex = false
+} = Astro.props;
+
+const currentUrl = new URL(Astro.request.url);
+const siteUrl = "https://servistream.net";
+const canonicalUrl = canonical || `${siteUrl}${currentUrl.pathname}`;
+const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="Streaming Radio, Tv, Paginas Web, Web Hosting, Reseller Hosting y Dominios. Hosting Web de alto rendimiento, tiempo de actividad del 99.9% y soporte."
-		/>
-		<meta
-			name="keywords"
-			content="streaming, radio, tv, hosting web, reseller hosting, certificados ssl, correo empresarial, streaming facebook, streaming ecuador, streaming tv, audio real, ecuador, streaming movil, streaming celulares, radio web, radio online, medios online, radios ecuador, radios fm, streaming radios, medios ecuador, arcotel, cordicom, frecuencias fm, streaming xhd, radio cloud, streaming cloud, streaming radio, streaming redes sociales, tricaster ecuador, OTT,streaming 4k, tv online, ip tv, encoder video, tv ecuador, streamingtv, canal tv, propia tv, video hd, transmitir video, video streaming ecuador, decoder video, canal online, canal tv online, full hd, capturadora video, streaming hd, streaming full hd, hosting ecuador, hosting empresarial, hosting dedicado, cpanel ecuador, node js, contenedores docker, virtualizacion ecuador, soluciones empresariales, hosting moodle, hosting wordpress, registro dominios, correo zimbra, zimbra ecuador, ecuador hosting, servidor dedicado, hosting windows, hosting linux, hosting java, net core, enlace ip, videoip, radio ip, enlaces tv, enlaces dedicados, audio sobre ip, video sobre ip, mpls ecuador, OTT ecuador"
-		/>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="ServiStream" />
+		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+		<link rel="canonical" href={canonicalUrl} />
+		
+		<!-- Favicon and App Icons -->
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
+		<link rel="manifest" href="/manifest.json" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={imageUrl} />
+		<meta property="og:site_name" content="ServiStream" />
+		<meta property="og:locale" content="es_ES" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={imageUrl} />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="theme-color" content="#00b285" />
+		<meta name="msapplication-TileColor" content="#00b285" />
 		<meta name="generator" content={Astro.generator} />
 
+		<!-- DNS Prefetch and Preconnect -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+		<link rel="dns-prefetch" href="https://kit.fontawesome.com" />
+		<link rel="dns-prefetch" href="https://walink.co" />
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		
+		<!-- Preload critical fonts -->
+		<link rel="preload" href="/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossorigin />
 
 		<link
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -39,14 +91,82 @@ const { title } = Astro.props;
 
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-
-		<title>{title}</title>
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "ServiStream",
+			"description": "Hosting Internet Services - Streaming Radio, TV, Páginas Web, Web Hosting, Reseller Hosting y Dominios",
+			"url": "https://servistream.net",
+			"logo": "https://servistream.net/img/logo.png",
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"telephone": "+593-4-123-4567",
+					"contactType": "customer support",
+					"availableLanguage": ["Spanish", "English"]
+				}
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "EC",
+				"addressLocality": "Ecuador"
+			},
+			"foundingDate": "2014",
+			"sameAs": [
+				"https://facebook.com/servistream",
+				"https://twitter.com/servistream"
+			],
+			"offers": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Web Hosting",
+						"description": "Hosting web de alto rendimiento con tiempo de actividad del 99.9%"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Radio Streaming",
+						"description": "Servicios de streaming de radio profesional"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "TV Streaming",
+						"description": "Servicios de streaming de televisión de alta calidad"
+					}
+				}
+			]
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
+		
+		<!-- FontAwesome -->
 		<script
 			src="https://kit.fontawesome.com/67f2be0dce.js"
-			crossorigin="anonymous"></script>
+			crossorigin="anonymous"
+			defer></script>
+		
+		<!-- Analytics placeholder - Replace with your actual tracking code -->
+		<!--
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'GA_MEASUREMENT_ID');
+		</script>
+		-->
 	</body>
 
 	<style is:global>
