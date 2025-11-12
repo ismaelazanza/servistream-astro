@@ -8,14 +8,13 @@ import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.a
 import CardDescripCentovaUno from "../components/centovacast/CardDescripCentovaUno.astro";
 import CardPreciosCentova from "../components/centovacast/CardPreciosCentova.astro";
 import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
-import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE PROMOCION DE RADIO */
-
+import PromocionRadio from "../components/PromocionRadio.astro"; /* CODIGO DE PROMOCION DE RADIO */
 ---
 
-<Layout 
-	title="Radio Streaming SonicPanel Ecuador - ServiStream | Streaming de Audio"
-	description="Radio streaming profesional con SonicPanel en Ecuador. AutoDJ, SSL incluido, hasta 320kbps, reproductores HTML5. Radio online de calidad profesional."
-	keywords="radio streaming ecuador, sonicpanel, autodj, streaming audio, radio online, mp3pro, aacplus, radio profesional ecuador"
+<Layout
+    title="Radio Streaming SonicPanel Ecuador - ServiStream | Streaming de Audio"
+    description="Radio streaming profesional con SonicPanel en Ecuador. AutoDJ, SSL incluido, hasta 320kbps, reproductores HTML5. Radio online de calidad profesional."
+    keywords="radio streaming ecuador, sonicpanel, autodj, streaming audio, radio online, mp3pro, aacplus, radio profesional ecuador"
 >
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -33,18 +32,22 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
                 <h1
                     class="text-white text-3xl font-light pb-5 tracking-tighter md:text-5xl lg:text-6xl"
                 >
-                    <span class="text-is-gradient font-bold">Radio Streaming SonicPanel</span>
+                    <span class="text-is-gradient font-bold"
+                        >Radio Streaming SonicPanel</span
+                    >
                 </h1>
                 <p class="text-white">
                     Hemos desarrollado una plataforma completa para que su
                     estación de radio este en internet todo el tiempo, <br />
-                     ofreciendo una experiencia insuperable de reproducción de
-                    audio para sus oyentes
+                    ofreciendo una experiencia insuperable de reproducción de audio
+                    para sus oyentes
                 </p>
 
-                <div class="textos flex flex-col items-center mt-10 md:flex-row">
+                <div
+                    class="textos flex flex-col items-center mt-10 md:flex-row"
+                >
                     <a
-                        href="https://panel.servistream.net/order/product?pid=d5308768-251d-4801-532f-847e390921e6"
+                        href="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-basico"
                         class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mb-5 md:mb-0"
                     >
                         <span
@@ -53,7 +56,9 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
                             Comprar Streaming Ahora
                         </span>
                     </a>
-                    <a href="#ver_precios" class="text-sm font-medium text-white ml-5"
+                    <a
+                        href="#ver_precios"
+                        class="text-sm font-medium text-white ml-5"
                         >Comparar Precios <i class="fa-solid fa-arrow-down-long"
                         ></i></a
                     >
@@ -65,66 +70,139 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
                     <section class="contenedor mx-auto">
                         <LogosScrollHosting />
                     </section>
-                    <p class="text-white bg-morado inline-block py-1 px-4 rounded-md mt-10 text-sm font-semibold">Grandes medios de comunicación ya confían en nosotros. Súmate a la experiencia de nuestro soporte
+                    <p
+                        class="text-white bg-morado inline-block py-1 px-4 rounded-md mt-10 text-sm font-semibold"
+                    >
+                        Grandes medios de comunicación ya confían en nosotros.
+                        Súmate a la experiencia de nuestro soporte
                     </p>
                 </article>
             </div>
         </header>
 
-        <section class="contenedor mx-auto grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3">
-            <CardDescripCentovaUno src="/img/SolarMusicNote2Outline.svg" title="Calidad de Sonido" content="Transmisiones de hasta 320kbps. Codificación en mp3PRO y aacPlus para mayor calidad con la misma conectividad." />
-            <CardDescripCentovaUno src="/img/SolarAlignBottomOutline.svg" title="Estadísticas" content="Información sobre la actividad de tus oyentes: ubicación geográfica, cantidad de oyentes, tiempo de escucha, y mucho más." />
-            <CardDescripCentovaUno src="/img/SolarMusicLibraryOutline.svg" title="HTML5 & SSL" content="Varios modelos de reproductores con tecnología SSL activa. Máxima compatibilidad con navegadores y sistemas bajo firewalls." />
+        <section
+            class="contenedor mx-auto grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3"
+        >
+            <CardDescripCentovaUno
+                src="/img/SolarMusicNote2Outline.svg"
+                title="Calidad de Sonido"
+                content="Transmisiones de hasta 320kbps. Codificación en mp3PRO y aacPlus para mayor calidad con la misma conectividad."
+            />
+            <CardDescripCentovaUno
+                src="/img/SolarAlignBottomOutline.svg"
+                title="Estadísticas"
+                content="Información sobre la actividad de tus oyentes: ubicación geográfica, cantidad de oyentes, tiempo de escucha, y mucho más."
+            />
+            <CardDescripCentovaUno
+                src="/img/SolarMusicLibraryOutline.svg"
+                title="HTML5 & SSL"
+                content="Varios modelos de reproductores con tecnología SSL activa. Máxima compatibilidad con navegadores y sistemas bajo firewalls."
+            />
         </section>
 
-         <!-- INICIO CODIGO SECCION PRECIO-->
+        <!-- INICIO CODIGO SECCION PRECIO-->
 
-         <div id="ver_precios" class="my-20 contenedor mx-auto px-5">
-            <h2 class="text-white">
-                En vivo en 3... 2... 1...
-            </h2>
-            <p class="text-white">Inicie su estación de radio en corto tiempo. Y puedes cancelar en cualquier momento.</p>
-         </div>
-
-        <section class="contenedor mx-auto flex items-center flex-wrap justify-center pb-20">
-
-            <CardPreciosCentova plan="Económico" precio="$5" activacion="Descuento por suscripción anual" des1="500" des2="128 KBPS" des3="5 GB" link="https://panel.servistream.net/order/product?pid=61e50989-73d2-472e-500c-345e610832d7"/>
-            <CardPreciosCentova plan="Básico" precio="$10" activacion="Descuento por suscripción anual" des1="1000" des2="192 KBPS" des3="10 GB" link="https://panel.servistream.net/order/product?pid=d5308768-251d-4801-532f-847e390921e6"/>
-            <CardPreciosCentova plan="Plus" precio="$15" activacion="Descuento por suscripción anual" des1="3000" des2="320 KBPS" des3="15 GB" link="https://panel.servistream.net/order/product?pid=2e071d93-1d5e-4607-861c-546028758396"/>
-            <CardPreciosCentova plan="Profesional" precio="$20" activacion="Descuento por suscripción anual" des1="5000" des2="320 KBPS" des3="20 GB" link="https://panel.servistream.net/order/product?pid=196e02e5-136d-4295-076b-1429807875d3"/>
-
-        </section>
-
-
-         <!-- INICIO CODIGO SECCION PLAYER RADIO-->
-
-
-        <div class="player-radio">
-            <iframe src="https://player.streamseguro.com/radio/electrofactoryradio/" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 540px; border: 0;"></iframe>
+        <div id="ver_precios" class="my-20 contenedor mx-auto px-5">
+            <h2 class="text-white">En vivo en 3... 2... 1...</h2>
+            <p class="text-white">
+                Inicie su estación de radio en corto tiempo. Y puedes cancelar
+                en cualquier momento.
+            </p>
         </div>
 
+        <section
+            class="contenedor mx-auto flex items-center flex-wrap justify-center pb-20"
+        >
+            <CardPreciosCentova
+                plan="Económico"
+                precio="$5"
+                activacion="Descuento por suscripción anual"
+                des1="500"
+                des2="128 KBPS"
+                des3="5 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-economico"
+            />
+            <CardPreciosCentova
+                plan="Básico"
+                precio="$10"
+                activacion="Descuento por suscripción anual"
+                des1="1000"
+                des2="192 KBPS"
+                des3="10 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-basico"
+            />
+            <CardPreciosCentova
+                plan="Plus"
+                precio="$15"
+                activacion="Descuento por suscripción anual"
+                des1="3000"
+                des2="320 KBPS"
+                des3="15 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-plus"
+            />
+            <CardPreciosCentova
+                plan="Profesional"
+                precio="$20"
+                activacion="Descuento por suscripción anual"
+                des1="5000"
+                des2="320 KBPS"
+                des3="20 GB"
+                link="https://clientes.servistream.net/index.php?rp=/store/streaming-radio/stream-profesional"
+            />
+        </section>
+
+        <!-- INICIO CODIGO SECCION PLAYER RADIO-->
+
+        <div class="player-radio">
+            <iframe
+                src="https://player.streamseguro.com/radio/electrofactoryradio/"
+                frameborder="0"
+                allowtransparency="true"
+                style="width: 100%; min-height: 540px; border: 0;"></iframe>
+        </div>
 
         <!-- INICIO CODIGO SECCION DESCRIPCION DOS-->
 
-        <section class="grid grid-cols-1 contenedor mx-auto py-20 gap-3 md:grid-cols-2 lg:grid-cols-4">
-            <CardDescripCentovaDos title="Reproductores" content="Nuestra empresa cuenta con más de 20 reproductores gratuitos para nuestros clientes, entregamos códigos HTML listos para su sitio" />
-            <CardDescripCentovaDos title="Delay Mínimo" content="Servidores estratégicamente posicionados, configurados y optimizados para obtener el menor retardo de su señal de radio" />
-            <CardDescripCentovaDos title="Beneficios" content="Todos nuestros planes cuentan con tecnología AACPlus y MP3 que permiten transmitir a baja calidad y con un excelente sonido" />
-            <CardDescripCentovaDos title="AutoDJ" content="Los planes Streaming de Audio que incluyen espacio Autodj permiten reproducir archivos musicales directamente desde el servidor" />
-            <CardDescripCentovaDos title="99.9% de actividad" content="Experimente una transmisión confiable con servidores colocados en varios lugares de Estados Unidos y Europa" />
-            <CardDescripCentovaDos title="Soporte SSL" content="Nuestro servidor proporciona una URL de enlace de transmisión segura que puede usar en cualquier aplicación que requiera HTTPS" />
-            <CardDescripCentovaDos title="Panel de Control" content="Utiliza el panel de control Sonic para una administración fácil de usar de su servidor" />
-            <CardDescripCentovaDos title="Compatibilidad" content="Puede ofrecer a sus oyentes varios soportes de reproductores multimedia para Winamp, Real, Windows Player" />
-
+        <section
+            class="grid grid-cols-1 contenedor mx-auto py-20 gap-3 md:grid-cols-2 lg:grid-cols-4"
+        >
+            <CardDescripCentovaDos
+                title="Reproductores"
+                content="Nuestra empresa cuenta con más de 20 reproductores gratuitos para nuestros clientes, entregamos códigos HTML listos para su sitio"
+            />
+            <CardDescripCentovaDos
+                title="Delay Mínimo"
+                content="Servidores estratégicamente posicionados, configurados y optimizados para obtener el menor retardo de su señal de radio"
+            />
+            <CardDescripCentovaDos
+                title="Beneficios"
+                content="Todos nuestros planes cuentan con tecnología AACPlus y MP3 que permiten transmitir a baja calidad y con un excelente sonido"
+            />
+            <CardDescripCentovaDos
+                title="AutoDJ"
+                content="Los planes Streaming de Audio que incluyen espacio Autodj permiten reproducir archivos musicales directamente desde el servidor"
+            />
+            <CardDescripCentovaDos
+                title="99.9% de actividad"
+                content="Experimente una transmisión confiable con servidores colocados en varios lugares de Estados Unidos y Europa"
+            />
+            <CardDescripCentovaDos
+                title="Soporte SSL"
+                content="Nuestro servidor proporciona una URL de enlace de transmisión segura que puede usar en cualquier aplicación que requiera HTTPS"
+            />
+            <CardDescripCentovaDos
+                title="Panel de Control"
+                content="Utiliza el panel de control Sonic para una administración fácil de usar de su servidor"
+            />
+            <CardDescripCentovaDos
+                title="Compatibilidad"
+                content="Puede ofrecer a sus oyentes varios soportes de reproductores multimedia para Winamp, Real, Windows Player"
+            />
         </section>
 
-            <!-- INICIO CODIGO SECCION FOOTER-->
-    <FooterOscuro />
-
-
+        <!-- INICIO CODIGO SECCION FOOTER-->
+        <FooterOscuro />
     </main>
-
-
 </Layout>
 
 <style lang="scss">
@@ -151,13 +229,13 @@ import PromocionRadio from "../components/PromocionRadio.astro";    /* CODIGO DE
         max-width: 1000px;
     }
 
-    .textos{
-    font-family: "IBM Plex Mono", monospace;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 2px;
-     }
+    .textos {
+        font-family: "IBM Plex Mono", monospace;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 
     /*
     CSS SECCION PLANES HOSTING
