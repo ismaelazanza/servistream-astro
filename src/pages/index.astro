@@ -17,13 +17,31 @@ import BotonUno from "../components/BotonUno.astro";
 import BotonDos from "../components/BotonDos.astro";
 import BotonTres from "../components/BotonTres.astro";
 import BotonCuatro from "../components/BotonCuatro.astro";
+
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ServiStream",
+    "url": "https://servistream.net",
+    "description": "Hosting web, streaming de radio y TV, dominios y páginas web en Ecuador desde 2014.",
+    "inLanguage": "es-EC",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://servistream.net/dominios/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+    }
+};
 ---
 
-<Layout 
+<Layout
 	title="ServiStream - Hosting Internet Services | Radio y TV Streaming | Ecuador"
 	description="ServiStream ofrece servicios de hosting web premium, streaming de radio y TV, registro de dominios y páginas web en Ecuador. 99.9% uptime garantizado desde 2014."
 	keywords="hosting ecuador, streaming radio ecuador, tv streaming ecuador, hosting web, cpanel ecuador, dominios ecuador, servistream, hosting premium, radio online, tv online"
 	image="/img/servistream-home-og.png"
+	schema={websiteSchema}
 >
 	<main>
 		<!-- INICIA CODIGO DE HEADER MENU INDEX -->

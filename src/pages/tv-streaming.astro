@@ -9,13 +9,36 @@ import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaD
 import CardTvStreaming from "../components/tv_streaming/CardTvStreaming.astro";
 import CardPrecioTvStreaming from "../components/tv_streaming/CardPrecioTvStreaming.astro";
 import PlayerTv from "../components/tv_streaming/PlayerTv.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "TV Streaming Ecuador",
+    "description": "Servicios de TV streaming en Ecuador. Transmisión en vivo HD y 4K, adaptive bitrate, compatible con encoders profesionales.",
+    "url": "https://servistream.net/tv-streaming/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes TV Streaming",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Live Streaming Small", "price": "20", "priceCurrency": "USD", "description": "99 oyentes, transmisión en vivo" },
+            { "@type": "Offer", "name": "Live Streaming Profesional", "price": "30", "priceCurrency": "USD", "description": "499 oyentes, transmisión en vivo" },
+            { "@type": "Offer", "name": "Cloud Streaming Basic", "price": "30", "priceCurrency": "USD", "description": "99 oyentes, AutoDJ, 160 GB disco, Panel VDO" },
+            { "@type": "Offer", "name": "Cloud Streaming Medium", "price": "40", "priceCurrency": "USD", "description": "299 oyentes, AutoDJ, 240 GB disco, Panel VDO" },
+            { "@type": "Offer", "name": "Cloud Streaming Large", "price": "75", "priceCurrency": "USD", "description": "499 oyentes, AutoDJ, 320 GB disco, Panel VDO" }
+        ]
+    }
+};
 ---
 
-<Layout 
+<Layout
 	title="TV Streaming Ecuador - ServiStream | Streaming de Televisión HD"
 	description="Servicios de TV streaming en Ecuador. Transmisión en vivo HD, adaptive bitrate, compatible con encoders profesionales. TV online de alta calidad."
 	keywords="tv streaming ecuador, streaming televisión, streaming hd, encoder video, tv online, adaptive bitrate, transmisión vivo ecuador"
+	schema={serviceSchema}
 >
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -26,6 +49,13 @@ import PlayerTv from "../components/tv_streaming/PlayerTv.astro";
                 <Menu />
             </div>
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div class="contenedor mx-auto px-5 pt-4">
+                <Breadcrumb items={[
+                    { label: "Inicio", href: "/" },
+                    { label: "TV Streaming" }
+                ]} />
+            </div>
 
             <div
                 class="contenedor mx-auto text-center items-center py-10 px-5"
@@ -147,6 +177,11 @@ import PlayerTv from "../components/tv_streaming/PlayerTv.astro";
         </section>
 
             <!-- INICIO CODIGO SECCION FOOTER-->
+    <ServiciosRelacionados enlaces={[
+        { href: "/centovacast/", titulo: "Radio Streaming CentovaCast", descripcion: "Streaming de audio profesional con AutoDJ, estadísticas y SSL desde $10/mes." },
+        { href: "/sonicpanel/", titulo: "Radio Streaming SonicPanel", descripcion: "Streaming de audio con AutoDJ y reproductores HTML5 desde $5/mes." },
+        { href: "/reseller-radio/", titulo: "Reseller Radio Streaming", descripcion: "Revende radio streaming bajo tu propia marca con panel multi-cliente." }
+    ]} />
     <FooterOscuro />
 
 

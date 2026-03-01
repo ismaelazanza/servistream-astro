@@ -5,15 +5,30 @@ import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import SubmenuHostingReseller from "../components/hosting_reseller/SubmenuHostingReseller.astro";
 import Footer from "../components/Footer.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import CardPlanesHostingReseller from "../components/hosting_reseller/cardPlanesHostingReseller.astro";
 import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 
 import BotonDos from "../components/BotonDos.astro";
 import Acordion from "../components/hosting_reseller/Acordion.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hosting Reseller cPanel Ecuador",
+    "description": "Hosting Reseller con cPanel y WHM. Marca blanca, CloudLinux, SSL, infraestructura multi-cloud. Ideal para agencias y desarrolladores web.",
+    "url": "https://servistream.net/hosting-reseller/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" }
+};
 ---
 
-<Layout title="Hosting Internet Services | Hosting Reseller">
+<Layout
+    title="Hosting Reseller cPanel Ecuador - Revende Hosting Profesional | ServiStream"
+    description="Hosting Reseller con cPanel en Ecuador. Marca blanca, WHM completo, CloudLinux, SSL incluido. Inicia tu empresa de hosting con infraestructura profesional."
+    schema={serviceSchema}
+>
 
 
     <!-- INICIA CODIGO SECCION HEADER-->
@@ -24,6 +39,13 @@ import Acordion from "../components/hosting_reseller/Acordion.astro";
             <Menu />
         </div>
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div class="contenedor mx-auto px-5 pt-4">
+            <Breadcrumb items={[
+                { label: "Inicio", href: "/" },
+                { label: "Hosting Reseller cPanel" }
+            ]} />
+        </div>
 
         <div
             class="contenedor mx-auto text-center flex flex-col justify-center items-center px-5 h-[70%]"
@@ -190,6 +212,11 @@ import Acordion from "../components/hosting_reseller/Acordion.astro";
     
 
     <!-- INICIO CODIGO SECCION FOOTER-->
+    <ServiciosRelacionados enlaces={[
+        { href: "/hosting-linux/", titulo: "Hosting Linux cPanel Ecuador", descripcion: "Hosting compartido desde $2.30/mes con CloudLinux y SSL gratis." },
+        { href: "/hosting-cloud/", titulo: "Hosting Cloud Ecuador", descripcion: "Recursos dedicados garantizados y escalabilidad automática." },
+        { href: "/dominios/", titulo: "Registro de Dominios", descripcion: "Dominios .com, .ec, .net y más con gestión DNS gratuita." }
+    ]} />
     <Footer />
 </Layout>
 
@@ -204,7 +231,8 @@ import Acordion from "../components/hosting_reseller/Acordion.astro";
     }
 
     header {
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

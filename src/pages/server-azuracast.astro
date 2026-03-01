@@ -4,11 +4,37 @@ import Top from "../components/Top.astro";
 import MenuBlack from "../components/MenuBlack.astro";
 import MobileMenuBlack from "../components/paginasweb/MovileMenuBlack.astro";
 import Footer from "../components/Footer.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import CardAzuraUno from "../components/server_azuracast/CardAzuraUno.astro";
 import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Servidor AzuraCast Ecuador",
+    "description": "Servidores AzuraCast en Ecuador. Panel de autogestión, AutoDJ, estadísticas, SSL incluido. Servidor propio de radio streaming.",
+    "url": "https://servistream.net/server-azuracast/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes AzuraCast",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Azure Cloud S", "price": "11", "priceCurrency": "USD", "description": "2 GB RAM, 2 vCPU, 80 GB SSD, tráfico ilimitado" },
+            { "@type": "Offer", "name": "Azure Cloud M", "price": "17", "priceCurrency": "USD", "description": "4 GB RAM, 2 vCPU, 160 GB SSD, tráfico ilimitado" },
+            { "@type": "Offer", "name": "Azure Cloud L", "price": "24", "priceCurrency": "USD", "description": "8 GB RAM, 4 vCPU, 240 GB SSD, tráfico ilimitado" },
+            { "@type": "Offer", "name": "Azure Cloud XL", "price": "40", "priceCurrency": "USD", "description": "16 GB RAM, 8 vCPU, 320 GB SSD, tráfico ilimitado" },
+            { "@type": "Offer", "name": "Azure Cloud XXXL", "price": "65", "priceCurrency": "USD", "description": "24 GB RAM, 12 vCPU, 640 GB SSD, tráfico ilimitado" }
+        ]
+    }
+};
 ---
 
-<Layout title="Hosting Internet Services | Server Azuracast">
+<Layout
+    title="Servidor AzuraCast Ecuador - Radio Streaming Autogestión | ServiStream"
+    description="Servidores AzuraCast en Ecuador. Gestiona tu propia radio streaming con AutoDJ, estadísticas en tiempo real, SSL incluido y soporte técnico especializado."
+    schema={serviceSchema}
+>
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <main>
@@ -18,6 +44,13 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro";
                 <MenuBlack />
             </div>
             <div class="pt-4 lg:hidden"><MobileMenuBlack /></div>
+
+            <div class="contenedor mx-auto px-5 pt-4">
+                <Breadcrumb items={[
+                    { label: "Inicio", href: "/" },
+                    { label: "Servidor AzuraCast" }
+                ]} />
+            </div>
 
             <div
                 class="contenedor mx-auto my-20 flex flex-col items-center px-5"
@@ -248,13 +281,19 @@ import PreciosAzura from "../components/server_azuracast/PreciosAzura.astro";
                             </section>
 
                             <!-- INICIO CODIGO SECCION FOOTER-->
+                            <ServiciosRelacionados enlaces={[
+                                { href: "/centovacast/", titulo: "Radio Streaming CentovaCast", descripcion: "Hosting de radio streaming gestionado desde $10/mes." },
+                                { href: "/sonicpanel/", titulo: "Radio Streaming SonicPanel", descripcion: "Streaming de audio con AutoDJ y reproductores HTML5 desde $5/mes." },
+                                { href: "/reseller-radio/", titulo: "Reseller Radio Streaming", descripcion: "Revende radio streaming bajo tu propia marca." }
+                            ]} />
                             <Footer />
                         </div>
                     </div>
 
                     <style lang="scss">
                         main {
-                            background-attachment: fixed;
+                            background-attachment: scroll;
+                            @media (min-width: 1024px) { background-attachment: fixed; }
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;

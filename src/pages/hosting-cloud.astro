@@ -5,6 +5,7 @@ import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import SubmenuHosting from "../components/hosting_cloud/SubmenuHostingCloud.astro";
 import Footer from "../components/Footer.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import CardHostingLinux from "../components/hosting_linux/cardheader.astro";
 import PlanesHostingCloud from "../components/hosting_cloud/PlanesHostingCloud.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
@@ -12,11 +13,33 @@ import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel
 
 import BotonUno from "../components/BotonUno.astro";
 import BotonDos from "../components/BotonDos.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
-
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hosting Cloud Ecuador",
+    "description": "Hosting Cloud con recursos dedicados garantizados. NvMe, escalabilidad automática, CloudLinux, SSL gratis, uptime 99.9%.",
+    "url": "https://servistream.net/hosting-cloud/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes Hosting Cloud",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Starter", "price": "4.99", "priceCurrency": "USD", "description": "100 GB espacio, 1 dominio, 10 subdominios, 100 correos, 5 MySQL" },
+            { "@type": "Offer", "name": "Business", "price": "6.99", "priceCurrency": "USD", "description": "200 GB espacio, 10 dominios, 20 subdominios, 500 correos, 20 MySQL" },
+            { "@type": "Offer", "name": "Corporate", "price": "8.25", "priceCurrency": "USD", "description": "Espacio ilimitado, 20 dominios, 30 subdominios, 1000 correos, 30 MySQL" }
+        ]
+    }
+};
 ---
 
-<Layout title="Hosting Internet Services | Hosting Cloud">
+<Layout
+    title="Hosting Cloud Ecuador - Recursos Garantizados y Alto Rendimiento | ServiStream"
+    description="Hosting Cloud en Ecuador con recursos dedicados garantizados. NvMe ultrarrápido, escalabilidad automática, uptime 99.9% y soporte técnico 24/7."
+    schema={serviceSchema}
+>
 
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -26,6 +49,13 @@ import BotonDos from "../components/BotonDos.astro";
             <Menu />
         </div>
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div class="contenedor mx-auto px-5 pt-4">
+            <Breadcrumb items={[
+                { label: "Inicio", href: "/" },
+                { label: "Hosting Cloud" }
+            ]} />
+        </div>
 
         <div class="contenedor mx-auto grid grid-cols-1 pt-10 pb-20 lg:grid-cols-2 px-5">
             <div>
@@ -250,13 +280,19 @@ import BotonDos from "../components/BotonDos.astro";
 
 
     <!-- INICIO CODIGO SECCION FOOTER-->
+    <ServiciosRelacionados enlaces={[
+        { href: "/hosting-linux/", titulo: "Hosting Linux cPanel Ecuador", descripcion: "Hosting compartido desde $2.30/mes con CloudLinux y SSL gratis." },
+        { href: "/hosting-reseller/", titulo: "Hosting Reseller cPanel", descripcion: "Revende hosting bajo tu propia marca con WHM completo." },
+        { href: "/paginas-web/", titulo: "Diseño de Páginas Web", descripcion: "Sitios web profesionales WordPress y eCommerce para tu empresa." }
+    ]} />
     <Footer />
 </Layout>
 
 <style lang="scss">
     header {
         background-image: url(../img/back7.avif);
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

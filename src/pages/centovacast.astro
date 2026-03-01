@@ -4,14 +4,39 @@ import Top from "../components/Top.astro";
 import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import FooterOscuro from "../components/FooterOscuro.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
 import CardDescripCentovaUno from "../components/centovacast/CardDescripCentovaUno.astro";
 import CardPreciosCentova from "../components/centovacast/CardPreciosCentova.astro";
 import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Radio Streaming CentovaCast Ecuador",
+    "description": "Radio streaming profesional con CentovaCast. AutoDJ, estadísticas en tiempo real, SSL, compatible con Shoutcast e Icecast.",
+    "url": "https://servistream.net/centovacast/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes CentovaCast",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Centova 128", "price": "10", "priceCurrency": "USD", "description": "260 oyentes, 128 KBPS, AutoDJ ilimitado" },
+            { "@type": "Offer", "name": "Centova 256", "price": "15", "priceCurrency": "USD", "description": "400 oyentes, 256 KBPS, AutoDJ ilimitado" },
+            { "@type": "Offer", "name": "Centova 320", "price": "20", "priceCurrency": "USD", "description": "999 oyentes, 320 KBPS, AutoDJ ilimitado" },
+            { "@type": "Offer", "name": "Centova Ilimitado", "price": "25", "priceCurrency": "USD", "description": "Oyentes ilimitados, 320 KBPS, AutoDJ ilimitado" }
+        ]
+    }
+};
 ---
 
-<Layout title="Hosting Internet Services | Radio CentovaCast">
+<Layout
+    title="CentovaCast Ecuador - Radio Streaming Profesional | ServiStream"
+    description="Radio streaming profesional con CentovaCast en Ecuador. AutoDJ, estadísticas en tiempo real, compatible Shoutcast e Icecast, SSL incluido. Soporte 24/7."
+    schema={serviceSchema}
+>
 
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -22,6 +47,13 @@ import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaD
                 <Menu />
             </div>
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div class="contenedor mx-auto px-5 pt-4">
+                <Breadcrumb items={[
+                    { label: "Inicio", href: "/" },
+                    { label: "Radio Streaming CentovaCast" }
+                ]} />
+            </div>
 
             <div
                 class="contenedor mx-auto text-center flex flex-col justify-center items-center px-5 py-10"
@@ -118,6 +150,11 @@ import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaD
         </section>
 
             <!-- INICIO CODIGO SECCION FOOTER-->
+    <ServiciosRelacionados enlaces={[
+        { href: "/sonicpanel/", titulo: "Radio Streaming SonicPanel", descripcion: "Alternativa con AutoDJ, SSL y reproductores HTML5 desde $5/mes." },
+        { href: "/server-azuracast/", titulo: "Servidor AzuraCast", descripcion: "Tu propio servidor de radio streaming con panel de autogestión." },
+        { href: "/reseller-radio/", titulo: "Reseller Radio Streaming", descripcion: "Revende radio streaming bajo tu propia marca." }
+    ]} />
     <FooterOscuro />
 
 

@@ -7,7 +7,11 @@ import Footer from "../components/Footer.astro";
 
 ---
 
-<Layout title="Hosting Internet Services | Términos y Condiciones">
+<Layout
+    title="Términos y Condiciones | ServiStream Ecuador"
+    description="Términos y condiciones de uso de los servicios de ServiStream Ecuador: hosting web, streaming de radio y TV, dominios y páginas web."
+    noindex={true}
+>
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <header class="css-selector">
@@ -81,7 +85,8 @@ import Footer from "../components/Footer.astro";
     }
 
     header {
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

@@ -10,7 +10,10 @@ import CardIntegraciones from "../components/paginasweb/CardIntegraciones.astro"
 
 ---
 
-<Layout title="Hosting Internet Services | Páginas Web">
+<Layout
+    title="Diseño de Páginas Web Ecuador - Sitios Profesionales | ServiStream"
+    description="Diseño y desarrollo de páginas web profesionales en Ecuador. WordPress, eCommerce, portales corporativos. Integraciones con plataformas líderes. Cotización gratis."
+>
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <main>
@@ -421,7 +424,8 @@ import CardIntegraciones from "../components/paginasweb/CardIntegraciones.astro"
 
 <style lang="scss">
     main {
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

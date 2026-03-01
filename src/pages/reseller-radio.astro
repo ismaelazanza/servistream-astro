@@ -9,9 +9,35 @@ import CardDescripCentovaUno from "../components/centovacast/CardDescripCentovaU
 import CardPreciosCentova from "../components/centovacast/CardPreciosCentova.astro";
 import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
 import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosResellerRadio.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reseller Radio Streaming Ecuador",
+    "description": "Revende radio streaming bajo tu propia marca. Panel multi-cliente, AutoDJ incluido, oyentes ilimitados, hasta 320 KBPS.",
+    "url": "https://servistream.net/reseller-radio/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes Reseller Radio",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Plan Star", "price": "35", "priceCurrency": "USD", "description": "Oyentes ilimitados, 192 KBPS, 100 GB transferencia" },
+            { "@type": "Offer", "name": "Plan Smart", "price": "42", "priceCurrency": "USD", "description": "Oyentes ilimitados, 192 KBPS, 500 GB transferencia" },
+            { "@type": "Offer", "name": "Plan Max", "price": "55", "priceCurrency": "USD", "description": "Oyentes ilimitados, 320 KBPS, 1000 GB transferencia" },
+            { "@type": "Offer", "name": "Plan Pro", "price": "65", "priceCurrency": "USD", "description": "Oyentes ilimitados, 320 KBPS, transferencia ilimitada" }
+        ]
+    }
+};
 ---
 
-<Layout title="Hosting Internet Services | Reseller Radio">
+<Layout
+    title="Reseller Radio Streaming Ecuador - Revende Radios Online | ServiStream"
+    description="Conviértete en revendedor de radio streaming en Ecuador. Panel multi-cliente, marca blanca, AutoDJ incluido. Inicia tu negocio de streaming profesional."
+    schema={serviceSchema}
+>
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <main>
@@ -21,6 +47,13 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
                 <Menu />
             </div>
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div class="contenedor mx-auto px-5 pt-4">
+                <Breadcrumb items={[
+                    { label: "Inicio", href: "/" },
+                    { label: "Reseller Radio Streaming" }
+                ]} />
+            </div>
 
             <div
                 class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10 px-5"
@@ -176,6 +209,11 @@ import CardPreciosResellerRadio from "../components/resellerradio/CardPreciosRes
         </section>
 
         <!-- INICIO CODIGO SECCION FOOTER-->
+        <ServiciosRelacionados enlaces={[
+            { href: "/centovacast/", titulo: "Radio Streaming CentovaCast", descripcion: "Panel profesional con estadísticas avanzadas y SSL desde $10/mes." },
+            { href: "/sonicpanel/", titulo: "Radio Streaming SonicPanel", descripcion: "Streaming de audio con AutoDJ y reproductores HTML5 desde $5/mes." },
+            { href: "/server-azuracast/", titulo: "Servidor AzuraCast", descripcion: "Tu propio servidor de radio streaming con panel de autogestión." }
+        ]} />
         <FooterOscuro />
     </main>
 </Layout>

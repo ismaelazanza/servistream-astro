@@ -1,0 +1,32 @@
+---
+interface Enlace {
+    href: string;
+    titulo: string;
+    descripcion: string;
+}
+
+interface Props {
+    enlaces: Enlace[];
+}
+
+const { enlaces } = Astro.props;
+---
+
+<section class="contenedor mx-auto px-5 py-16 border-t border-gray-100">
+    <h3 class="text-lg font-semibold uppercase tracking-widest mb-8 text-center">
+        También te puede interesar
+    </h3>
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {enlaces.map((e) => (
+            <li>
+                <a
+                    href={e.href}
+                    class="block p-5 rounded-xl border border-gray-200 hover:border-[#00b285] hover:shadow-md transition-all ease-out group"
+                >
+                    <p class="font-semibold group-hover:text-[#00b285] transition-colors">{e.titulo}</p>
+                    <p class="text-sm text-gray-500 mt-1">{e.descripcion}</p>
+                </a>
+            </li>
+        ))}
+    </ul>
+</section>

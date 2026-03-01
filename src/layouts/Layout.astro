@@ -6,17 +6,19 @@ interface Props {
 	image?: string;
 	canonical?: string;
 	noindex?: boolean;
+	schema?: object;
 }
 
 // import { ViewTransitions } from 'astro:transitions';
 
-const { 
-	title, 
+const {
+	title,
 	description = "Hosting Internet Services - Streaming Radio, TV, Páginas Web, Web Hosting, Reseller Hosting y Dominios. Hosting Web de alto rendimiento, tiempo de actividad del 99.9% y soporte técnico especializado.",
 	keywords = "streaming, radio, tv, hosting web, reseller hosting, certificados ssl, correo empresarial, streaming facebook, streaming ecuador, streaming tv, audio real, ecuador, streaming movil, streaming celulares, radio web, radio online, medios online, radios ecuador, radios fm, streaming radios, medios ecuador, arcotel, cordicom, frecuencias fm, streaming xhd, radio cloud, streaming cloud, streaming radio, streaming redes sociales, tricaster ecuador, OTT, streaming 4k, tv online, ip tv, encoder video, tv ecuador, streamingtv, canal tv, propia tv, video hd, transmitir video, video streaming ecuador, decoder video, canal online, canal tv online, full hd, capturadora video, streaming hd, streaming full hd, hosting ecuador, hosting empresarial, hosting dedicado, cpanel ecuador, node js, contenedores docker, virtualizacion ecuador, soluciones empresariales, hosting moodle, hosting wordpress, registro dominios, correo zimbra, zimbra ecuador, ecuador hosting, servidor dedicado, hosting windows, hosting linux, hosting java, net core, enlace ip, videoip, radio ip, enlaces tv, enlaces dedicados, audio sobre ip, video sobre ip, mpls ecuador, OTT ecuador",
 	image = "/img/servistream-og-image.png",
 	canonical,
-	noindex = false
+	noindex = false,
+	schema
 } = Astro.props;
 
 const currentUrl = new URL(Astro.request.url);
@@ -39,10 +41,13 @@ const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 		<meta name="author" content="ServiStream" />
 		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 		<link rel="canonical" href={canonicalUrl} />
-		
+		<link rel="alternate" hreflang="es-EC" href={canonicalUrl} />
+		<link rel="alternate" hreflang="es" href={canonicalUrl} />
+		<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
 		<!-- Favicon and App Icons -->
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="apple-touch-icon" href="/favicon.png" />
+		<link rel="icon" type="image/png" href="/faviconcolor.png" />
+		<link rel="apple-touch-icon" href="/faviconcolor.png" />
 		<link rel="manifest" href="/manifest.json" />
 		
 		<!-- Open Graph / Facebook -->
@@ -79,74 +84,101 @@ const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 		<link rel="preload" href="/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/fonts/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossorigin />
 
+		<!-- Google Fonts: IBM Plex Mono + Plus Jakarta Sans (consolidated) -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
-
-		<link
-			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-			rel="stylesheet"
-		/>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 		
-		<!-- Structured Data -->
+		<!-- Structured Data: Organization -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "ServiStream",
-			"description": "Hosting Internet Services - Streaming Radio, TV, Páginas Web, Web Hosting, Reseller Hosting y Dominios",
+			"legalName": "ServiStream - Hosting Internet Services",
+			"description": "Servicios de hosting web, streaming de radio y TV, registro de dominios y diseño de páginas web en Ecuador desde 2014.",
 			"url": "https://servistream.net",
-			"logo": "https://servistream.net/img/logo.png",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://servistream.net/img/LOGO-SERVISTREAM-NUEVO4.svg",
+				"width": 200,
+				"height": 52
+			},
+			"telephone": "+593991220769",
 			"contactPoint": [
 				{
 					"@type": "ContactPoint",
-					"telephone": "+593-4-123-4567",
+					"telephone": "+593991220769",
 					"contactType": "customer support",
-					"availableLanguage": ["Spanish", "English"]
+					"availableLanguage": ["Spanish"],
+					"areaServed": "EC"
 				}
 			],
 			"address": {
 				"@type": "PostalAddress",
-				"addressCountry": "EC",
-				"addressLocality": "Ecuador"
+				"addressCountry": "EC"
 			},
 			"foundingDate": "2014",
+			"areaServed": {
+				"@type": "Country",
+				"name": "Ecuador"
+			},
 			"sameAs": [
 				"https://facebook.com/servistream",
 				"https://twitter.com/servistream"
 			],
-			"offers": [
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "Web Hosting",
-						"description": "Hosting web de alto rendimiento con tiempo de actividad del 99.9%"
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Servicios ServiStream",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Hosting Linux cPanel Ecuador",
+							"url": "https://servistream.net/hosting-linux/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Hosting Cloud Ecuador",
+							"url": "https://servistream.net/hosting-cloud/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Radio Streaming Ecuador",
+							"url": "https://servistream.net/centovacast/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "TV Streaming Ecuador",
+							"url": "https://servistream.net/tv-streaming/"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Registro de Dominios Ecuador",
+							"url": "https://servistream.net/dominios/"
+						}
 					}
-				},
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "Radio Streaming",
-						"description": "Servicios de streaming de radio profesional"
-					}
-				},
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "TV Streaming",
-						"description": "Servicios de streaming de televisión de alta calidad"
-					}
-				}
-			]
+				]
+			}
 		}
 		</script>
+		{schema && (
+			<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+		)}
 	</head>
 	<body>
 		<slot />
@@ -165,6 +197,21 @@ const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		  gtag('config', 'GA_MEASUREMENT_ID');
+		</script>
+		-->
+
+		<!-- Tawk.to Live Chat - Reemplazar TAWK_PROPERTY_ID/TAWK_WIDGET_ID con los IDs reales de tawk.to -->
+		<!--
+		<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadTime=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/TAWK_PROPERTY_ID/TAWK_WIDGET_ID';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
 		</script>
 		-->
 	</body>

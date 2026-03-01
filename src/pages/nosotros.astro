@@ -1,0 +1,318 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import MobileMenu from "../components/MobilMenu.astro";
+import Footer from "../components/Footer.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ServiStream",
+    "url": "https://servistream.net",
+    "logo": "https://servistream.net/img/LOGO-SERVISTREAM-NUEVO4.svg",
+    "foundingDate": "2018",
+    "foundingLocation": {
+        "@type": "Place",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Loja",
+            "addressCountry": "EC"
+        }
+    },
+    "description": "ServiStream es una empresa ecuatoriana de hosting web, streaming de radio, dominios y páginas web con más de 6 años de experiencia en el mercado digital ecuatoriano.",
+    "telephone": "+593991220769",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+593991220769",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish",
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "Ecuador"
+    },
+    "sameAs": []
+};
+
+const breadcrumbItems = [
+    { label: "Inicio", href: "/" },
+    { label: "Sobre Nosotros" }
+];
+
+const valores = [
+    {
+        icon: "shield",
+        title: "Confiabilidad",
+        desc: "Infraestructura estable con 99.9% de uptime garantizado. Tus servicios funcionan sin interrupciones."
+    },
+    {
+        icon: "clock",
+        title: "Soporte 24/7",
+        desc: "Atención técnica disponible todos los días, a cualquier hora, por WhatsApp y ticket de soporte."
+    },
+    {
+        icon: "map-pin",
+        title: "Equipo Local",
+        desc: "Somos ecuatorianos, entendemos el mercado local y hablamos tu idioma. Sin intermediarios internacionales."
+    },
+    {
+        icon: "trending-up",
+        title: "Crecimiento",
+        desc: "Acompañamos el crecimiento de tu negocio. Planes escalables que crecen contigo sin migrar."
+    }
+];
+
+const hitos = [
+    { year: "2014", event: "Fundación de ServiStream en Loja, Ecuador. Primeros 20 clientes de hosting." },
+    { year: "2019", event: "Expansión del servicio de streaming de radio. Superamos los 100 clientes activos." },
+    { year: "2020", event: "Lanzamiento de hosting cloud con recursos dedicados. Migración de infraestructura." },
+    { year: "2021", event: "Incorporamos soporte para AzuraCast y SonicPanel. +300 clientes activos." },
+    { year: "2022", event: "Programa Reseller: más de 50 agencias web venden bajo nuestra plataforma." },
+    { year: "2023", event: "Servicio de TV Streaming y páginas web. Superamos los 500 servicios activos." },
+    { year: "2024", event: "Más de 12 años en el mercado. Seguimos creciendo con Ecuador." }
+];
+---
+
+<Layout
+    title="Sobre Nosotros — ServiStream Ecuador | Empresa de Hosting y Streaming"
+    description="Conoce ServiStream: empresa ecuatoriana fundada en 2014 con más de 12 años ofreciendo hosting web, streaming de radio y servicios digitales para empresas en Ecuador."
+    schema={organizationSchema}
+>
+    <header class="nosotros-header">
+        <Top />
+        <div class="hidden lg:block"><Menu /></div>
+        <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div class="contenedor mx-auto px-5 py-4">
+            <Breadcrumb items={breadcrumbItems} />
+        </div>
+
+        <div class="contenedor mx-auto text-center py-16 px-5">
+            <p class="text-white text-sm font-semibold bg-[#00b285] inline-block px-4 py-1 rounded-full mb-6 uppercase tracking-widest">
+                Empresa Ecuatoriana
+            </p>
+            <h1 class="text-white text-4xl font-bold pb-4 md:text-5xl">
+                Somos ServiStream
+            </h1>
+            <p class="text-white text-lg max-w-2xl mx-auto">
+                Empresa ecuatoriana con más de 12 años conectando negocios y proyectos digitales en Ecuador con infraestructura confiable, soporte local y precios accesibles.
+            </p>
+        </div>
+    </header>
+
+    <!-- Nuestra historia -->
+    <section class="contenedor mx-auto px-5 py-20">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+            <div>
+                <p class="text-[#00b285] font-semibold text-sm uppercase tracking-widest mb-3">Nuestra Historia</p>
+                <h2 class="text-3xl font-bold mb-6">De Loja para todo Ecuador</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    ServiStream nació en 4 de marzo de 2014 en la ciudad de Loja con una misión clara: ofrecer servicios de hosting y streaming de calidad internacional, con soporte en español y atención local, a precios accesibles para el mercado ecuatoriano.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Lo que empezó con los primeros 20 clientes de hosting compartido, hoy es una plataforma completa que sirve a más de 500 servicios activos: radios online, tiendas de comercio electrónico, portales institucionales, agencias de diseño web y empresas de todos los sectores en Ecuador.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Nuestro diferencial siempre ha sido el mismo: respuesta rápida, conocimiento técnico real y la tranquilidad de tener un equipo local que entiende tus necesidades.
+                </p>
+            </div>
+            <div class="relative">
+                <!-- Timeline de hitos -->
+                <div class="space-y-4">
+                    {hitos.map((hito) => (
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-shrink-0 w-16 text-right">
+                                <span class="text-[#00b285] font-bold text-sm">{hito.year}</span>
+                            </div>
+                            <div class="flex-shrink-0 w-3 h-3 rounded-full bg-[#00b285] mt-1 relative">
+                                <div class="absolute left-1/2 top-3 bottom-0 w-px bg-gray-200 -translate-x-1/2 h-8"></div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed pb-4">{hito.event}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="bg-gray-50 py-20 px-5">
+        <div class="contenedor mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-[#00b285] font-semibold text-sm uppercase tracking-widest mb-3">Lo que nos define</p>
+                <h2 class="text-3xl font-bold">Nuestros valores</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {valores.map((v) => (
+                    <div class="bg-white rounded-xl p-6 border border-gray-100 hover:border-[#00b285] hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-[#e8faf5] rounded-lg flex items-center justify-center mb-4">
+                            {v.icon === "shield" && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b285" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            )}
+                            {v.icon === "clock" && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b285" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            )}
+                            {v.icon === "map-pin" && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b285" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            )}
+                            {v.icon === "trending-up" && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b285" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                            )}
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">{v.title}</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos / diferenciadores E-E-A-T -->
+    <section class="contenedor mx-auto px-5 py-20">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+            <div>
+                <p class="text-[#00b285] font-semibold text-sm uppercase tracking-widest mb-3">Experiencia Real</p>
+                <h2 class="text-3xl font-bold mb-6">¿Por qué confiar en ServiStream?</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3 items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#00b285] flex items-center justify-center mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">+12 años de experiencia en el mercado ecuatoriano</p>
+                            <p class="text-gray-500 text-sm">Conocemos las necesidades específicas de empresas y emprendedores en Ecuador.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#00b285] flex items-center justify-center mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Equipo técnico capacitado en cPanel, LiteSpeed y streaming</p>
+                            <p class="text-gray-500 text-sm">No tercerizamos el soporte. Tu problema lo atiende alguien con conocimiento real.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#00b285] flex items-center justify-center mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Más de 500 servicios activos en todo Ecuador</p>
+                            <p class="text-gray-500 text-sm">Quito, Guayaquil, Cuenca, Loja y todo el país. Empresas que llevan años con nosotros.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#00b285] flex items-center justify-center mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Pagos locales en Ecuador</p>
+                            <p class="text-gray-500 text-sm">Acepta transferencias bancarias, depósitos y métodos de pago ecuatorianos.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#00b285] flex items-center justify-center mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Facturación electrónica ecuatoriana</p>
+                            <p class="text-gray-500 text-sm">Emitimos facturas electrónicas válidas para declaración de impuestos en Ecuador.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-[#0e141b] rounded-2xl p-8 text-center">
+                    <p class="text-[#00b285] text-4xl font-extrabold">12+</p>
+                    <p class="text-white font-semibold mt-1">Años de experiencia</p>
+                    <p class="text-gray-400 text-xs mt-1">en el mercado ecuatoriano</p>
+                </div>
+                <div class="bg-[#0e141b] rounded-2xl p-8 text-center">
+                    <p class="text-[#00b285] text-4xl font-extrabold">500+</p>
+                    <p class="text-white font-semibold mt-1">Servicios activos</p>
+                    <p class="text-gray-400 text-xs mt-1">hosting, streaming y más</p>
+                </div>
+                <div class="bg-[#0e141b] rounded-2xl p-8 text-center">
+                    <p class="text-[#00b285] text-4xl font-extrabold">99.9%</p>
+                    <p class="text-white font-semibold mt-1">Uptime garantizado</p>
+                    <p class="text-gray-400 text-xs mt-1">en todos los planes</p>
+                </div>
+                <div class="bg-[#0e141b] rounded-2xl p-8 text-center">
+                    <p class="text-[#00b285] text-4xl font-extrabold">24/7</p>
+                    <p class="text-white font-semibold mt-1">Soporte técnico</p>
+                    <p class="text-gray-400 text-xs mt-1">todos los días del año</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestros servicios (enlazado interno) -->
+    <section class="bg-gray-50 py-16 px-5">
+        <div class="contenedor mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold">Nuestros servicios</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+                {[
+                    { label: "Hosting Linux", href: "/hosting-linux/" },
+                    { label: "Hosting Cloud", href: "/hosting-cloud/" },
+                    { label: "Hosting Reseller", href: "/hosting-reseller/" },
+                    { label: "Radio Streaming", href: "/centovacast/" },
+                    { label: "Dominios .EC", href: "/dominios/" },
+                    { label: "Páginas Web", href: "/paginas-web/" }
+                ].map(s => (
+                    <a
+                        href={s.href}
+                        class="bg-white border border-gray-200 rounded-xl p-4 text-center text-sm font-semibold text-gray-700 hover:border-[#00b285] hover:text-[#00b285] transition-all"
+                    >
+                        {s.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="contenedor mx-auto px-5 py-20 text-center">
+        <h2 class="text-2xl font-bold mb-4">¿Tienes alguna pregunta?</h2>
+        <p class="text-gray-600 mb-8 max-w-xl mx-auto">Nuestro equipo está disponible para ayudarte a elegir el servicio que mejor se adapte a tu negocio en Ecuador.</p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a
+                href="https://wa.me/593991220769"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-bold py-3 px-8 rounded-full transition-colors"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Hablar con un asesor
+            </a>
+            <a
+                href="/contacto/"
+                class="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 hover:border-[#00b285] hover:text-[#00b285] font-bold py-3 px-8 rounded-full transition-colors"
+            >
+                Ver datos de contacto
+            </a>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<style lang="scss">
+    .nosotros-header {
+        background-color: #0e141b;
+        background-image: linear-gradient(135deg, #1e1b3d 0%, #0e141b 60%, #0d1f1a 100%);
+    }
+</style>

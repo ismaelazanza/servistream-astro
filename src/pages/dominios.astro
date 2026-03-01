@@ -139,7 +139,8 @@ import BotonTres from "../components/BotonTres.astro";
     }
 
     header {
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

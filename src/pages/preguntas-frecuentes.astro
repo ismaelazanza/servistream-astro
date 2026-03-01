@@ -5,9 +5,116 @@ import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import Footer from "../components/Footer.astro";
 import ExternalScript from "../components/ExternalScript.astro";
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "¿Qué es el alojamiento web?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El alojamiento web es un servicio que proporciona espacio en un servidor conectado a Internet en un centro de datos. Cargar o crear su sitio web en alojamiento web es lo que permite que personas de todo el mundo visiten su sitio en Internet. ServiStream ofrece planes desde unos pocos dólares al mes, impulsados por cPanel."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Necesito tener experiencia técnica para usar el hosting?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Todo lo que vendemos está diseñado para que no necesites tener ninguna experiencia o conocimiento técnico previo. Gestionamos todo el servidor y ofrecemos más de 300 aplicaciones de creación de sitios web, incluido WordPress, que puede instalar automáticamente."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo tarda en configurarse mi paquete de alojamiento web?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La configuración con ServiStream es casi instantánea. Después de realizar el pedido, recibirás los detalles de bienvenida con acceso a cPanel en tan solo unos minutos."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿ServiStream puede migrar mis sitios web existentes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Contamos con un equipo de migraciones dedicado que moverá sus sitios web de su proveedor existente a ServiStream. Necesitaríamos acceso a su antiguo proveedor de alojamiento."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Puedo alojar varios dominios en mi cuenta de alojamiento?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puede alojar varios sitios mediante el uso de dominios adicionales en todos nuestros paquetes de alojamiento, excepto en los planes de Web Hosting Linux que solo admiten un único sitio. Los paquetes de Web Hosting Cloud admiten alias de dominio."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Puedo actualizar o degradar mi plan de hosting?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Es fácil de actualizar o degradar. Para las actualizaciones, le cobraremos el costo a prorrata hasta el final de su período de facturación actual. Contacta a nuestro equipo de soporte para realizar el cambio."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Cómo inicio sesión en mi cPanel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puede acceder a cPanel usando el nombre de host del servidor seguido de '/cpanel', o mediante el inicio de sesión automático desde el área de clientes de ServiStream en Mis servicios > Cuentas de alojamiento."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué es Reseller Hosting y me beneficiaría?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El hosting reseller es ideal para personas o empresas que quieren revender espacio de alojamiento bajo su propia marca, o para profesionales web que administran muchos sitios. Incluye cPanel y WHM, con CloudLinux para aislar cada cuenta."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Ofrecen planes de Streaming con usuarios ilimitados?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Por el momento no ofrecemos planes de radio y TV streaming con usuarios ilimitados, sin embargo, ofrecemos planes muy buenos e incluso hacemos planes a medida en base a los requerimientos de nuestros clientes."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué necesito para poner mi radio en línea?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Necesitas contratar un plan de Radio Streaming, contar con internet estable de al menos 512 kbps de upload, y un software encoder como StreamS, Butt o SAM Broadcaster. Si ya tienes radio AM/FM, únicamente necesitas el encoder para enviar el audio a nuestros servidores."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Qué es un nombre de dominio?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un nombre de dominio es la dirección que los usuarios ingresan en su navegador para visitar su sitio web. Puede ser .com, .net, .ec, .org u otras extensiones. ServiStream ofrece registro de dominios con gestión DNS gratuita."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Necesito comprar un nombre de dominio para comenzar con el hosting?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, si ya tiene un nombre de dominio, simplemente ingréselo al hacer el pedido y el sistema le preguntará si desea transferirlo o actualizar los servidores de nombres para vincularlo a su nuevo servicio de alojamiento."
+            }
+        }
+    ]
+};
 ---
 
-<Layout title="Hosting Internet Services | Preguntas Frecuentes">
+<Layout
+    title="Preguntas Frecuentes - Hosting, Streaming y Dominios Ecuador | ServiStream"
+    description="Resuelve tus dudas sobre hosting web, radio streaming, registro de dominios y páginas web en Ecuador. Soporte técnico especializado ServiStream desde 2014."
+    schema={faqSchema}
+>
     <!-- INICIA CODIGO SECCION HEADER-->
 
     <header class="css-selector">
@@ -21,11 +128,11 @@ import ExternalScript from "../components/ExternalScript.astro";
     <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
 
     <section class="contenedor mx-auto my-20 px-5">
-        <h2 class="text-balance">Preguntas Frecuentes</h2>
-        <h3>
+        <h1 class="text-balance">Preguntas Frecuentes sobre Hosting y Streaming en Ecuador</h1>
+        <p>
             El presente documento sufre modificaciones y actualizaciones, se
             recomienda leerlo constantemente
-        </h3>
+        </p>
     </section>
 
     <main class="contenedor mx-auto grid grid-cols-1 lg:grid-cols-12 px-5">
@@ -970,7 +1077,8 @@ import ExternalScript from "../components/ExternalScript.astro";
         }
 
         .css-selector {
-            background-attachment: fixed;
+            background-attachment: scroll;
+            @media (min-width: 1024px) { background-attachment: fixed; }
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

@@ -9,19 +9,68 @@ import PlanesHostingLinux from "../components/hosting_linux/cardPlanesHosting.as
 import DescripcionHosting from "../components/hosting_linux/cardDescrip.astro";
 import TemasEnvato from "../components/index/TemasEnvato.astro";
 import Footer from "../components/Footer.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import DescriptionCpanel from "../components/hosting_linux/cardDescripcionCpanel.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
 
 import BotonTres from "../components/BotonTres.astro";
 import BotonSeisBlack from "../components/BotonSeisBlack.astro";
 import Acordion from "../components/hosting_linux/Acordion.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hosting Linux cPanel Ecuador",
+    "description": "Hosting Linux con cPanel, CloudLinux, SSL gratis, Jetbackup, servidores NvMe ultrarrápidos. Soporte 24/7.",
+    "url": "https://servistream.net/hosting-linux/",
+    "provider": {
+        "@type": "Organization",
+        "name": "ServiStream",
+        "url": "https://servistream.net"
+    },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes Hosting Linux",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "name": "Plan Deluxe",
+                "description": "10 GB espacio, 50 GB tráfico, 1 dominio, 20 correos, 5 MySQL",
+                "price": "2.30",
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "billingIncrement": "P1M" },
+                "url": "https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/deluxe-plan"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plan Ultimate",
+                "description": "25 GB espacio, 70 GB tráfico, 1 dominio, 30 correos, 20 MySQL",
+                "price": "2.75",
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "billingIncrement": "P1M" },
+                "url": "https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/ultimate-plan"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plan Maximum",
+                "description": "50 GB espacio, 100 GB tráfico, 1 dominio, 50 correos, 50 MySQL",
+                "price": "3.33",
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "billingIncrement": "P1M" },
+                "url": "https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan"
+            }
+        ]
+    }
+};
 ---
 
-<Layout 
+<Layout
 	title="Hosting Linux cPanel Ecuador - ServiStream | Web Hosting Compartido"
 	description="Hosting Linux con cPanel en Ecuador. CloudLinux, SSL gratis, Jetbackup incluido, servidores NvMe ultrarrápidos. Hosting web profesional desde 2014."
 	keywords="hosting linux ecuador, cpanel ecuador, hosting compartido, cloudlinux, ssl gratis, jetbackup, hosting nvme, web hosting ecuador"
+	schema={serviceSchema}
 >
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -31,6 +80,13 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
             <Menu />
         </div>
         <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+        <div class="contenedor mx-auto px-5 pt-4">
+            <Breadcrumb items={[
+                { label: "Inicio", href: "/" },
+                { label: "Hosting Linux cPanel" }
+            ]} />
+        </div>
 
         <article class="flex items-center justify-center h-[40rem]">
             <div class="px-5">
@@ -99,11 +155,11 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
                 <h2>
                     Los mejores planes para su Website
                 </h2>
-                <h5>
+                <p>
                     Disfruta de tiempos de carga ultrarrápidos, seguridad sólida
                     <br />
                      como una roca y escalabilidad
-                </h5>
+                </p>
             </div>
         </div>
 
@@ -211,7 +267,7 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
 
     <section class="section_descripcion grid grid-cols-1 mb-[10rem] lg:grid-cols-2">
         <div class="backgroud__migraciones">
-            <img src="/img/back10.avif" alt="Imagen">
+            <img src="/img/back10.avif" alt="Migración de WordPress a ServiStream Ecuador sin tiempo de inactividad">
         </div>
         <div class="px-12 py-12 flex flex-col justify-center">
             <p
@@ -222,11 +278,11 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
             <h2 class="mt-5">
                 ¿Ya tienes un sitio de WordPress? Mígralo ¡gratis!
             </h2>
-            <h5>
+            <p>
                 Migra fácilmente cualquier sitio de WordPress a servistream sin
                 tiempo de inactividad utilizando nuestro plugin gratuito de
                 migración automatizada.
-            </h5>
+            </p>
             <div class="mt-5">
                 <BotonTres href="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan" title="Comprar Plan"/>
             </div>
@@ -244,10 +300,10 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
                 <span class="underline">Amazon Web Services</span>,
                 <span class="underline">LiteSpeed</span>
             </h2>
-            <h5 class="text-white pt-5">
+            <p class="text-white pt-5">
                 Tiene un montón de características, donde incluye privacidad,
                 seguridad, usabilidad y velocidad
-            </h5>
+            </p>
             <ul class="pt-10">
                 <li class="text-white flex items-center">
                     <svg
@@ -294,16 +350,16 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
                     src="/img/leaseweb.svg"
                     width="150"
                     height="150"
-                    alt="leaseweb"
+                    alt="LeaseWeb - Infraestructura de servidores ServiStream"
                 />
                 <img
                     class="mr-10"
                     src="/img/litespeed-logo-vertical.svg"
                     width="150"
                     height="150"
-                    alt="litespeed"
+                    alt="LiteSpeed Web Server - Hosting ultrarrápido ServiStream"
                 />
-                <img src="/img/logoamazon.svg" width="50" height="50" alt="logoamazon" />
+                <img src="/img/logoamazon.svg" width="50" height="50" alt="Amazon Web Services - Cloud infrastructure ServiStream" />
             </div>
         </div>
     </section>
@@ -323,11 +379,11 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
 
     <section class="contenedor mx-auto pb-20 px-5">
         <h2 class="text-center">Funciones cPanel</h2>
-        <h5 class="text-center mb-20">
+        <p class="text-center mb-20">
             Creamos la mejor plataforma de alojamiento web cPanel posible. Hemos
             incluido todo <br /> lo que necesita para ejecutar su sitio web y
             sus correos electrónicos.
-        </h5>
+        </p>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <DescriptionCpanel
                 title="WordPress"
@@ -446,6 +502,11 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
     </div>
     
     <!-- INICIO CODIGO SECCION FOOTER-->
+    <ServiciosRelacionados enlaces={[
+        { href: "/hosting-cloud/", titulo: "Hosting Cloud Ecuador", descripcion: "Recursos dedicados garantizados, NvMe, escalabilidad automática." },
+        { href: "/hosting-reseller/", titulo: "Hosting Reseller cPanel", descripcion: "Revende hosting bajo tu propia marca con WHM completo." },
+        { href: "/dominios/", titulo: "Registro de Dominios", descripcion: "Dominios .com, .ec, .net y más con gestión DNS gratuita." }
+    ]} />
     <Footer />
 </Layout>
 
@@ -466,7 +527,8 @@ import Acordion from "../components/hosting_linux/Acordion.astro";
 
     header {
         background-image: url(/img/back12.avif);
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: 1024px) { background-attachment: fixed; }
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

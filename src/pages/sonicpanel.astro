@@ -4,17 +4,40 @@ import Top from "../components/Top.astro";
 import Menu from "../components/Menu.astro";
 import MobileMenu from "../components/MobilMenu.astro";
 import FooterOscuro from "../components/FooterOscuro.astro";
+import ServiciosRelacionados from "../components/ServiciosRelacionados.astro";
 import LogosScrollHosting from "../components/hosting_linux/LogosScrollHosting.astro";
 import CardDescripCentovaUno from "../components/centovacast/CardDescripCentovaUno.astro";
 import CardPreciosCentova from "../components/centovacast/CardPreciosCentova.astro";
 import CardDescripCentovaDos from "../components/centovacast/CardDescripCentovaDos.astro";
 import PromocionRadio from "../components/PromocionRadio.astro"; /* CODIGO DE PROMOCION DE RADIO */
+import Breadcrumb from "../components/Breadcrumb.astro";
+
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Radio Streaming SonicPanel Ecuador",
+    "description": "Radio streaming profesional con SonicPanel. AutoDJ incluido, SSL, hasta 320 KBPS, reproductores HTML5 compatibles con todos los dispositivos.",
+    "url": "https://servistream.net/sonicpanel/",
+    "provider": { "@type": "Organization", "name": "ServiStream", "url": "https://servistream.net" },
+    "areaServed": { "@type": "Country", "name": "Ecuador" },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes SonicPanel",
+        "itemListElement": [
+            { "@type": "Offer", "name": "Plan Económico", "price": "5", "priceCurrency": "USD", "description": "500 oyentes, 128 KBPS, 5 GB AutoDJ" },
+            { "@type": "Offer", "name": "Plan Básico", "price": "10", "priceCurrency": "USD", "description": "1000 oyentes, 192 KBPS, 10 GB AutoDJ" },
+            { "@type": "Offer", "name": "Plan Plus", "price": "15", "priceCurrency": "USD", "description": "3000 oyentes, 320 KBPS, 15 GB AutoDJ" },
+            { "@type": "Offer", "name": "Plan Profesional", "price": "20", "priceCurrency": "USD", "description": "5000 oyentes, 320 KBPS, 20 GB AutoDJ" }
+        ]
+    }
+};
 ---
 
 <Layout
     title="Radio Streaming SonicPanel Ecuador - ServiStream | Streaming de Audio"
     description="Radio streaming profesional con SonicPanel en Ecuador. AutoDJ, SSL incluido, hasta 320kbps, reproductores HTML5. Radio online de calidad profesional."
     keywords="radio streaming ecuador, sonicpanel, autodj, streaming audio, radio online, mp3pro, aacplus, radio profesional ecuador"
+    schema={serviceSchema}
 >
     <!-- INICIA CODIGO SECCION HEADER-->
 
@@ -25,6 +48,13 @@ import PromocionRadio from "../components/PromocionRadio.astro"; /* CODIGO DE PR
                 <Menu />
             </div>
             <div class="pt-4 lg:hidden"><MobileMenu /></div>
+
+            <div class="contenedor mx-auto px-5 pt-4">
+                <Breadcrumb items={[
+                    { label: "Inicio", href: "/" },
+                    { label: "Radio Streaming SonicPanel" }
+                ]} />
+            </div>
 
             <div
                 class="contenedor mx-auto text-center flex flex-col justify-center items-center py-10 px-5"
@@ -201,6 +231,11 @@ import PromocionRadio from "../components/PromocionRadio.astro"; /* CODIGO DE PR
         </section>
 
         <!-- INICIO CODIGO SECCION FOOTER-->
+        <ServiciosRelacionados enlaces={[
+            { href: "/centovacast/", titulo: "Radio Streaming CentovaCast", descripcion: "Panel profesional con estadísticas avanzadas y SSL desde $10/mes." },
+            { href: "/server-azuracast/", titulo: "Servidor AzuraCast", descripcion: "Tu propio servidor de radio streaming con panel de autogestión." },
+            { href: "/reseller-radio/", titulo: "Reseller Radio Streaming", descripcion: "Revende radio streaming bajo tu propia marca." }
+        ]} />
         <FooterOscuro />
     </main>
 </Layout>
