@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.9",
-    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/alpinejs": "^1.0.0",
+    "@astrojs/sitemap": "^3.7.3",
     "@astrojs/tailwind": "^6.0.2",
     "@types/alpinejs": "^3.13.3",
     "alpinejs": "^3.13.2",
-    "astro": "^5.14.1",
+    "astro": "^7.0.3",
     "braces": "^3.0.3",
     "sass": "^1.69.4",
     "serve": "^14.2.4",
