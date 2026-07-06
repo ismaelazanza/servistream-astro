@@ -36,7 +36,7 @@ const serviceSchema = {
         "itemListElement": [
             {
                 "@type": "Offer",
-                "name": "Plan Deluxe",
+                "name": "Plan Inicio",
                 "description": "10 GB espacio, 50 GB tráfico, 1 dominio, 20 correos, 5 MySQL",
                 "price": "2.30",
                 "priceCurrency": "USD",
@@ -45,7 +45,7 @@ const serviceSchema = {
             },
             {
                 "@type": "Offer",
-                "name": "Plan Ultimate",
+                "name": "Plan Plus",
                 "description": "25 GB espacio, 70 GB tráfico, 1 dominio, 30 correos, 20 MySQL",
                 "price": "2.75",
                 "priceCurrency": "USD",
@@ -54,7 +54,16 @@ const serviceSchema = {
             },
             {
                 "@type": "Offer",
-                "name": "Plan Maximum",
+                "name": "Plan Pro",
+                "description": "50 GB espacio, 100 GB tráfico, 1 dominio, 50 correos, 50 MySQL",
+                "price": "3.33",
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "billingIncrement": "P1M" },
+                "url": "https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plan Empresa",
                 "description": "50 GB espacio, 100 GB tráfico, 1 dominio, 50 correos, 50 MySQL",
                 "price": "3.33",
                 "priceCurrency": "USD",
@@ -119,7 +128,7 @@ const serviceSchema = {
                         />
                         <CardHostingLinux
                             src="/img/SolarHeartsBroken.svg"
-                            content="Con la Confianza de Millones"
+                            content="Con la Confianza de Miles"
                         />
                     </div>
                 </section>
@@ -139,14 +148,6 @@ const serviceSchema = {
 
     <!-- FIN CODIGO SECCION HEADER-->
 
-    <!-- INICIO CODIGO SECCION SUBMENU HOSTING-->
-
-    <section class="hidden lg:block">
-        <SubmenuHosting />
-    </section>
-
-    <!-- FIN CODIGO SECCION SUBMENU HOSTING-->
-
     <!-- INICIO CODIGO SECCION PLANES HOSTING-->
 
     <section class="bg-white py-28 px-5">
@@ -164,55 +165,71 @@ const serviceSchema = {
         </div>
 
         <div
-            class="contenedor__hosting__precios mx-auto grid grid-cols-1 gap-3 mt-10 lg:grid-cols-3"
+            class="contenedor__hosting__precios mx-auto grid grid-cols-1 gap-3 mt-10 lg:grid-cols-4"
         >
             <PlanesHostingLinux
-                plan="Plan Deluxe"
-                precio="$2.30"
+                plan="Plan Inicio"
+                precio="$3.30"
                 mes="USD/mes"
                 opcion="Precio económico para nuevos sitios, incluido WordPress"
-                des1="10 GB "
-                des2="50 GB "
-                des3="1 dominio alojado"
+                des1="8 GB NVME"
+                des2="Ilimitado GB "
+                des3="Ilimitados dominios alojados"
                 des4="Soporte"
                 des5="Backups diarios"
-                des6="5 subdominios"
-                des7="5 dominios aparcados"
-                des8="20 correos electrónicos"
-                des9="5 MySQL Base de datos"
-                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/deluxe-plan"
+                des6="Ilimitados subdominios"
+                des7="Infraestructura Propia"
+                des8="Ilimitados correos"
+                des9="Ilimitados MySQL"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/inicio-plan"
             />
             <PlanesHostingLinux
-                plan="Plan Ultimate"
-                precio="$2.75"
+                plan="Plan Plus"
+                precio="$4.20"
                 mes="USD/mes"
                 opcion="El paquete perfecto para webs personales"
-                des1="25 GB "
-                des2="70 GB "
-                des3="1 dominio alojado"
+                des1="12 GB NVME"
+                des2="Ilimitado GB "
+                des3="Ilimitados dominios alojados"
                 des4="Soporte"
                 des5="Backups diarios"
-                des6="10 subdominios"
-                des7="10 dominios aparcados"
-                des8="30 correos electrónicos"
-                des9="20 MySQL Base de datos"
-                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/ultimate-plan"
+                des6="Ilimitados subdominios"
+                des7="Infraestructura Propia"
+                des8="Ilimitados correos"
+                des9="Ilimitados MySQL"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/plus-plan"
             />
             <PlanesHostingLinux
-                plan="Plan Maximum"
-                precio="$3.33"
+                plan="Plan Pro"
+                precio="$6.25"
                 mes="USD/mes"
                 opcion="Sube de nivel con más potencia y funciones mejoradas"
-                des1="50 GB "
-                des2="100 GB "
-                des3="1 dominio alojado"
+                des1="20 GB NVME"
+                des2="Ilimitado GB "
+                des3="Ilimitados dominios alojados"
                 des4="Soporte"
                 des5="Backups diarios"
-                des6="30 subdominios"
-                des7="30 dominios aparcados"
-                des8="50 correos electrónicos"
-                des9="50 MySQL Base de datos"
-                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/maximum-plan"
+                des6="Ilimitados subdominios"
+                des7="Infraestructura Propia"
+                des8="Ilimitados correos"
+                des9="Ilimitados MySQL"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/pro-plan"
+            />
+                        <PlanesHostingLinux
+                plan="Plan Empresa"
+                precio="$10.00"
+                mes="USD/mes"
+                opcion="Sube de nivel con más potencia y funciones mejoradas"
+                des1="40 GB NVME"
+                des2="Ilimitado GB "
+                des3="Ilimitados dominios alojados"
+                des4="Soporte"
+                des5="Backups diarios"
+                des6="Ilimitados subdominios"
+                des7="Infraestructura Propia"
+                des8="Ilimitados correos"
+                des9="Ilimitados MySQL"
+                link="https://clientes.servistream.net/index.php?rp=/store/web-hosting-linux/empresa-plan"
             />
         </div>
     </section>
@@ -502,11 +519,7 @@ const serviceSchema = {
     </div>
     
     <!-- INICIO CODIGO SECCION FOOTER-->
-    <ServiciosRelacionados enlaces={[
-        { href: "/hosting-cloud/", titulo: "Hosting Cloud Ecuador", descripcion: "Recursos dedicados garantizados, NvMe, escalabilidad automática." },
-        { href: "/hosting-reseller/", titulo: "Hosting Reseller cPanel", descripcion: "Revende hosting bajo tu propia marca con WHM completo." },
-        { href: "/dominios/", titulo: "Registro de Dominios", descripcion: "Dominios .com, .ec, .net y más con gestión DNS gratuita." }
-    ]} />
+
     <Footer />
 </Layout>
 
@@ -552,7 +565,7 @@ const serviceSchema = {
     */
 
     .contenedor__hosting__precios {
-        max-width: 1000px;
+        max-width: 1300px;
         background: linear-gradient(97.03deg, #edf4ff -0.58%, #defffe 92.09%);
         padding: 0.9rem;
         border-radius: 1rem;
